@@ -9,7 +9,8 @@ public class Coffee extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
+        super.onCreate(savedInstanceState);
+        this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_coffee);
     }
 }

@@ -23,7 +23,8 @@ public class Main_Menu extends AppCompatActivity {
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
+        super.onCreate(savedInstanceState);
+        this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_menu);
 
         sw = findViewById(R.id.search);
