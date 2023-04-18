@@ -107,7 +107,7 @@
                 android:id="@+id/editTextNumber3"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
-                android:background="@drawable/edittext_view"
+                android:background="@xml/edittext_view"
                 android:inputType="number" />
 
             <ImageButton
@@ -165,7 +165,7 @@
                 android:id="@+id/editTextNumber18"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
-                android:background="@drawable/edittext_view"
+                android:background="@xml/edittext_view"
                 android:inputType="number" />
 
             <ImageButton
@@ -224,7 +224,7 @@
                 android:id="@+id/editTextNumber17"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
-                android:background="@drawable/edittext_view"
+                android:background="@xml/edittext_view"
                 android:inputType="number" />
 
             <ImageButton
@@ -282,7 +282,7 @@
                 android:id="@+id/editTextNumber16"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
-                android:background="@drawable/edittext_view"
+                android:background="@xml/edittext_view"
                 android:inputType="number" />
 
             <ImageButton
