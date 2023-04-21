@@ -71,6 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
@@ -129,6 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout22"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
@@ -186,11 +188,11 @@
         android:id="@+id/linearLayout24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout22"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout23"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -248,7 +250,7 @@
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout24"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout23"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
 
         <ImageView
