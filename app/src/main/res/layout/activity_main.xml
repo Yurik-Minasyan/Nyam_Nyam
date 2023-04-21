@@ -8,8 +8,8 @@
     tools:context=".MainActivity">
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_width="450dp"
+        android:layout_height="400dp"
         android:background="@drawable/logo2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -18,19 +18,50 @@
         android:contentDescription="TODO" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/engbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#325bba"
         android:fontFamily="serif-monospace"
-        android:onClick="menu"
-        android:text="Welcome"
+        android:onClick="eng"
+        android:text="English"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/rusbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#325bba"
+        android:fontFamily="serif-monospace"
+        android:onClick="rus"
+        android:text="Русский"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engbutton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/armbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#325bba"
+        android:fontFamily="serif-monospace"
+        android:onClick="am"
+        android:text="Հայերեն"
+        android:textSize="23.5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rusbutton"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
