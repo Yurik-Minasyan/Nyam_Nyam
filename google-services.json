@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316692920541",
+    "project_id": "nyam-6c4e5",
+    "storage_bucket": "nyam-6c4e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316692920541:android:52943df8eba4d813de4334",
+        "android_client_info": {
+          "package_name": "com.example.nyam_nyam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316692920541-u17n4ubn58o4k723e3ge13dttl38ap0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVf361n9g4asV7PMPR07548EGdr7IBAKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316692920541-u17n4ubn58o4k723e3ge13dttl38ap0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

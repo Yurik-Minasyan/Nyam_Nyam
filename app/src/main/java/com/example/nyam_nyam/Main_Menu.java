@@ -1,5 +1,6 @@
 package com.example.nyam_nyam;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,13 +10,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
 public class Main_Menu extends AppCompatActivity {
+    FirebaseFirestore firestore;
+    Button upload;
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
@@ -25,13 +35,35 @@ public class Main_Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_menu);
+        firestore = FirebaseFirestore.getInstance();
+        upload=findViewById(R.id.upload);
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                POJO pojo =new POJO();
+                pojo.setValue("HELLO WORLD!");
+                firestore.collection("RootCollection").document("MyDoc").set(pojo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Main_Menu.this,"UnSucsess",Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        });
+
+
 
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
-        array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
         array.add("Թթուներ");//2
@@ -80,7 +112,6 @@ public class Main_Menu extends AppCompatActivity {
         array.add("Water");//45
         array.add("Micado");//46
         array.add("Napoleon");//47
-
         array.add("Caramel filled donut");//48
         array.add("Ջուր");//49
         array.add("Вода");//50
