@@ -1,6 +1,5 @@
 package com.example.nyam_nyam;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -10,22 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.ArrayList;
 
 public class Main_Menu extends AppCompatActivity {
-    FirebaseFirestore firestore;
-    Button upload;
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
@@ -35,35 +26,12 @@ public class Main_Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FirebaseApp.initializeApp(this);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_menu);
-        firestore = FirebaseFirestore.getInstance();
-        upload=findViewById(R.id.upload);
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                POJO pojo =new POJO();
-                pojo.setValue("HELLO WORLD!");
-                firestore.collection("RootCollection").document("MyDoc").set(pojo).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(Main_Menu.this,"UnSucsess",Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        });
-
-
-
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
+        array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
         array.add("Թթուներ");//2
@@ -78,7 +46,7 @@ public class Main_Menu extends AppCompatActivity {
         array.add("Լատտե");//11
         array.add("Միկադո");//12
         array.add("Նապոլեոն");//13
-        array.add("արամելային միջուկով դոնաթ");//14
+        array.add("Կարամելային միջուկով դոնաթ");//14
         array.add("Закуски");//15
         array.add("Сыры");//16
         array.add("Маринады");//17
@@ -138,30 +106,32 @@ public class Main_Menu extends AppCompatActivity {
         });
         lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(id == 0 || id == 1 |id == 2 ||id == 15 ||id == 16 ||id == 17 || id == 30 ||id == 31 ||id == 32){
-                    Intent i = new Intent(Main_Menu.this, Naxutest.class);
-                    startActivity(i);
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                String text = lw.getItemAtPosition(i).toString();
+                //Toast.makeText(Main_Menu.this, ""+text, Toast.LENGTH_SHORT).show();
+                if(text=="Water" || text=="Вода" || text=="Ջուր" || text=="Coca-Cola" || text=="Fanta" || text=="Sprite"){
+                    Intent iy = new Intent(Main_Menu.this, Drink.class);
+                    startActivity(iy);
                 }
-                if(id == 3 || id == 4 ||id == 5 ||id == 18 ||id == 19 || id == 20 ||id == 33 ||id == 34 |id == 35){
-                    Intent i = new Intent(Main_Menu.this, Salad.class);
-                    startActivity(i);
+                if(text=="Մսային նախուտեստներ" || text=="Պանրի տեսականի" || text=="Թթուներ" || text=="Закуски" || text=="Сыры" || text=="Маринады" || text=="Meat snacks" || text=="Cheese" || text=="Marinades"){
+                    Intent iy = new Intent(Main_Menu.this, Naxutest.class);
+                    startActivity(iy);
                 }
-                if(id == 6 || id == 7 ||id == 8 |id == 21 ||id == 22 || id == 33 ||id == 36 ||id == 37 ||id == 38){
-                    Intent i = new Intent(Main_Menu.this, Fast_Food.class);
-                    startActivity(i);
+                if(text=="Կապարզե" || text=="Կեսար" || text=="Բանջարեղենային" || text=="Капрезе" || text=="Цезарь" || text=="Овощной" || text=="Caprese" || text=="Caesar" || text=="Vegetable"){
+                    Intent iy = new Intent(Main_Menu.this, Salad.class);
+                    startActivity(iy);
                 }
-                if(id == 9 ||id == 10 ||id == 11 ||id == 24 ||id == 25 || id == 26 ||id == 39 ||id == 40 ||id == 41){
-                    Intent i = new Intent(Main_Menu.this, Coffee.class);
-                    startActivity(i);
+                if(text=="Կարտոֆիլ ֆրի" || text=="Հոթ-դոգ բարբիքյու" || text=="Տավարի մսով բուրգեր" || text=="Картофель фри" || text=="Хот-дог барбекю" || text=="Бургер с говядиной" || text=="Hot-dog barbeque" || text=="French fries" || text=="Beef burger"){
+                    Intent iy = new Intent(Main_Menu.this, Fast_Food.class);
+                    startActivity(iy);
                 }
-                if(id == 12 || id == 13 ||id == 14 ||id == 27 ||id == 28 || id== 29 ||id == 46 ||id == 47 ||id == 48){
-                    Intent i = new Intent(Main_Menu.this, Cake.class);
-                    startActivity(i);
+                if(text=="Արաբիկա" || text=="Կապուչինո" || text=="Լատտե" || text=="Арабика" || text=="Капучино" || text=="Латте" || text=="Latte" || text=="Arabia" || text=="Cappuccino"){
+                    Intent iy = new Intent(Main_Menu.this, Fast_Food.class);
+                    startActivity(iy);
                 }
-                if(id == 42 || id == 43 ||id == 44 ||id == 45 || id == 49 || id == 50){
-                    Intent i = new Intent(Main_Menu.this, Drink.class);
-                    startActivity(i);
+                if(text=="Միկադո" || text=="Նապոլեոն" || text=="Կարամելային միջուկով դոնաթ" || text=="Наполеон" || text=="Микадо" || text=="Донат с карамельной начинкой" || text=="Micado" || text=="Napoleon" || text=="Caramel filled donut"){
+                    Intent iy = new Intent(Main_Menu.this, Fast_Food.class);
+                    startActivity(iy);
                 }
             }
         });
@@ -189,6 +159,10 @@ public class Main_Menu extends AppCompatActivity {
     }
     public void cake(View view){
         Intent i = new Intent(Main_Menu.this, Cake.class);
+        startActivity(i);
+    }
+    public void cart_menu(View view){
+        Intent i = new Intent(Main_Menu.this, Cart.class);
         startActivity(i);
     }
 }

@@ -18,4 +18,8 @@ public class Coffee extends AppCompatActivity {
         Intent i = new Intent(Coffee.this, Main_Menu.class);
         startActivity(i);
     }
+    public void cart_coffee(View view){
+        Intent i = new Intent(Coffee.this, Cart.class);
+        startActivity(i);
+    }
 }

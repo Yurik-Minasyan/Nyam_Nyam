@@ -18,4 +18,8 @@ public class Naxutest extends AppCompatActivity {
         Intent i = new Intent(Naxutest.this, Main_Menu.class);
         startActivity(i);
     }
+    public void cart_nax(View view){
+        Intent i = new Intent(Naxutest.this, Cart.class);
+        startActivity(i);
+    }
 }

@@ -18,4 +18,8 @@ public class Fast_Food extends AppCompatActivity {
         Intent i = new Intent(Fast_Food.this, Main_Menu.class);
         startActivity(i);
     }
+    public void cart(View view){
+        Intent i = new Intent(Fast_Food.this, Cart.class);
+        startActivity(i);
+    }
 }

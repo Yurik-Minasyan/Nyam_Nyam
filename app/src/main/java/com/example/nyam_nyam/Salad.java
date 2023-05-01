@@ -18,4 +18,8 @@ public class Salad extends AppCompatActivity {
         Intent i = new Intent(Salad.this, Main_Menu.class);
         startActivity(i);
     }
+    public void cart_salad(View view){
+        Intent i = new Intent(Salad.this, Salad.class);
+        startActivity(i);
+    }
 }

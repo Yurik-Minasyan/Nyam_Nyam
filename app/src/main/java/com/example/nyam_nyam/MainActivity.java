@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
     }
-    public void eng(View view){
+    public void menu(View view){
         Intent i = new Intent(MainActivity.this, Main_Menu.class);
         startActivity(i);
     }

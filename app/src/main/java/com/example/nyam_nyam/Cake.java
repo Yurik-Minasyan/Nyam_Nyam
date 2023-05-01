@@ -20,4 +20,8 @@ public class Cake extends AppCompatActivity {
         Intent i = new Intent(Cake.this, Main_Menu.class);
         startActivity(i);
     }
+    public void cart_cake(View view){
+        Intent i = new Intent(Cake.this, Cart.class);
+        startActivity(i);
+    }
 }
