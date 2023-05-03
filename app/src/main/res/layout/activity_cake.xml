@@ -140,7 +140,7 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="108dp"
+            android:layout_height="115dp"
             android:background="#33FFFFFF"
             app:srcCompat="@drawable/napoleon" />
 

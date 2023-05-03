@@ -139,7 +139,7 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="170dp"
-            android:layout_height="133dp"
+            android:layout_height="115dp"
 
             app:srcCompat="@drawable/kesar" />
 
