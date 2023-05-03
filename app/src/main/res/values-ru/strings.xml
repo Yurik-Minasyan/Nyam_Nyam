@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Nyam_Nyam</string>
+    <string name="snack" translatable="false">Закуски</string>
+    <string name="salad" translatable="false">Салат</string>
+    <string name="fast_food" translatable="false">Fast food</string>
+    <string name="drinks" translatable="false">Напитки</string>
+    <string name="coffee" translatable="false">Кофе</string>
+    <string name="cake" translatable="false">Пирожное</string>
+    <string name="meat" translatable="false">Мясные закуски</string>
+    <string name="cheese" translatable="false">Сыр</string>
+    <string name="marinades" translatable="false">Маринады</string>
+    <string name="caprese" translatable="false">Капрезе</string>
+    <string name="caesar" translatable="false">Цезарь</string>
+    <string name="vegetable" translatable="false">Овощной</string>
+    <string name="french_fries" translatable="false">Картофель фри</string>
+    <string name="hot_dog_barbeque" translatable="false">Барбекю хот-догов</string>
+    <string name="beef_burger" translatable="false">Бургер из говядины</string>
+    <string name="arab" translatable="false">Арабский</string>
+    <string name="cappuccino" translatable="false">Капучино</string>
+    <string name="latte" translatable="false">Латте</string>
+    <string name="micado" translatable="false">Микадо</string>
+    <string name="napoleon" translatable="false">Наполеон</string>
+    <string name="donut" translatable="false">Пончик с карамельной начинкой</string>
+
 </resources>

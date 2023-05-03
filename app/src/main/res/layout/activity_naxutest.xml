@@ -88,7 +88,7 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Մսային նախուտեստներ/Закуски/Meat snacks"
+            android:text="@string/meat"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black" />
@@ -149,7 +149,7 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Պանրի տեսականի/Сыры/Cheese"
+            android:text="@string/cheese"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black" />
@@ -210,7 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Թթուներ/Маринады/Marinades"
+            android:text="@string/marinades"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

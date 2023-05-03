@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Կապրեզե/Капрезе/Caprese"
+            android:text="@string/caprese"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -149,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Կեսար/Цезарь/Caesar"
+            android:text="@string/caesar"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -208,7 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Բանջարեղենային/Овощной/Vegetable"
+            android:text="@string/vegetable"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

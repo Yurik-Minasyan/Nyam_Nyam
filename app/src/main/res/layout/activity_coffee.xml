@@ -87,7 +87,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Արաբիկա/Арабика/Arabia"
+            android:gravity="center"
+            android:text="@string/arab"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -144,7 +145,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Կապուչինո/Капучино/Cappuccino"
+            android:gravity="center"
+            android:text="@string/cappuccino"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -201,7 +203,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Լատտե/Латте/Latte"
+            android:gravity="center"
+            android:text="@string/latte"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

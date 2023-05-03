@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Nyam_Nyam</string>
+    <string name="snack" translatable="false">Snacks</string>
+    <string name="salad" translatable="false">Salad</string>
+    <string name="fast_food" translatable="false">Fast food</string>
+    <string name="drinks" translatable="false">Drinks</string>
+    <string name="coffee" translatable="false">Coffee</string>
+    <string name="cake" translatable="false">Cake</string>
+    <string name="meat" translatable="false">Meat snacks</string>
+    <string name="cheese" translatable="false">Cheese</string>
+    <string name="marinades" translatable="false">Marinades</string>
+    <string name="caprese" translatable="false">Caprese</string>
+    <string name="caesar" translatable="false">Caesar</string>
+    <string name="vegetable" translatable="false">Vegetable</string>
+    <string name="french_fries" translatable="false">French fries</string>
+    <string name="hot_dog_barbeque" translatable="false">Hot-dog barbeque</string>
+    <string name="beef_burger" translatable="false">Beef burger</string>
+    <string name="arab" translatable="false">Arabia</string>
+    <string name="cappuccino" translatable="false">Cappuccino</string>
+    <string name="latte" translatable="false">Latte</string>
+    <string name="micado" translatable="false">Micado</string>
+    <string name="napoleon" translatable="false">Napoleon</string>
+    <string name="donut" translatable="false">Caramel filled donut</string>
 
 </resources>

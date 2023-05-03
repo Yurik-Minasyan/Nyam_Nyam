@@ -88,7 +88,7 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Կարտոֆիլ ֆրի/Картофель фри/French fries"
+            android:text="@string/french_fries"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black" />
@@ -148,7 +148,7 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Հոթ-դոգ բարբիքյու/Хот-дог барбекю/Hot-dog barbeque"
+            android:text="@string/hot_dog_barbeque"
             android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/black" />
@@ -207,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Տավարի մսով բուրգեր/Бургер с говядиной/Beef burger"
+            android:text="@string/beef_burger"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

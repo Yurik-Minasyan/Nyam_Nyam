@@ -88,7 +88,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Միկադո/Микадо/Micado"
+            android:gravity="center"
+            android:text="@string/micado"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -148,7 +149,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Նապոլեոն/Наполеон/Napoleon"
+            android:gravity="center"
+            android:text="@string/napoleon"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -206,7 +208,8 @@
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Կարամելային միջուկով դոնաթ/Донат с карамельной начинкой/Caramel filled donut"
+            android:text="@string/donut"
+            android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
