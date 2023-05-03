@@ -108,19 +108,20 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber15"
+                android:id="@+id/meat_num"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
 
             <ImageButton
-                android:id="@+id/imageButton15"
+                android:id="@+id/meat_btn"
+                android:onClick="meat"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
-                app:srcCompat="@drawable/cart" />
+                android:src="@drawable/cart" />
         </LinearLayout>
 
     </LinearLayout>
