@@ -44,6 +44,13 @@
                 app:srcCompat="@drawable/cart"
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/translate_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="translate_menu"
+                android:background="@drawable/l"/>
         </LinearLayout>
     </LinearLayout>
 

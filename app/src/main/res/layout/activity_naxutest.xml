@@ -45,6 +45,14 @@
                 app:srcCompat="@drawable/cart"
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/translate_nax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="translate_nax"
+                android:background="@drawable/l"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -115,12 +123,13 @@
                 android:inputType="number" />
 
             <ImageButton
-                android:id="@+id/meat_btn"
-                android:onClick="meat"
+                android:id="@+id/meat_btn1"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:clickable="true"
+
                 android:src="@drawable/cart" />
         </LinearLayout>
 

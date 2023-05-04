@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+
+import java.util.Locale;
 
 public class Cart extends AppCompatActivity {
 
@@ -18,5 +21,14 @@ public class Cart extends AppCompatActivity {
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);
         startActivity(i);
+    }
+    public void translate_cart(View view) {
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        recreate();
     }
 }

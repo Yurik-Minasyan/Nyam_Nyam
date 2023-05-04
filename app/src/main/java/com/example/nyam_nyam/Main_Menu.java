@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Main_Menu extends AppCompatActivity {
     SearchView sw;
@@ -164,5 +166,14 @@ public class Main_Menu extends AppCompatActivity {
     public void cart_menu(View view){
         Intent i = new Intent(Main_Menu.this, Cart.class);
         startActivity(i);
+    }
+    public void translate_menu(View view) {
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        recreate();
     }
 }

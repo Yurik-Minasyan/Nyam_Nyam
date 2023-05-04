@@ -45,6 +45,13 @@
                 app:srcCompat="@drawable/cart"
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+            <ImageButton
+                android:id="@+id/translate_coffee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="translate_coffee"
+                android:background="@drawable/l"/>
         </LinearLayout>
     </LinearLayout>
 

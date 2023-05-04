@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+
+import java.util.Locale;
 
 public class Fast_Food extends AppCompatActivity {
     @Override
@@ -21,5 +24,14 @@ public class Fast_Food extends AppCompatActivity {
     public void cart(View view){
         Intent i = new Intent(Fast_Food.this, Cart.class);
         startActivity(i);
+    }
+    public void translate_fast_food(View view) {
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        recreate();
     }
 }
