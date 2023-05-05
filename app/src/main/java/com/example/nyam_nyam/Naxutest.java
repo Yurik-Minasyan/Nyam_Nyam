@@ -32,9 +32,9 @@ import java.util.Locale;
 
 public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
-    ImageButton nax_us = this.findViewById(R.id.translate_nax_usa);
-    ImageButton nax_am = this.findViewById(R.id.translate_nax_arm);
-    ImageButton nax_ru = this.findViewById(R.id.translate_nax_rus);
+//    ImageButton nax_us = this.findViewById(R.id.translate_nax_usa);
+//    ImageButton nax_am = this.findViewById(R.id.translate_nax_arm);
+//    ImageButton nax_ru = this.findViewById(R.id.translate_nax_rus);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +58,8 @@ public class Naxutest extends AppCompatActivity {
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
-        nax_ru.setVisibility(View.GONE);
-        nax_am.setVisibility(View.VISIBLE);
+//        nax_ru.setVisibility(View.GONE);
+//        nax_am.setVisibility(View.VISIBLE);
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
         recreate();
@@ -69,8 +69,8 @@ public class Naxutest extends AppCompatActivity {
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
-        nax_us.setVisibility(View.GONE);
-        nax_ru.setVisibility(View.VISIBLE);
+//        nax_us.setVisibility(View.GONE);
+//        nax_ru.setVisibility(View.VISIBLE);
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
 
@@ -81,8 +81,8 @@ public class Naxutest extends AppCompatActivity {
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
-        nax_am.setVisibility(View.GONE);
-        nax_us.setVisibility(View.VISIBLE);
+//        nax_am.setVisibility(View.GONE);
+//        nax_us.setVisibility(View.VISIBLE);
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
 
