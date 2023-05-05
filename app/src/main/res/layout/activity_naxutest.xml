@@ -47,12 +47,28 @@
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <ImageButton
-                android:id="@+id/translate_nax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/translate_nax_usa"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:clickable="true"
-                android:onClick="translate_nax"
-                android:background="@drawable/l"/>
+                android:onClick="translate_nax_usa"
+                android:background="@drawable/usaicon"/>
+            <ImageButton
+                android:id="@+id/translate_nax_rus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="translate_nax_rus"
+                android:background="@drawable/russiaicon"/>
+            <ImageButton
+                android:id="@+id/translate_nax_arm"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="translate_nax_arm"
+                android:background="@drawable/armeniaicon"/>
         </LinearLayout>
     </LinearLayout>
 

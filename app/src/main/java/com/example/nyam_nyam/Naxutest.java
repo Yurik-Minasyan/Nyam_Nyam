@@ -35,9 +35,9 @@ import java.util.Locale;
 
 public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
-
-//    ImageButton ib = findViewById(R.id.translate);
-    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+    ImageButton nax_us = findViewById(R.id.translate_nax_usa);
+    ImageButton nax_am = findViewById(R.id.translate_nax_arm);
+    ImageButton nax_ru = findViewById(R.id.translate_nax_rus);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +56,39 @@ public class Naxutest extends AppCompatActivity {
 ////        }
 //    }
 
-    public void translate_nax(View view) {
+    public void translate_nax_rus(View view) {
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
+        nax_ru.setVisibility(View.GONE);
+        nax_am.setVisibility(View.VISIBLE);
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+    public void translate_nax_usa(View view) {
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        nax_us.setVisibility(View.GONE);
+        nax_ru.setVisibility(View.VISIBLE);
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
+        recreate();
+    }
+    public void translate_nax_arm(View view) {
+        Locale locale = new Locale("hy");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        nax_am.setVisibility(View.GONE);
+        nax_us.setVisibility(View.VISIBLE);
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
         recreate();
     }
 
