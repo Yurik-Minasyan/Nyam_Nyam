@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -29,15 +27,14 @@ import com.google.firebase.ktx.Firebase;
 import com.google.mlkit.nl.translate.Translation;
 import com.google.mlkit.nl.translate.Translator;
 import com.google.mlkit.nl.translate.TranslatorOptions;
-
 import java.util.HashMap;
 import java.util.Locale;
 
 public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
-    ImageButton nax_us = findViewById(R.id.translate_nax_usa);
-    ImageButton nax_am = findViewById(R.id.translate_nax_arm);
-    ImageButton nax_ru = findViewById(R.id.translate_nax_rus);
+    ImageButton nax_us = this.findViewById(R.id.translate_nax_usa);
+    ImageButton nax_am = this.findViewById(R.id.translate_nax_arm);
+    ImageButton nax_ru = this.findViewById(R.id.translate_nax_rus);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
