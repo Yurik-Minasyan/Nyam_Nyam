@@ -32,9 +32,6 @@ import java.util.Locale;
 
 public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
-//    ImageButton nax_us = this.findViewById(R.id.translate_nax_usa);
-//    ImageButton nax_am = this.findViewById(R.id.translate_nax_arm);
-//    ImageButton nax_ru = this.findViewById(R.id.translate_nax_rus);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

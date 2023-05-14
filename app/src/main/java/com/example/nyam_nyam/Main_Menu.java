@@ -167,13 +167,23 @@ public class Main_Menu extends AppCompatActivity {
         Intent i = new Intent(Main_Menu.this, Cart.class);
         startActivity(i);
     }
-//    public void translate_menu(View view) {
-//        Locale locale = new Locale("ru");
-//        Locale.setDefault(locale);
-//        Configuration config = getBaseContext().getResources().getConfiguration();
-//        config.locale = locale;
-//        getBaseContext().getResources().updateConfiguration(config,
-//                getBaseContext().getResources().getDisplayMetrics());
-//        recreate();
-//    }
+    public void translate_menu_rus(View view) {
+        Locale locale = new Locale("ru");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+    public void translate_menu_usa(View view) {
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
+        recreate();
+    }
 }

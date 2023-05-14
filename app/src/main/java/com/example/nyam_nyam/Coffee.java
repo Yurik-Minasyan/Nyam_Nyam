@@ -25,13 +25,23 @@ public class Coffee extends AppCompatActivity {
         Intent i = new Intent(Coffee.this, Cart.class);
         startActivity(i);
     }
-    public void translate_coffee(View view) {
+    public void translate_coffee_rus(View view) {
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+    public void translate_coffee_usa(View view) {
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
         recreate();
     }
 

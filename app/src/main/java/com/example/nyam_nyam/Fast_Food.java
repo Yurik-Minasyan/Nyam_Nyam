@@ -25,13 +25,23 @@ public class Fast_Food extends AppCompatActivity {
         Intent i = new Intent(Fast_Food.this, Cart.class);
         startActivity(i);
     }
-    public void translate_fast_food(View view) {
+    public void translate_fast_food_rus(View view) {
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+    public void translate_fast_food_usa(View view) {
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
         recreate();
     }
 }

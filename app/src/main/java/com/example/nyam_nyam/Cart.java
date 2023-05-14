@@ -22,13 +22,23 @@ public class Cart extends AppCompatActivity {
         Intent i = new Intent(Cart.this, Main_Menu.class);
         startActivity(i);
     }
-    public void translate_cart(View view) {
+    public void translate_cart_rus(View view) {
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
+        recreate();
+    }
+    public void translate_cart_usa(View view) {
+        Locale locale = new Locale("en");
+        Locale.setDefault(locale);
+        Configuration config = getBaseContext().getResources().getConfiguration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+
         recreate();
     }
 }
