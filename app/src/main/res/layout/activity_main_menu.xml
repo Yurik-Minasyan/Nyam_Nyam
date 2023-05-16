@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/dradient"
     tools:context=".Main_Menu">
 
 
@@ -132,25 +132,29 @@
                 app:srcCompat="@drawable/cart"
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
             <ImageButton
-                android:id="@+id/translate_menu_usa"
+                android:id="@+id/translate_usa"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/usaicon"
                 android:clickable="true"
-                android:onClick="translate_menu_usa"
-                android:visibility="gone" />
+                android:onClick="translate_usa"
+                app:layout_constraintEnd_toStartOf="@+id/menbutton"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:ignore="MissingConstraints" />
 
             <ImageButton
-                android:id="@+id/translate_menu_rus"
+                android:id="@+id/translate_rus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/russiaicon"
                 android:clickable="true"
-                android:onClick="translate_menu_rus"
-                android:visibility="visible" />
+                android:onClick="translate_rus"
+                app:layout_constraintStart_toEndOf="@+id/translate_usa"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                tools:ignore="MissingConstraints" />
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout

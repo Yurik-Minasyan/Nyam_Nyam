@@ -257,23 +257,6 @@
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-            <ImageButton
-                android:id="@+id/translate_salad_usa"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/usaicon"
-                android:clickable="true"
-                android:onClick="translate_salad_usa"
-                android:visibility="gone" />
-
-            <ImageButton
-                android:id="@+id/translate_salad_rus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/russiaicon"
-                android:clickable="true"
-                android:onClick="translate_salad_rus"
-                android:visibility="visible" />
         </LinearLayout>
     </LinearLayout>
 

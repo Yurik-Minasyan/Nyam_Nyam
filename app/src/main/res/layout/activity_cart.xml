@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/dradient"
     tools:context=".Cart">
 
 
@@ -82,23 +82,7 @@
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-            <ImageButton
-                android:id="@+id/translate_cart_usa"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/usaicon"
-                android:clickable="true"
-                android:onClick="translate_cart_usa"
-                android:visibility="gone" />
 
-            <ImageButton
-                android:id="@+id/translate_cart_rus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/russiaicon"
-                android:clickable="true"
-                android:onClick="translate_cart_rus"
-                android:visibility="visible" />
         </LinearLayout>
     </LinearLayout>
 

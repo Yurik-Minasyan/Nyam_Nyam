@@ -167,7 +167,9 @@ public class Main_Menu extends AppCompatActivity {
         Intent i = new Intent(Main_Menu.this, Cart.class);
         startActivity(i);
     }
-    public void translate_menu_rus(View view) {
+    public void translate_rus(View view) {
+        ImageButton cart_USA2=findViewById(R.id.translate_usa);
+        ImageButton cart_rus2=findViewById(R.id.translate_rus);
         Locale locale = new Locale("ru");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
@@ -175,8 +177,12 @@ public class Main_Menu extends AppCompatActivity {
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
         recreate();
+        cart_rus2.setVisibility(View.GONE);
+        cart_USA2.setVisibility(View.VISIBLE);
     }
-    public void translate_menu_usa(View view) {
+    public void translate_usa(View view) {
+        ImageButton cart_USA=findViewById(R.id.translate_usa);
+        ImageButton cart_rus=findViewById(R.id.translate_rus);
         Locale locale = new Locale("en");
         Locale.setDefault(locale);
         Configuration config = getBaseContext().getResources().getConfiguration();
@@ -185,5 +191,7 @@ public class Main_Menu extends AppCompatActivity {
                 getBaseContext().getResources().getDisplayMetrics());
 
         recreate();
+        cart_rus.setVisibility(View.VISIBLE);
+        cart_USA.setVisibility(View.GONE);
     }
 }

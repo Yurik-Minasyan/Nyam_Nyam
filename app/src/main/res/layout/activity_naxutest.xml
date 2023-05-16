@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/dradient"
     tools:context=".Naxutest">
 
 
@@ -274,7 +274,7 @@
                 android:background="@drawable/usaicon"
                 android:clickable="true"
                 android:onClick="translate_nax_usa"
-                android:visibility="gone" />
+                 />
 
             <ImageButton
                 android:id="@+id/translate_nax_rus"
@@ -283,7 +283,8 @@
                 android:background="@drawable/russiaicon"
                 android:clickable="true"
                 android:onClick="translate_nax_rus"
-                android:visibility="visible" />
+                android:visibility="gone"/>
+
         </LinearLayout>
 
         <LinearLayout
