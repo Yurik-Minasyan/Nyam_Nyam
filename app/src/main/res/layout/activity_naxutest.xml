@@ -24,7 +24,7 @@
         android:layout_marginStart="10dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -85,7 +85,7 @@
         android:layout_marginStart="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout19"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -143,7 +143,7 @@
         android:layout_marginStart="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout20"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -199,7 +199,7 @@
         android:layout_marginStart="20dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/linearLayout21"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -231,7 +231,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageButton
@@ -267,23 +267,6 @@
                 app:srcCompat="@drawable/cart"
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
-            <ImageButton
-                android:id="@+id/translate_nax_usa"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/usaicon"
-                android:clickable="true"
-                android:onClick="translate_nax_usa"
-                 />
-
-            <ImageButton
-                android:id="@+id/translate_nax_rus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/russiaicon"
-                android:clickable="true"
-                android:onClick="translate_nax_rus"
-                android:visibility="gone"/>
 
         </LinearLayout>
 

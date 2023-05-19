@@ -97,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -132,27 +132,7 @@
                 app:srcCompat="@drawable/cart"
 
                 tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-            <ImageButton
-                android:id="@+id/translate_usa"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/usaicon"
-                android:clickable="true"
-                android:onClick="translate_usa"
-                app:layout_constraintEnd_toStartOf="@+id/menbutton"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:ignore="MissingConstraints" />
 
-            <ImageButton
-                android:id="@+id/translate_rus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/russiaicon"
-                android:clickable="true"
-                android:onClick="translate_rus"
-                app:layout_constraintStart_toEndOf="@+id/translate_usa"
-                app:layout_constraintTop_toBottomOf="@+id/imageView"
-                tools:ignore="MissingConstraints" />
         </LinearLayout>
 
     </LinearLayout>
@@ -162,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
         <ListView
