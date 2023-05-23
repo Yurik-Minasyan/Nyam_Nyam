@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="3000դր/др/amd"
+            android:text="3000 amd"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -72,7 +72,7 @@
                 android:layout_height="35dp"
                 android:clickable="true"
                 android:gravity="end"
-
+                android:onClick="meat_cart"
                 android:src="@drawable/cart" />
         </LinearLayout>
 

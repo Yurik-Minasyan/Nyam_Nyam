@@ -1,53 +1,39 @@
 package com.example.nyam_nyam;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.os.LocaleListCompat;
+
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
-import com.google.mlkit.nl.translate.Translation;
-import com.google.mlkit.nl.translate.Translator;
-import com.google.mlkit.nl.translate.TranslatorOptions;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
 
 public class Naxutest extends AppCompatActivity {
+    String nax_meat;
     @SuppressLint("WrongViewCast")
+
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    EditText meat_num;
+    Food_Nubers food;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_naxutest);
+        food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -176,6 +162,16 @@ public class Naxutest extends AppCompatActivity {
     public void cart_nax(View view) {
         Intent i = new Intent(Naxutest.this, Cart.class);
         startActivity(i);
+    }
+    public void meat_cart(View view){
+
+        meat_num = findViewById(R.id.meat_num);
+        String n = meat_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

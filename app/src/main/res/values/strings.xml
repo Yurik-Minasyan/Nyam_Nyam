@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Nyam_Nyam</string>
+    <string name="app_name" translatable="false">Nyam_Nyam</string>
     <string name="snack" translatable="false">Snacks</string>
     <string name="salad" translatable="false">Salad</string>
     <string name="fast_food" translatable="false">Fast food</string>
@@ -21,5 +21,6 @@
     <string name="micado" translatable="false">Micado</string>
     <string name="napoleon" translatable="false">Napoleon</string>
     <string name="donut" translatable="false">Caramel filled donut</string>
+    <string name="number_err" translatable="false">Select the quantity of the dish</string>
 
 </resources>

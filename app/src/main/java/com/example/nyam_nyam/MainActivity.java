@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.textView5);
+
     }
     public void scan(View view){
 
@@ -49,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
 
+    }
+    public void menu(View view){
+        Intent i = new Intent(MainActivity.this, Main_Menu.class);
+        startActivity(i);
     }
 
 //    public void translate_rus(View view) {

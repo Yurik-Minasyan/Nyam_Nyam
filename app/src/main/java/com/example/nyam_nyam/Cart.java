@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -21,11 +22,13 @@ public class Cart extends AppCompatActivity {
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
+        tv = findViewById(R.id.random);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -133,6 +136,8 @@ public class Cart extends AppCompatActivity {
                 }
             }
         });
+        Food_Nubers food_nubers = (Food_Nubers) getApplicationContext();
+        tv.setText(food_nubers.getMeat());
     }
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);

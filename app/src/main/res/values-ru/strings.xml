@@ -21,5 +21,5 @@
     <string name="micado" translatable="false">Микадо</string>
     <string name="napoleon" translatable="false">Наполеон</string>
     <string name="donut" translatable="false">Пончик с карамельной начинкой</string>
-
+    <string name="number_err" translatable="false">Select the quantity of the dish</string>
 </resources>

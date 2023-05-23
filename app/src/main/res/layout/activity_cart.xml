@@ -8,39 +8,7 @@
     tools:context=".Cart">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-        tools:ignore="MissingConstraints">
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="170dp"
-            android:layout_height="115dp"
-
-            app:srcCompat="@drawable/logo2" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text=""
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/white" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout9"
@@ -101,4 +69,73 @@
             app:layout_constraintTop_toBottomOf="@+id/search"
             tools:layout_editor_absoluteX="1dp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+        <ImageView
+            android:id="@+id/imageViewexper"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/mser" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/meat"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="3000 amd"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/random"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/meat_num_ca"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:background="@xml/edittext_view"
+                android:inputType="number" />
+
+            <ImageButton
+                android:id="@+id/meat_btn1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:gravity="end"
+
+                android:src="@drawable/cart" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
