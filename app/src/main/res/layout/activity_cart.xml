@@ -103,37 +103,9 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
-        <TextView
-            android:id="@+id/random"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text=""
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/meat_num_ca"
-                android:layout_width="65dp"
-                android:layout_height="35dp"
-                android:background="@xml/edittext_view"
-                android:inputType="number" />
 
-            <ImageButton
-                android:id="@+id/meat_btn1"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:clickable="true"
-                android:gravity="end"
-
-                android:src="@drawable/cart" />
-        </LinearLayout>
 
     </LinearLayout>
 

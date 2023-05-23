@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,12 +22,17 @@ public class Fast_Food extends AppCompatActivity {
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    EditText french_num;
+    EditText hot_dog_num;
+    EditText burgir_num;
+    Food_Nubers food;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_fast_food);
         sw = findViewById(R.id.search);
+        food  = (Food_Nubers) getApplicationContext();
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
         array = new ArrayList<>();
@@ -140,6 +147,36 @@ public class Fast_Food extends AppCompatActivity {
     public void cart(View view){
         Intent i = new Intent(Fast_Food.this, Cart.class);
         startActivity(i);
+    }
+    public void french(View view){
+
+        french_num = findViewById(R.id.french);
+        String n = french_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void hot_dog(View view){
+
+        hot_dog_num = findViewById(R.id.hot_dog);
+        String n = hot_dog_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void burgir(View view){
+
+        burgir_num = findViewById(R.id.burgir);
+        String n = burgir_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

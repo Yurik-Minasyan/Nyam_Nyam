@@ -49,7 +49,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber3"
+                android:id="@+id/cola"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -61,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="cola"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>
@@ -107,7 +108,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber18"
+                android:id="@+id/fanta"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -119,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="fanta"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>
@@ -165,7 +167,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber17"
+                android:id="@+id/sprite"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -177,6 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="sprite"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>
@@ -223,7 +226,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber16"
+                android:id="@+id/water"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -235,6 +238,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="water"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>

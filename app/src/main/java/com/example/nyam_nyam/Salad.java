@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,11 +22,16 @@ public class Salad extends AppCompatActivity {
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    Food_Nubers food;
+    EditText caparse_num;
+    EditText casear_num;
+    EditText vegetablle_num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_salad);
+        food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -140,6 +147,27 @@ public class Salad extends AppCompatActivity {
     public void cart_salad(View view){
         Intent i = new Intent(Salad.this, Salad.class);
         startActivity(i);
+    }
+
+    public void caparse(View view){
+
+        caparse_num = findViewById(R.id.caprese);
+        String n = caparse_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void caesar(View view){
+
+        casear_num = findViewById(R.id.caesar);
+        String n = casear_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

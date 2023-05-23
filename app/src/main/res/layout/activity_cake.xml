@@ -52,7 +52,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber3"
+                android:id="@+id/micado"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -64,6 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="micado"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
 
@@ -112,7 +113,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber2"
+                android:id="@+id/napoleon"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -124,6 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="napoleon"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
 
@@ -170,7 +172,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber4"
+                android:id="@+id/donut"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -182,6 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="donat"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
 

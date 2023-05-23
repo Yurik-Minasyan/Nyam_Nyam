@@ -18,7 +18,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Naxutest extends AppCompatActivity {
-    String nax_meat;
     @SuppressLint("WrongViewCast")
 
     SearchView sw;
@@ -26,6 +25,8 @@ public class Naxutest extends AppCompatActivity {
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     EditText meat_num;
+    EditText cheese_num;
+    EditText marinade_num;
     Food_Nubers food;
 
     @Override
@@ -144,13 +145,13 @@ public class Naxutest extends AppCompatActivity {
 
     }
 //    public void meat(View view){
-////        String n = meat.getText().toString();
-////        if (TextUtils.isEmpty()) {
-////
-////            return;
-////        }else{
+//        String n = meat.getText().toString();
+//      if (TextUtils.isEmpty()) {
+//
+//         return;
+//       }else{
 //            mDatabase.child("Meat").setValue("n");Toast.makeText(Naxutest.this,"Enter Number",Toast.LENGTH_LONG).show();
-////        }
+//        }
 //    }
 
 
@@ -167,6 +168,26 @@ public class Naxutest extends AppCompatActivity {
 
         meat_num = findViewById(R.id.meat_num);
         String n = meat_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void chess_b(View view){
+
+        cheese_num = findViewById(R.id.chess_num);
+        String n = cheese_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void marinade(View view){
+
+        marinade_num = findViewById(R.id.marinad);
+        String n = marinade_num.getText().toString();
         if (n.length() != 0){
             food.setMeat(n);
         }else{

@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -20,11 +22,17 @@ public class Drink extends AppCompatActivity {
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    Food_Nubers food;
+    EditText cola_num;
+    EditText fanta_num;
+    EditText sprite_num;
+    EditText water_num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_drink);
+        food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -140,6 +148,46 @@ public class Drink extends AppCompatActivity {
     public void cart_drink(View view){
         Intent i = new Intent(Drink.this, Cart.class);
         startActivity(i);
+    }
+    public void cola(View view){
+
+        cola_num = findViewById(R.id.cola);
+        String n = cola_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void fanta(View view){
+
+        fanta_num = findViewById(R.id.fanta);
+        String n = fanta_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void sprite(View view){
+
+        sprite_num = findViewById(R.id.sprite);
+        String n = sprite_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void water(View view){
+
+        water_num = findViewById(R.id.water);
+        String n = water_num.getText().toString();
+        if (n.length() != 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

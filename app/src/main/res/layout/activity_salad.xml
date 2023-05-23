@@ -50,7 +50,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber10"
+                android:id="@+id/caprese"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -61,6 +61,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
+                android:onClick="caparse"
                 android:gravity="end"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
@@ -108,7 +109,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber11"
+                android:id="@+id/caesar"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -120,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="caesar"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>
@@ -166,7 +168,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber12"
+                android:id="@+id/vegetable"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -178,6 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="vegetable"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>

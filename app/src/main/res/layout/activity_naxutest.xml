@@ -8,22 +8,12 @@
     tools:context=".Naxutest">
 
 
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/linearLayout19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
 
@@ -120,7 +110,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber14"
+                android:id="@+id/chess_num"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -132,6 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:onClick="chess_b"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>
@@ -177,7 +168,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextNumber13"
+                android:id="@+id/marinad"
                 android:layout_width="65dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -188,6 +179,7 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
+                android:onClick="marinade"
                 android:gravity="end"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>

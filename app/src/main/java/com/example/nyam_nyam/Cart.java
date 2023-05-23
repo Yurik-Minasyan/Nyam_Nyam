@@ -4,18 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Cart extends AppCompatActivity {
     SearchView sw;
@@ -28,10 +25,10 @@ public class Cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
-        tv = findViewById(R.id.random);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
+        tv = findViewById(R.id.textView2);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -137,7 +134,8 @@ public class Cart extends AppCompatActivity {
             }
         });
         Food_Nubers food_nubers = (Food_Nubers) getApplicationContext();
-        tv.setText(food_nubers.getMeat());
+        int meat_n = Integer.parseInt(food_nubers.getMeat());
+        tv.setText(meat_n * 3000 + " amd");
     }
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);
