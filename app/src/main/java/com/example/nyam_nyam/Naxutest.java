@@ -179,7 +179,7 @@ public class Naxutest extends AppCompatActivity {
         cheese_num = findViewById(R.id.chess_num);
         String n = cheese_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setCheese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -189,7 +189,7 @@ public class Naxutest extends AppCompatActivity {
         marinade_num = findViewById(R.id.marinad);
         String n = marinade_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setMarinade(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }

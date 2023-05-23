@@ -2,12 +2,14 @@ package com.example.nyam_nyam;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -16,15 +18,19 @@ import java.util.ArrayList;
 
 public class Cart extends AppCompatActivity {
     SearchView sw;
+    LinearLayout meat;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    int meat_n;
     TextView tv;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
+        meat = findViewById(R.id.meat_Lay);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -134,8 +140,12 @@ public class Cart extends AppCompatActivity {
             }
         });
         Food_Nubers food_nubers = (Food_Nubers) getApplicationContext();
-        int meat_n = Integer.parseInt(food_nubers.getMeat());
-        tv.setText(meat_n * 3000 + " amd");
+
+        meat_n = Integer.parseInt(food_nubers.getMeat());
+        if(meat_n > 0){
+            meat.setVisibility(View.VISIBLE);
+            tv.setText(meat_n * 3000 + " amd" );
+        }
     }
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);

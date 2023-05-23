@@ -154,7 +154,7 @@ public class Drink extends AppCompatActivity {
         cola_num = findViewById(R.id.cola);
         String n = cola_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setCola(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -164,7 +164,7 @@ public class Drink extends AppCompatActivity {
         fanta_num = findViewById(R.id.fanta);
         String n = fanta_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setFanta(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -174,7 +174,7 @@ public class Drink extends AppCompatActivity {
         sprite_num = findViewById(R.id.sprite);
         String n = sprite_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setSprite(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -184,7 +184,7 @@ public class Drink extends AppCompatActivity {
         water_num = findViewById(R.id.water);
         String n = water_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setWater(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }

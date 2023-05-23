@@ -154,7 +154,7 @@ public class Salad extends AppCompatActivity {
         caparse_num = findViewById(R.id.caprese);
         String n = caparse_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setCaprese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -164,7 +164,7 @@ public class Salad extends AppCompatActivity {
         casear_num = findViewById(R.id.caesar);
         String n = casear_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setCaprese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }

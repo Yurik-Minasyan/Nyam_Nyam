@@ -157,7 +157,7 @@ public class Cake extends AppCompatActivity {
         mikado_num= findViewById(R.id.micado);
         String n = mikado_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setMicado(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -167,7 +167,7 @@ public class Cake extends AppCompatActivity {
         napoleon_num= findViewById(R.id.napoleon);
         String n = napoleon_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setNapoleon(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -177,7 +177,7 @@ public class Cake extends AppCompatActivity {
         donut_num= findViewById(R.id.donut);
         String n = donut_num.getText().toString();
         if (n.length() != 0){
-            food.setMeat(n);
+            food.setDonat(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
