@@ -28,6 +28,9 @@ public class Cart extends AppCompatActivity {
     LinearLayout arabia;
     LinearLayout cappuchino;
     LinearLayout latte;
+    LinearLayout french;
+    LinearLayout hot_dog;
+    LinearLayout burger;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -40,6 +43,9 @@ public class Cart extends AppCompatActivity {
     int arabia_n;
     int cappuchino_n;
     int latte_n;
+    int french_n;
+    int hot_dog_n;
+    int burger_n;
     TextView meat_p;
     TextView cheese_p;
     TextView marinade_p;
@@ -49,6 +55,9 @@ public class Cart extends AppCompatActivity {
     TextView arabia_p;
     TextView cappuchino_p;
     TextView latte_p;
+    TextView french_p;
+    TextView hot_dog_p;
+    TextView burger_p;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +73,9 @@ public class Cart extends AppCompatActivity {
         arabia = findViewById(R.id.arabia);
         cappuchino = findViewById(R.id.cappuchino_c);
         latte = findViewById(R.id.latte);
+        french = findViewById(R.id.french_f);
+        hot_dog = findViewById(R.id.hot_dog_ca);
+        burger = findViewById(R.id.burger);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -75,7 +87,10 @@ public class Cart extends AppCompatActivity {
         donat_p = findViewById(R.id.donat_pr);
         arabia_p = findViewById(R.id.arabia_pr);
         latte_p = findViewById(R.id.latte_pr);
+        french_p = findViewById(R.id.french_pr);
         cappuchino_p = findViewById(R.id.cappuchino_pr);
+        hot_dog_p = findViewById(R.id.hot_dog_pr);
+        burger_p = findViewById(R.id.burger_pr);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -191,6 +206,9 @@ public class Cart extends AppCompatActivity {
         arabia_n = Integer.parseInt(food_nubers.getArab());
         cappuchino_n = Integer.parseInt(food_nubers.getCappuccino());
         latte_n = Integer.parseInt(food_nubers.getLatte());
+        french_n = Integer.parseInt(food_nubers.getFrench());
+        hot_dog_n = Integer.parseInt(food_nubers.getHot_dog());
+        burger_n = Integer.parseInt(food_nubers.getBurger());
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
@@ -226,6 +244,18 @@ public class Cart extends AppCompatActivity {
         if(latte_n > 0){
             latte.setVisibility(View.VISIBLE);
             latte_p.setText(latte_n * 1000 + " amd" );
+        }
+        if(french_n > 0){
+            french.setVisibility(View.VISIBLE);
+            french_p.setText(french_n * 550 + " amd" );
+        }
+        if(hot_dog_n > 0){
+            hot_dog.setVisibility(View.VISIBLE);
+            hot_dog_p.setText(hot_dog_n * 800 + " amd" );
+        }
+        if(burger_n > 0){
+            burger.setVisibility(View.VISIBLE);
+            burger_p.setText(burger_n * 1200 + " amd" );
         }
     }
     public void home_c(View view){

@@ -327,7 +327,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/napoleon_lay">
+        app:layout_constraintTop_toBottomOf="@+id/napoleon_lay"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/cap_i"
@@ -390,4 +391,112 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/french_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/cappuchino_c"
+        app:layout_constraintTop_toBottomOf="@+id/donut_lay"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/french_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/frechfries" />
+
+        <TextView
+            android:id="@+id/french_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/french_fries"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/french_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hot_dog_ca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/french_f"
+        app:layout_constraintTop_toBottomOf="@+id/arabia"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/hot_dog_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+            app:srcCompat="@drawable/hot_dog" />
+
+        <TextView
+            android:id="@+id/hot_dog_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/hot_dog_barbeque"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hot_dog_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/hot_dog_ca"
+        app:layout_constraintTop_toBottomOf="@+id/latte">
+
+        <ImageView
+            android:id="@+id/burger_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/sev_tavari_msov" />
+
+        <TextView
+            android:id="@+id/burger_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/beef_burger"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/burger_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
