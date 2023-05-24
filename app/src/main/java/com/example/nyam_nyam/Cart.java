@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Checkable;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -19,11 +20,14 @@ import java.util.ArrayList;
 public class Cart extends AppCompatActivity {
     SearchView sw;
     LinearLayout meat;
+    LinearLayout cheese;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     int meat_n;
-    TextView tv;
+    int cheese_n;
+    TextView meat_p;
+    TextView cheese_p;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +35,12 @@ public class Cart extends AppCompatActivity {
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
         meat = findViewById(R.id.meat_Lay);
+        cheese = findViewById(R.id.cheese);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
-        tv = findViewById(R.id.textView2);
+        meat_p = findViewById(R.id.textView2);
+        cheese_p = findViewById(R.id.chesse_pr);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -142,9 +148,14 @@ public class Cart extends AppCompatActivity {
         Food_Nubers food_nubers = (Food_Nubers) getApplicationContext();
 
         meat_n = Integer.parseInt(food_nubers.getMeat());
+        cheese_n = Integer.parseInt(food_nubers.getCheese());
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
-            tv.setText(meat_n * 3000 + " amd" );
+            meat_p.setText(meat_n * 3000 + " amd" );
+        }
+        if(cheese_n > 0){
+            cheese.setVisibility(View.VISIBLE);
+            cheese_p.setText(cheese_n * 2500 + " amd" );
         }
     }
     public void home_c(View view){
