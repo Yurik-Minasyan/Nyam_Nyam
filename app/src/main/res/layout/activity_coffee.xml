@@ -60,6 +60,7 @@
                 android:id="@+id/imageButton22"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
+                android:clickable="true"
                 android:layout_height="35dp"
                 android:gravity="end"
                 android:onClick="arab"
@@ -120,6 +121,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:gravity="end"
+                android:clickable="true"
                 android:onClick="cappuchino"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
@@ -179,6 +181,7 @@
                 android:layout_height="35dp"
                 android:gravity="end"
                 android:onClick="lattee"
+                android:clickable="true"
                 app:srcCompat="@drawable/cart" />
         </LinearLayout>
     </LinearLayout>

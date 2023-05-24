@@ -21,13 +21,25 @@ public class Cart extends AppCompatActivity {
     SearchView sw;
     LinearLayout meat;
     LinearLayout cheese;
+    LinearLayout marinade;
+    LinearLayout micado;
+    LinearLayout napoleon;
+    LinearLayout donat;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     int meat_n;
     int cheese_n;
+    int marinade_n;
+    int micado_n;
+    int napoleon_n;
+    int donat_n;
     TextView meat_p;
     TextView cheese_p;
+    TextView marinade_p;
+    TextView micado_p;
+    TextView napoleon_p;
+    TextView donat_p;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +48,19 @@ public class Cart extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
         meat = findViewById(R.id.meat_Lay);
         cheese = findViewById(R.id.cheese);
+        marinade = findViewById(R.id.marinad);
+        micado = findViewById(R.id.mikado);
+        napoleon = findViewById(R.id.napoleon_lay);
+        donat = findViewById(R.id.donut_lay);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
         meat_p = findViewById(R.id.textView2);
         cheese_p = findViewById(R.id.chesse_pr);
+        marinade_p = findViewById(R.id.marinade);
+        micado_p = findViewById(R.id.mikadoo);
+        micado_p = findViewById(R.id.napoleont);
+        donat_p = findViewById(R.id.donat_pr);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -149,6 +169,10 @@ public class Cart extends AppCompatActivity {
 
         meat_n = Integer.parseInt(food_nubers.getMeat());
         cheese_n = Integer.parseInt(food_nubers.getCheese());
+        marinade_n = Integer.parseInt(food_nubers.getMarinade());
+        micado_n = Integer.parseInt(food_nubers.getMicado());
+        napoleon_n = Integer.parseInt(food_nubers.getNapoleon());
+        donat_n = Integer.parseInt(food_nubers.getDonat());
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
@@ -156,6 +180,22 @@ public class Cart extends AppCompatActivity {
         if(cheese_n > 0){
             cheese.setVisibility(View.VISIBLE);
             cheese_p.setText(cheese_n * 2500 + " amd" );
+        }
+        if(marinade_n > 0){
+            marinade.setVisibility(View.VISIBLE);
+            marinade_p.setText(marinade_n * 1800 + " amd" );
+        }
+        if(micado_n > 0){
+            micado.setVisibility(View.VISIBLE);
+            micado_p.setText(micado_n * 550 + " amd" );
+        }
+//        if(napoleon_n > 0){
+//            napoleon.setVisibility(View.VISIBLE);
+//            napoleon_p.setText(napoleon_n * 600 + " amd" );
+//        }
+        if(donat_n > 0){
+            donat.setVisibility(View.VISIBLE);
+            donat_p.setText(donat_n * 750 + " amd" );
         }
     }
     public void home_c(View view){
