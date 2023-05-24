@@ -173,6 +173,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -277,6 +278,110 @@
 
         <TextView
             android:id="@+id/donat_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/arabia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/donut_lay"
+        app:layout_constraintTop_toBottomOf="@+id/marinad"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/arabia_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/arabika" />
+
+        <TextView
+            android:id="@+id/arabia_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/arab"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/arabia_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cappuchino_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/napoleon_lay">
+
+        <ImageView
+            android:id="@+id/cap_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+            app:srcCompat="@drawable/cappuccino" />
+
+        <TextView
+            android:id="@+id/cap_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cappuccino"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cappuchino_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/latte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/arabia"
+        app:layout_constraintTop_toBottomOf="@+id/mikado">
+
+        <ImageView
+            android:id="@+id/latte_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/latte" />
+
+        <TextView
+            android:id="@+id/latte_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/latte"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/latte_pr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
