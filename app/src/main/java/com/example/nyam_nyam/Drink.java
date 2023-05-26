@@ -152,8 +152,9 @@ public class Drink extends AppCompatActivity {
     public void cola(View view){
 
         cola_num = findViewById(R.id.cola);
-        String n = cola_num.getText().toString();
-        if (n.length() != 0){
+        String g = cola_num.toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setCola(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -162,8 +163,9 @@ public class Drink extends AppCompatActivity {
     public void fanta(View view){
 
         fanta_num = findViewById(R.id.fanta);
-        String n = fanta_num.getText().toString();
-        if (n.length() != 0){
+        String g = fanta_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setFanta(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -172,8 +174,9 @@ public class Drink extends AppCompatActivity {
     public void sprite(View view){
 
         sprite_num = findViewById(R.id.sprite);
-        String n = sprite_num.getText().toString();
-        if (n.length() != 0){
+        String g = sprite_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n >  0){
             food.setSprite(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -182,8 +185,9 @@ public class Drink extends AppCompatActivity {
     public void water(View view){
 
         water_num = findViewById(R.id.water);
-        String n = water_num.getText().toString();
-        if (n.length() != 0){
+        String g = water_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setWater(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();

@@ -1,140 +1,139 @@
 package com.example.nyam_nyam;
 
 import android.app.Application;
-import android.view.Choreographer;
 
 public class Food_Nubers extends Application {
-    private String Meat;
-    private String Cheese;
-    private String Marinade;
-    private String Micado;
-    private String Napoleon;
-    private String Donat;
-    private String Arab;
-    private String Cappuccino;
-    private String Latte;
-    private String Cola;
-    private String Fanta;
-    private String Sprite;
-    private String Water;
-    private String French;
-    private String Hot_dog;
-    private String Burger;
-    private String Caprese;
-    private String Caesar;
-    private String Vegetable;
-    public String getMeat(){
+    private int Meat=0;
+    private int Cheese=0;
+    private int Marinade=0;
+    private int Micado=0;
+    private int Napoleon=0;
+    private int Donat=0;
+    private int Arab=0;
+    private int Cappuccino=0;
+    private int Latte=0;
+    private int Cola=0;
+    private int Fanta=0;
+    private int Sprite=0;
+    private int Water=0;
+    private int French=0;
+    private int Hot_dog=0;
+    private int Burger=0;
+    private int Caprese=0;
+    private int Caesar=0;
+    private int Vegetable;
+    public int getMeat(){
         return Meat;
     }
-    public void setMeat(String Meat){
+    public void setMeat(int Meat){
         this.Meat = Meat;
     }
-    public String getCheese(){
+    public int getCheese(){
         return Cheese;
     }
-    public void setCheese(String Cheese){
+    public void setCheese(int Cheese){
         this.Cheese = Cheese;
     }
-    public String getMarinade(){
+    public int getMarinade(){
         return Marinade;
     }
-    public void setMarinade(String Marinade){
+    public void setMarinade(int Marinade){
         this.Marinade = Marinade;
     }
-    public String getMicado(){
+    public int getMicado(){
         return Micado;
     }
-    public void setMicado(String Micado){
+    public void setMicado(int Micado){
         this.Micado=Micado;
     }
-    public String getNapoleon(){
+    public int getNapoleon(){
         return Napoleon;
     }
-    public void setNapoleon(String Napoleon){
+    public void setNapoleon(int Napoleon){
         this.Napoleon=Napoleon;
     }
-    public String getDonat(){
+    public int getDonat(){
         return Donat;
     }
-    public void setDonat(String Donat){
+    public void setDonat(int Donat){
         this.Donat=Donat;
     }
-    public String getArab(){
+    public int getArab(){
         return Arab;
     }
-    public void setArab(String Arab){
+    public void setArab(int Arab){
         this.Arab=Arab;
     }
-    public String getCappuccino(){
+    public int getCappuccino(){
         return Cappuccino;
     }
-    public void setCappuccino(String Cappuccino){
+    public void setCappuccino(int Cappuccino){
         this.Cappuccino=Cappuccino;
     }
-    public String getLatte(){
+    public int getLatte(){
         return Latte;
     }
-    public void setLatte(String Latte){
+    public void setLatte(int Latte){
         this.Latte=Latte;
     }
-    public String getCola(){
+    public int getCola(){
         return Cola;
     }
-    public void setCola(String Cola){
+    public void setCola(int Cola){
         this.Cola=Cola;
     }
-    public String getFanta(){
+    public int getFanta(){
         return Fanta;
     }
-    public void setFanta(String Fanta){
+    public void setFanta(int Fanta){
         this.Fanta=Fanta;
     }
-    public String getSprite(){
+    public int getSprite(){
         return Sprite;
     }
-    public void setSprite(String Sprite){
+    public void setSprite(int Sprite){
         this.Sprite=Sprite;
     }
-    public String getWater(){
+    public int getWater(){
         return Water;
     }
-    public void setWater(String Water){
+    public void setWater(int Water){
         this.Water=Water;
     }
-    public String getFrench(){
+    public int getFrench(){
         return French;
     }
-    public void setFrench(String French){
+    public void setFrench(int French){
         this.French=French;
     }
-    public String getHot_dog(){
+    public int getHot_dog(){
         return Micado;
     }
-    public void setHot_dog(String Hot_dog){
+    public void setHot_dog(int Hot_dog){
         this.Hot_dog=Hot_dog;
     }
-    public String getBurger(){
+    public int getBurger(){
         return Burger;
     }
-    public void setBurger(String Burger){
+    public void setBurger(int Burger){
         this.Burger=Burger;
     }
-    public String getCaprese(){
+    public int getCaprese(){
         return Caprese;
     }
-    public void setCaprese(String Caprese){
+    public void setCaprese(int Caprese){
         this.Caprese=Caprese;
     }
-    public String getCaesar(){
+    public int getCaesar(){
         return Caesar;
     }
-    public void setCaesar(String Caesar){
+    public void setCaesar(int Caesar){
         this.Caesar=Caesar;
     }
-    public String getVegetable(){
+    public int getVegetable(){
         return Vegetable;
     }
-    public void setVegetable(String Vegetable){
+    public void setVegetable(int Vegetable){
         this.Vegetable=Vegetable;
     }
 }

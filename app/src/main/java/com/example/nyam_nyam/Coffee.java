@@ -152,8 +152,9 @@ public class Coffee extends AppCompatActivity {
     public void arab(View view){
 
         arabia_num = findViewById(R.id.arab);
-        String n = arabia_num.getText().toString();
-        if (n.length() != 0){
+        String g = arabia_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setArab(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -162,8 +163,9 @@ public class Coffee extends AppCompatActivity {
     public void cappuchino(View view){
 
         cappuchino_num = findViewById(R.id.cappuchino);
-        String n = cappuchino_num.getText().toString();
-        if (n.length() != 0){
+        String g = cappuchino_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setCappuccino(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -172,8 +174,9 @@ public class Coffee extends AppCompatActivity {
     public void lattee(View view){
 
         lattee_num = findViewById(R.id.lattee);
-        String n = lattee_num.getText().toString();
-        if (n.length() != 0){
+        String g = lattee_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setLatte(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();

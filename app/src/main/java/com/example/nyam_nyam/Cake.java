@@ -4,19 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Cake extends AppCompatActivity {
     SearchView sw;
@@ -155,8 +153,9 @@ public class Cake extends AppCompatActivity {
     public void micado(View view){
 
         mikado_num= findViewById(R.id.micado);
-        String n = mikado_num.getText().toString();
-        if (n.length() != 0){
+        String g = mikado_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setMicado(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -165,8 +164,9 @@ public class Cake extends AppCompatActivity {
     public void napoleon(View view){
 
         napoleon_num= findViewById(R.id.napoleon);
-        String n = napoleon_num.getText().toString();
-        if (n.length() != 0){
+        String g = napoleon_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setNapoleon(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -175,8 +175,9 @@ public class Cake extends AppCompatActivity {
     public void donut(View view){
 
         donut_num= findViewById(R.id.donut);
-        String n = donut_num.getText().toString();
-        if (n.length() != 0){
+        String g = donut_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setDonat(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();

@@ -151,8 +151,9 @@ public class Fast_Food extends AppCompatActivity {
     public void french(View view){
 
         french_num = findViewById(R.id.french);
-        String n = french_num.getText().toString();
-        if (n.length() != 0){
+        String g = french_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setFrench(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -161,8 +162,9 @@ public class Fast_Food extends AppCompatActivity {
     public void hot_dog(View view){
 
         hot_dog_num = findViewById(R.id.hot_dog);
-        String n = hot_dog_num.getText().toString();
-        if (n.length() != 0){
+        String g = hot_dog_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setHot_dog(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
@@ -171,8 +173,9 @@ public class Fast_Food extends AppCompatActivity {
     public void burgir(View view){
 
         burgir_num = findViewById(R.id.burgir);
-        String n = burgir_num.getText().toString();
-        if (n.length() != 0){
+        String g = burgir_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
             food.setBurger(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
