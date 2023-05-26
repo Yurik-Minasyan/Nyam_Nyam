@@ -75,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/cheese"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
@@ -113,6 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
@@ -146,6 +148,7 @@
 
     <LinearLayout
         android:id="@+id/marinad"
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -185,6 +188,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/marinad"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -220,6 +224,7 @@
         android:id="@+id/napoleon_lay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/cheese"
         tools:ignore="MissingConstraints">
@@ -256,6 +261,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/donut_lay"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/napoleon_lay"
         app:layout_constraintTop_toBottomOf="@+id/meat_Lay">
 
@@ -291,6 +297,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/donut_lay"
         app:layout_constraintTop_toBottomOf="@+id/marinad"
         tools:ignore="MissingConstraints">
@@ -327,6 +334,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/napoleon_lay"
         tools:ignore="MissingConstraints">
 
@@ -361,6 +369,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/arabia"
         app:layout_constraintTop_toBottomOf="@+id/mikado">
 
@@ -396,6 +405,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/cappuchino_c"
         app:layout_constraintTop_toBottomOf="@+id/donut_lay"
         tools:ignore="MissingConstraints">
@@ -433,6 +443,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/french_f"
         app:layout_constraintTop_toBottomOf="@+id/arabia"
         tools:ignore="MissingConstraints">
@@ -468,6 +479,7 @@
         android:id="@+id/burger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/hot_dog_ca"
         app:layout_constraintTop_toBottomOf="@+id/latte">
@@ -503,6 +515,7 @@
     <LinearLayout
         android:id="@+id/caprese_c"
         android:layout_width="wrap_content"
+        android:visibility="invisible"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/cappuchino_c"
@@ -535,11 +548,16 @@
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/ceasar_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ceasar_c"
-        android:orientation="vertical">
+        android:visibility="invisible"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/caprese_c"
+        app:layout_constraintTop_toBottomOf="@+id/french_f">
+
         <ImageView
             android:id="@+id/caesar_i"
             android:layout_width="170dp"
