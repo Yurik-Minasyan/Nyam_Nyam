@@ -148,10 +148,10 @@
 
     <LinearLayout
         android:id="@+id/marinad"
-        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/meat_Lay"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
@@ -224,8 +224,8 @@
         android:id="@+id/napoleon_lay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/cheese"
         tools:ignore="MissingConstraints">
 
@@ -257,10 +257,10 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/donut_lay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/donut_lay"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/napoleon_lay"
         app:layout_constraintTop_toBottomOf="@+id/meat_Lay">
@@ -479,8 +479,8 @@
         android:id="@+id/burger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/hot_dog_ca"
         app:layout_constraintTop_toBottomOf="@+id/latte">
 
@@ -515,9 +515,9 @@
     <LinearLayout
         android:id="@+id/caprese_c"
         android:layout_width="wrap_content"
-        android:visibility="invisible"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/cappuchino_c"
         tools:ignore="MissingConstraints">
 
@@ -543,7 +543,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="1800"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -553,8 +553,8 @@
         android:id="@+id/ceasar_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/caprese_c"
         app:layout_constraintTop_toBottomOf="@+id/french_f">
 
@@ -585,4 +585,42 @@
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vegetable_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/ceasar_c"
+        app:layout_constraintTop_toBottomOf="@+id/hot_dog_ca"
+        tools:ignore="ExtraText">
+
+        <ImageView
+            android:id="@+id/vegetable_i"
+            android:layout_width="170dp"
+            android:layout_height="115dp"
+
+            app:srcCompat="@drawable/vegetable" />
+
+        <TextView
+            android:id="@+id/vegetable_t"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/vegetable"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/vegetable_pr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

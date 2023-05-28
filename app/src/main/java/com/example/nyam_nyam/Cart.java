@@ -32,6 +32,7 @@ public class Cart extends AppCompatActivity {
     LinearLayout burger;
     LinearLayout capreze;
     LinearLayout caesar;
+    LinearLayout vegetable;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -49,6 +50,7 @@ public class Cart extends AppCompatActivity {
     int burger_n;
     int capreze_n;
     int caesar_n;
+    int vegetable_n;
     TextView meat_p;
     TextView cheese_p;
     TextView marinade_p;
@@ -63,6 +65,7 @@ public class Cart extends AppCompatActivity {
     TextView burger_p;
     TextView capreze_p;
     TextView caesar_p;
+    TextView vegetable_p;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +86,7 @@ public class Cart extends AppCompatActivity {
         burger = findViewById(R.id.burger);
         capreze = findViewById(R.id.caprese_c);
         caesar = findViewById(R.id.ceasar_c);
+        vegetable = findViewById(R.id.vegetable_c);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -100,6 +104,7 @@ public class Cart extends AppCompatActivity {
         burger_p = findViewById(R.id.burger_pr);
         capreze_p = findViewById(R.id.caprese_pr);
         caesar_p = findViewById(R.id.caesar_pr);
+        vegetable_p = findViewById(R.id.vegetable_pr);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -220,6 +225,7 @@ public class Cart extends AppCompatActivity {
         burger_n = food_nubers.getBurger();
         capreze_n = food_nubers.getCaprese();
         caesar_n = food_nubers.getCaesar();
+        vegetable_n = food_nubers.getVegetable();
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
@@ -275,6 +281,10 @@ public class Cart extends AppCompatActivity {
         if(caesar_n > 0){
             caesar.setVisibility(View.VISIBLE);
             caesar_p.setText(caesar_n * 1000 + " amd" );
+        }
+        if(vegetable_n > 0){
+            vegetable.setVisibility(View.VISIBLE);
+            vegetable_p.setText(vegetable_n * 500 + " amd" );
         }
     }
     public void home_c(View view){
