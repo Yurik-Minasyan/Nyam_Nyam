@@ -37,6 +37,7 @@ public class Cart extends AppCompatActivity {
     LinearLayout fanta;
     LinearLayout sprite;
     LinearLayout water;
+    LinearLayout theEnd;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -84,7 +85,8 @@ public class Cart extends AppCompatActivity {
     TextView fastt;
     TextView drinkk;
     TextView cakee;
-    @SuppressLint("MissingInflatedId")
+    TextView end_t;
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +111,7 @@ public class Cart extends AppCompatActivity {
         fanta = findViewById(R.id.fanta_c);
         sprite = findViewById(R.id.sprite_c);
         water = findViewById(R.id.water_c);
+        theEnd = findViewById(R.id.end);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -137,6 +140,7 @@ public class Cart extends AppCompatActivity {
         fastt = findViewById(R.id.fas_tt);
         drinkk = findViewById(R.id.drink_tt);
         snackk = findViewById(R.id.snack_tt);
+        end_t = findViewById(R.id.end_t);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -262,101 +266,142 @@ public class Cart extends AppCompatActivity {
         fanta_n = food_nubers.getFanta();
         sprite_n = food_nubers.getSprite();
         water_n = food_nubers.getWater();
+        int sum = 0;
         if(meat_n > 0){
+
             meat.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += meat_n*3000;
         }
         if(cheese_n > 0){
             cheese.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
             cheese_p.setText(cheese_n * 2500 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += cheese_n*2500;
         }
         if(marinade_n > 0){
             marinade.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
             marinade_p.setText(marinade_n * 1800 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += marinade_n*1800;
         }
         if(micado_n > 0){
             micado.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
             micado_p.setText(micado_n * 550 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += micado_n*550;
         }
         if(napoleon_n > 0){
             napoleon.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
             napoleon_p.setText(napoleon_n * 600 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += napoleon_n*600;
         }
         if(donat_n > 0){
             donat.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
             donat_p.setText(donat_n * 750 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += donat_n*750;
         }
         if(arabia_n > 0){
             arabia.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
             arabia_p.setText(arabia_n * 700 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += arabia_n*700;
         }
         if(cappuchino_n > 0){
             cappuchino.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
             cappuchino_p.setText(cappuchino_n * 750 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += cappuchino_n*750;
         }
         if(latte_n > 0){
             latte.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
             latte_p.setText(latte_n * 1000 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += latte_n*1000;
         }
         if(french_n > 0){
             french.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
             french_p.setText(french_n * 550 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += french_n*550;
         }
         if(hot_dog_n > 0){
             hot_dog.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
             hot_dog_p.setText(hot_dog_n * 800 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += hot_dog_n*800;
         }
         if(burger_n > 0){
             burger.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
             burger_p.setText(burger_n * 1200 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += burger_n*1200;
         }
         if(capreze_n > 0){
             capreze.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
             capreze_p.setText(capreze_n * 1200 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += capreze_n*1200;
         }
         if(caesar_n > 0){
             caesar.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
             caesar_p.setText(caesar_n * 1000 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += caesar_n*1000;
         }
         if(vegetable_n > 0){
             vegetable.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
             vegetable_p.setText(vegetable_n * 500 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += vegetable_n*500;
         }
         if(cola_n > 0){
             cola.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
             cola_p.setText(cola_n * 500 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += cola_n*500;
         }
         if(fanta_n > 0){
             fanta.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
             fanta_p.setText(fanta_n * 500 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += fanta_n*500;
         }
         if(sprite_n > 0){
             sprite.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
             sprite_p.setText(sprite_n * 500 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += sprite_n*500;
         }
         if(water_n > 0){
             water.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
             water_p.setText(water_n * 300 + " amd" );
+            theEnd.setVisibility(View.VISIBLE);
+            sum += water_n*300;
         }
+        end_t.setText(sum + " amd");
     }
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);
