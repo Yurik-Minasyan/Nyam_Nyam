@@ -33,6 +33,10 @@ public class Cart extends AppCompatActivity {
     LinearLayout capreze;
     LinearLayout caesar;
     LinearLayout vegetable;
+    LinearLayout cola;
+    LinearLayout fanta;
+    LinearLayout sprite;
+    LinearLayout water;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -51,6 +55,10 @@ public class Cart extends AppCompatActivity {
     int capreze_n;
     int caesar_n;
     int vegetable_n;
+    int cola_n;
+    int fanta_n;
+    int sprite_n;
+    int water_n;
     TextView meat_p;
     TextView cheese_p;
     TextView marinade_p;
@@ -66,6 +74,10 @@ public class Cart extends AppCompatActivity {
     TextView capreze_p;
     TextView caesar_p;
     TextView vegetable_p;
+    TextView cola_p;
+    TextView fanta_p;
+    TextView sprite_p;
+    TextView water_p;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +99,10 @@ public class Cart extends AppCompatActivity {
         capreze = findViewById(R.id.caprese_c);
         caesar = findViewById(R.id.ceasar_c);
         vegetable = findViewById(R.id.vegetable_c);
+        cola = findViewById(R.id.cola_c);
+        fanta = findViewById(R.id.fanta_c);
+        sprite = findViewById(R.id.sprite_c);
+        water = findViewById(R.id.water_c);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
@@ -94,7 +110,7 @@ public class Cart extends AppCompatActivity {
         cheese_p = findViewById(R.id.chesse_pr);
         marinade_p = findViewById(R.id.marinade);
         micado_p = findViewById(R.id.mikadoo);
-        micado_p = findViewById(R.id.napoleont);
+        napoleon_p = findViewById(R.id.napoleont);
         donat_p = findViewById(R.id.donat_pr);
         arabia_p = findViewById(R.id.arabia_pr);
         latte_p = findViewById(R.id.latte_pr);
@@ -105,6 +121,10 @@ public class Cart extends AppCompatActivity {
         capreze_p = findViewById(R.id.caprese_pr);
         caesar_p = findViewById(R.id.caesar_pr);
         vegetable_p = findViewById(R.id.vegetable_pr);
+        cola_p = findViewById(R.id.cola_pr);
+        fanta_p = findViewById(R.id.fanta_pr);
+        sprite_p = findViewById(R.id.sprite_pr);
+        water_p = findViewById(R.id.water_pr);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -226,6 +246,10 @@ public class Cart extends AppCompatActivity {
         capreze_n = food_nubers.getCaprese();
         caesar_n = food_nubers.getCaesar();
         vegetable_n = food_nubers.getVegetable();
+        cola_n = food_nubers.getCola();
+        fanta_n = food_nubers.getFanta();
+        sprite_n = food_nubers.getSprite();
+        water_n = food_nubers.getWater();
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
@@ -242,10 +266,10 @@ public class Cart extends AppCompatActivity {
             micado.setVisibility(View.VISIBLE);
             micado_p.setText(micado_n * 550 + " amd" );
         }
-//        if(napoleon_n > 0){
-//            napoleon.setVisibility(View.VISIBLE);
-//            napoleon_p.setText(napoleon_n * 600 + " amd" );
-//        }
+        if(napoleon_n > 0){
+            napoleon.setVisibility(View.VISIBLE);
+            napoleon_p.setText(napoleon_n * 600 + " amd" );
+        }
         if(donat_n > 0){
             donat.setVisibility(View.VISIBLE);
             donat_p.setText(donat_n * 750 + " amd" );
@@ -275,8 +299,8 @@ public class Cart extends AppCompatActivity {
             burger_p.setText(burger_n * 1200 + " amd" );
         }
         if(capreze_n > 0){
-            burger.setVisibility(View.VISIBLE);
-            burger_p.setText(burger_n * 1200 + " amd" );
+            capreze.setVisibility(View.VISIBLE);
+            capreze_p.setText(capreze_n * 1200 + " amd" );
         }
         if(caesar_n > 0){
             caesar.setVisibility(View.VISIBLE);
@@ -285,6 +309,22 @@ public class Cart extends AppCompatActivity {
         if(vegetable_n > 0){
             vegetable.setVisibility(View.VISIBLE);
             vegetable_p.setText(vegetable_n * 500 + " amd" );
+        }
+        if(cola_n > 0){
+            cola.setVisibility(View.VISIBLE);
+            cola_p.setText(cola_n * 500 + " amd" );
+        }
+        if(fanta_n > 0){
+            fanta.setVisibility(View.VISIBLE);
+            fanta_p.setText(fanta_n * 500 + " amd" );
+        }
+        if(sprite_n > 0){
+            sprite.setVisibility(View.VISIBLE);
+            sprite_p.setText(sprite_n * 500 + " amd" );
+        }
+        if(water_n > 0){
+            water.setVisibility(View.VISIBLE);
+            water_p.setText(water_n * 300 + " amd" );
         }
     }
     public void home_c(View view){

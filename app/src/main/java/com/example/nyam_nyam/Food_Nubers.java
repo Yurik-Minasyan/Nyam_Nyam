@@ -17,11 +17,31 @@ public class Food_Nubers extends Application {
     private int Sprite=0;
     private int Water=0;
     private int French=0;
-    private int Hot_dog=0;
+    private int Hotdog=0;
     private int Burger=0;
     private int Caprese=0;
     private int Caesar=0;
-    private int Vegetable;
+    private int Vegetable=0;
+
+//    private int Meat=2;
+//    private int Cheese=2;
+//    private int Marinade=2;
+//    private int Micado=2;
+//    private int Napoleon=2;
+//    private int Donat=2;
+//    private int Arab=2;
+//    private int Cappuccino=2;
+//    private int Latte=2;
+//    private int Cola=2;
+//    private int Fanta=2;
+//    private int Sprite=2;
+//    private int Water=2;
+//    private int French=2;
+//    private int Hotdog=2;
+//    private int Burger=2;
+//    private int Caprese=2;
+//    private int Caesar=2;
+//    private int Vegetable=2;
     public int getMeat(){
         return Meat;
     }
@@ -110,7 +130,7 @@ public class Food_Nubers extends Application {
         return Micado;
     }
     public void setHot_dog(int Hot_dog){
-        this.Hot_dog=Hot_dog;
+        this.Hotdog=Hot_dog;
     }
     public int getBurger(){
         return Burger;

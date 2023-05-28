@@ -145,7 +145,7 @@ public class Salad extends AppCompatActivity {
         startActivity(i);
     }
     public void cart_salad(View view){
-        Intent i = new Intent(Salad.this, Salad.class);
+        Intent i = new Intent(Salad.this, Cart.class);
         startActivity(i);
     }
 
@@ -167,6 +167,17 @@ public class Salad extends AppCompatActivity {
         int n = Integer.parseInt(g);
         if (n > 0){
             food.setCaprese(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void vegetable(View view){
+
+        vegetablle_num = findViewById(R.id.caesar);
+        String g = vegetablle_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setVegetable(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }

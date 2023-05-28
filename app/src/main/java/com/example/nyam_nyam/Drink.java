@@ -150,9 +150,8 @@ public class Drink extends AppCompatActivity {
         startActivity(i);
     }
     public void cola(View view){
-
         cola_num = findViewById(R.id.cola);
-        String g = cola_num.toString();
+        String g = cola_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
             food.setCola(n);
