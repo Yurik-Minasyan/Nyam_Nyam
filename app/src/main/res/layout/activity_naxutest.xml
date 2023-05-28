@@ -47,13 +47,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/meat_minus"
+                android:onClick="meat_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/meat_num"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/meat_plus"
+                android:onClick="meat_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                 />
 
             <ImageButton
                 android:id="@+id/meat_btn1"

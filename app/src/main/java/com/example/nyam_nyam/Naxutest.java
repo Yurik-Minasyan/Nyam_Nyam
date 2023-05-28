@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
 
     SearchView sw;
+    int i = 0;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -37,7 +39,7 @@ public class Naxutest extends AppCompatActivity {
         food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
-        lw.setVisibility(View.GONE);
+        lw.setVisibility(View.INVISIBLE);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -101,11 +103,13 @@ public class Naxutest extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String s) {
                 if(s.length() != 0){
+
                     lw.setVisibility(View.VISIBLE);
                     adapter.getFilter().filter(s);
+
                 }
                 else{
-                    lw.setVisibility(View.GONE);
+                    lw.setVisibility(View.INVISIBLE);
                 }
 
                 return false;
@@ -165,7 +169,6 @@ public class Naxutest extends AppCompatActivity {
         startActivity(i);
     }
     public void meat_cart(View view){
-
         meat_num = findViewById(R.id.meat_num);
         String g = meat_num.getText().toString();
         int n = Integer.parseInt(g);
@@ -174,6 +177,8 @@ public class Naxutest extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+
+
     }
     public void chess_b(View view){
 
@@ -195,6 +200,20 @@ public class Naxutest extends AppCompatActivity {
             food.setMarinade(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void meat_plus(View view){
+        meat_num = findViewById(R.id.meat_num);
+        String g = Integer.toString(i);
+        meat_num.setText(g);
+        i++;
+    }
+    public void meat_minus(View view){
+        meat_num = findViewById(R.id.meat_num);
+        String g = Integer.toString(i);
+        if(i >= 0){
+            meat_num.setText(g);
+            i--;
         }
     }
 
