@@ -78,7 +78,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/snack"
         android:textSize="35dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/snack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageViewexper"
@@ -125,33 +125,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/meat_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/meat_minus_c"
                     android:onClick="meat_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/meat_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/meat_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/meat_plus_c"
                     android:onClick="meat_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/meat_btn_cc"
@@ -172,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -200,33 +202,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/cheese_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/cheese_minus_c"
                     android:onClick="cheese_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/cheese_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/cheese_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/cheese_plus_c"
                     android:onClick="cheese_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/cheese_btn_cc"
@@ -245,7 +249,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -272,33 +276,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/marinade_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/marinade_minus_c"
                     android:onClick="marinade_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/marinade_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/marinade_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/marinade_plus_c"
                     android:onClick="marinade_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/marinade_btn_cc"
@@ -307,7 +313,7 @@
                     android:layout_height="35dp"
                     android:clickable="true"
                     android:gravity="end"
-                    android:onClick="meat_cart_c"
+                    android:onClick="marinade_cart_c"
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
@@ -320,7 +326,7 @@
         android:layout_height="wrap_content"
         android:text="@string/salad"
         android:textSize="40dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/salad_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -337,7 +343,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -366,33 +372,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/caprese_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/caprese_minus_c"
                     android:onClick="caprese_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/caprese_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/caprese_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/caprese_plus_c"
                     android:onClick="caprese_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/caprese_btn_cc"
@@ -411,7 +419,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/caesar_i"
@@ -439,33 +447,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/caesar_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/caesar_minus_c"
                     android:onClick="caesar_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/caesar_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/caesar_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/caesar_plus_c"
                     android:onClick="caesar_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/caesar_btn_cc"
@@ -484,7 +494,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="ExtraText">
 
             <ImageView
@@ -512,33 +522,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/vegetable_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/vegetable_minus_c"
                     android:onClick="vegetable_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/vegetable_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/vegetable_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/vegetable_plus_c"
                     android:onClick="vegetable_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/vegetable_btn_cc"
@@ -560,7 +572,7 @@
         android:layout_height="wrap_content"
         android:text="@string/coffee"
         android:textSize="35dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/coffee_c"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -578,7 +590,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -610,30 +622,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/arab_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/arab_minus_c"
                     android:onClick="arab_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/arab_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/arab_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/arab_plus_c"
                     android:onClick="arab_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/arab_btn_cc"
@@ -652,7 +665,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -683,30 +696,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/cappuchino_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/cappuchino_minus_c"
                     android:onClick="cappuchino_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/cappuchino_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/cappuchino_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/cappuchino_plus_c"
                     android:onClick="cappuchino_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/cappuchino_btn_cc"
@@ -725,7 +739,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/latte_i"
@@ -752,33 +766,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/latte_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/latte_minus_c"
                     android:onClick="latte_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/latte_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/latte_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/latte_plus_c"
                     android:onClick="latte_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/latte_btn_cc"
@@ -800,7 +816,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cake"
         android:textSize="35dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/cake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -817,7 +833,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -845,33 +861,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/mikado_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/mikado_minus_c"
                     android:onClick="mikado_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/mikado_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/mikado_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/mikado_plus_c"
                     android:onClick="mikado_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/mikado_btn_cc"
@@ -890,7 +908,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -918,33 +936,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/napoleon_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/napoleon_minus_c"
                     android:onClick="napoleon_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/napoleon_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/napoleon_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/napoleon_plus_c"
                     android:onClick="napoleon_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/napoleon_btn_cc"
@@ -963,7 +983,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/donat_i"
@@ -990,36 +1010,38 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/donut_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/donut_minus_c"
                     android:onClick="donut_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/donut_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
-                <ImageButton
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/add"
-                    android:clickable="true"
-                    android:id="@+id/donut_plus_c"
-                    android:onClick="donut_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
 
                 <ImageButton
-                    android:id="@+id/meat_btn_cc"
+                    android:id="@+id/donut_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:clickable="true"
+                    android:onClick="donut_plus_c"
+                    android:src="@drawable/add" />
+
+                <ImageButton
+                    android:id="@+id/donut_btn_cc"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="35dp"
@@ -1038,7 +1060,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fast_food"
         android:textSize="35dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/fast"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -1055,7 +1077,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1088,30 +1110,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/french_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/french_minus_c"
                     android:onClick="french_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/french_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/french_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/french_plus_c"
                     android:onClick="french_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/french_btn_cc"
@@ -1130,7 +1153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1162,30 +1185,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/hot_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/hot_minus_c"
                     android:onClick="hot_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/hot_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/hot_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/hot_plus_c"
                     android:onClick="hot_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/hot_btn_cc"
@@ -1204,7 +1228,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/burger_i"
@@ -1232,33 +1256,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/burger_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/burger_minus_c"
                     android:onClick="burger_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/burger_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/burger_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/burger_plus_c"
                     android:onClick="burger_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/burger_btn_cc"
@@ -1280,7 +1306,7 @@
         android:layout_height="wrap_content"
         android:text="@string/drinks"
         android:textSize="35dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/drink"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -1297,7 +1323,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/cola"
@@ -1324,33 +1350,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/cola_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/cola_minus_c"
                     android:onClick="cola_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/cola_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/cola_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/cola_plus_c"
                     android:onClick="cola_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/cola_btn_cc"
@@ -1369,7 +1397,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -1402,30 +1430,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/fanta_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/fanta_minus_c"
                     android:onClick="fanta_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/fanta_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/fanta_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/fanta_plus_c"
                     android:onClick="fanta_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/fanta_btn_cc"
@@ -1444,7 +1473,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/sprite_i"
@@ -1472,33 +1501,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/sprite_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/sprite_minus_c"
                     android:onClick="sprite_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/sprite_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/sprite_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/sprite_plus_c"
                     android:onClick="sprite_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/sprite_btn_cc"
@@ -1517,7 +1548,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1546,33 +1577,35 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageButton
+                    android:id="@+id/water_minus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/minus"
                     android:clickable="true"
-                    android:id="@+id/water_minus_c"
                     android:onClick="water_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/minus" />
+
                 <EditText
                     android:id="@+id/water_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
+
                 <ImageButton
+                    android:id="@+id/water_plus_c"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/add"
                     android:clickable="true"
-                    android:id="@+id/water_plus_c"
                     android:onClick="water_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:src="@drawable/add" />
 
                 <ImageButton
                     android:id="@+id/water_btn_cc"

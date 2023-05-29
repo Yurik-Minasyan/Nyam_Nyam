@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -126,9 +127,11 @@ public class Cart extends AppCompatActivity {
     EditText fantac;
     EditText spritec;
     EditText waterc;
+    Food_Nubers food;
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        food  = (Food_Nubers) getApplicationContext();
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
@@ -285,159 +288,162 @@ public class Cart extends AppCompatActivity {
                 }
             }
         });
-        Food_Nubers food_nubers = (Food_Nubers) getApplicationContext();
+        check();
 
-        meat_n = food_nubers.getMeat();
-        cheese_n = food_nubers.getCheese();
-        marinade_n = food_nubers.getMarinade();
-        micado_n = food_nubers.getMicado();
-        napoleon_n =food_nubers.getNapoleon();
-        donat_n = food_nubers.getDonat();
-        arabia_n = food_nubers.getArab();
-        cappuchino_n = food_nubers.getCappuccino();
-        latte_n =  food_nubers.getLatte();
-        french_n = food_nubers.getFrench();
-        hot_dog_n =food_nubers.getHot_dog();
-        burger_n = food_nubers.getBurger();
-        capreze_n = food_nubers.getCaprese();
-        caesar_n = food_nubers.getCaesar();
-        vegetable_n = food_nubers.getVegetable();
-        cola_n = food_nubers.getCola();
-        fanta_n = food_nubers.getFanta();
-        sprite_n = food_nubers.getSprite();
-        water_n = food_nubers.getWater();
+
+
+    }
+    public void check(){
+        meat_n = food.getMeat();
+        cheese_n = food.getCheese();
+        marinade_n = food.getMarinade();
+        micado_n = food.getMicado();
+        napoleon_n =food.getNapoleon();
+        donat_n = food.getDonat();
+        arabia_n = food.getArab();
+        cappuchino_n = food.getCappuccino();
+        latte_n =  food.getLatte();
+        french_n = food.getFrench();
+        hot_dog_n =food.getHot_dog();
+        burger_n = food.getBurger();
+        capreze_n = food.getCaprese();
+        caesar_n = food.getCaesar();
+        vegetable_n = food.getVegetable();
+        cola_n = food.getCola();
+        fanta_n = food.getFanta();
+        sprite_n = food.getSprite();
+        water_n = food.getWater();
         int sum = 0;
         if(meat_n > 0){
-
             meat.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
-            meat_p.setText(meat_n * 3000 + " amd" );
+            meat_p.setText(meat_n + " " + meat_n * 3000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += meat_n*3000;
         }
         if(cheese_n > 0){
             cheese.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
-            cheese_p.setText(cheese_n * 2500 + " amd" );
+            cheese_p.setText(cheese_n + " " +cheese_n * 2500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += cheese_n*2500;
         }
         if(marinade_n > 0){
             marinade.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
-            marinade_p.setText(marinade_n * 1800 + " amd" );
+            marinade_p.setText(marinade_n+ " " +marinade_n * 1800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += marinade_n*1800;
         }
         if(micado_n > 0){
             micado.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
-            micado_p.setText(micado_n * 550 + " amd" );
+            micado_p.setText(micado_n + " " + micado_n  * 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += micado_n*550;
         }
         if(napoleon_n > 0){
             napoleon.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
-            napoleon_p.setText(napoleon_n * 600 + " amd" );
+            napoleon_p.setText(napoleon_n + " " +  napoleon_n  * 600 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += napoleon_n*600;
         }
         if(donat_n > 0){
             donat.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
-            donat_p.setText(donat_n * 750 + " amd" );
+            donat_p.setText(donat_n + " " + donat_n * 750 + " amd");
             theEnd.setVisibility(View.VISIBLE);
             sum += donat_n*750;
         }
         if(arabia_n > 0){
             arabia.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
-            arabia_p.setText(arabia_n * 700 + " amd" );
+            arabia_p.setText(arabia_n + " " +arabia_n * 700 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += arabia_n*700;
         }
         if(cappuchino_n > 0){
             cappuchino.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
-            cappuchino_p.setText(cappuchino_n * 750 + " amd" );
+            cappuchino_p.setText(cappuchino_n + " " +cappuchino_n * 750 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += cappuchino_n*750;
         }
         if(latte_n > 0){
             latte.setVisibility(View.VISIBLE);
             coffeee.setVisibility(View.VISIBLE);
-            latte_p.setText(latte_n * 1000 + " amd" );
+            latte_p.setText(latte_n + " " +latte_n* 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += latte_n*1000;
         }
         if(french_n > 0){
             french.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
-            french_p.setText(french_n * 550 + " amd" );
+            french_p.setText(french_n + " " +french_n * 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += french_n*550;
         }
         if(hot_dog_n > 0){
             hot_dog.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
-            hot_dog_p.setText(hot_dog_n * 800 + " amd" );
+            hot_dog_p.setText(hot_dog_n + " "+ hot_dog_n  * 800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += hot_dog_n*800;
         }
         if(burger_n > 0){
             burger.setVisibility(View.VISIBLE);
             fastt.setVisibility(View.VISIBLE);
-            burger_p.setText(burger_n * 1200 + " amd" );
+            burger_p.setText(burger_n + " " + burger_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += burger_n*1200;
         }
         if(capreze_n > 0){
             capreze.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
-            capreze_p.setText(capreze_n * 1200 + " amd" );
+            capreze_p.setText(capreze_n + " " + capreze_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += capreze_n*1200;
         }
         if(caesar_n > 0){
             caesar.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
-            caesar_p.setText(caesar_n * 1000 + " amd" );
+            caesar_p.setText(caesar_n + " " +caesar_n  * 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += caesar_n*1000;
         }
         if(vegetable_n > 0){
             vegetable.setVisibility(View.VISIBLE);
             saladd.setVisibility(View.VISIBLE);
-            vegetable_p.setText(vegetable_n * 500 + " amd" );
+            vegetable_p.setText(vegetable_n + " " +vegetable_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += vegetable_n*500;
         }
         if(cola_n > 0){
             cola.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
-            cola_p.setText(cola_n * 500 + " amd" );
+            cola_p.setText(cola_n + " " + cola_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += cola_n*500;
         }
         if(fanta_n > 0){
             fanta.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
-            fanta_p.setText(fanta_n * 500 + " amd" );
+            fanta_p.setText(fanta_n + " " + fanta_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += fanta_n*500;
         }
         if(sprite_n > 0){
             sprite.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
-            sprite_p.setText(sprite_n * 500 + " amd" );
+            sprite_p.setText(sprite_n + " " + sprite_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += sprite_n*500;
         }
         if(water_n > 0){
             water.setVisibility(View.VISIBLE);
             drinkk.setVisibility(View.VISIBLE);
-            water_p.setText(water_n * 300 + " amd" );
+            water_p.setText(water_n + " " +water_n * 300 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             sum += water_n*300;
         }
@@ -462,8 +468,6 @@ public class Cart extends AppCompatActivity {
             meatc.setText(g);
         }
     }
-
-
     public void cheese_plus_c(View view){
         chessec = findViewById(R.id.cheese_num_c);
         String g = Integer.toString(chesse_c);
@@ -716,5 +720,182 @@ public class Cart extends AppCompatActivity {
             water_c--;
             waterc.setText(g);
         }
+    }
+/////////////////
+    public void meat_cart_c(View view){
+        meatc = findViewById(R.id.meat_num_c);
+        String g = meatc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMeat(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void cheese_cart_c(View view){
+        chessec = findViewById(R.id.cheese_num_c);
+        String g = chessec.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setCheese(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void marinade_cart_c(View view){
+        marinadc = findViewById(R.id.marinade_num_c);
+        String g = marinadc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void caprese_cart_c(View view){
+        capresec = findViewById(R.id.caprese_num_c);
+        String g = capresec.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void caesar_cart_c(View view){
+        caesarc = findViewById(R.id.caesar_num_c);
+        String g = caesarc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void vegetable_cart_c(View view){
+        vegetablec = findViewById(R.id.vegetable_num_c);
+        String g = vegetablec.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void arab_cart_c(View view){
+        arabc = findViewById(R.id.arab_num_c);
+        String g = arabc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void cappuchino_cart_c(View view){
+        cappuchinoc = findViewById(R.id.cappuchino_num_c);
+        String g = cappuchinoc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void latte_cart_c(View view){
+        lattec = findViewById(R.id.latte_num_c);
+        String g = lattec.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void french_cart_c(View view){
+        frenchc = findViewById(R.id.french_num_c);
+        String g = frenchc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void hot_cart_c(View view){
+        hot_dogc = findViewById(R.id.hot_num_c);
+        String g = hot_dogc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void burger_cart_c(View view){
+        burgerc = findViewById(R.id.burger_num_c);
+        String g = burgerc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void cola_cart_c(View view){
+        colac = findViewById(R.id.cola_num_c);
+        String g = colac.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void fanta_cart_c(View view){
+        fantac = findViewById(R.id.fanta_num_c);
+        String g = fantac.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void sprite_cart_c(View view){
+        spritec = findViewById(R.id.sprite_num_c);
+        String g = spritec.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
+    }
+    public void water_cart_c(View view){
+        waterc = findViewById(R.id.water_num_c);
+        String g = waterc.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setMarinade(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        check();
     }
 }
