@@ -1408,7 +1408,7 @@
                     android:src="@drawable/minus"
                     android:clickable="true"
                     android:id="@+id/fanta_minus_c"
-                    android:onClick="meat_minus_c"
+                    android:onClick="fanta_minus_c"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     />
                 <EditText

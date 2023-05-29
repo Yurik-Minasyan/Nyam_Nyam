@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -86,6 +87,45 @@ public class Cart extends AppCompatActivity {
     TextView drinkk;
     TextView cakee;
     TextView end_t;
+    int meat_c = 1;
+    int chesse_c = 1;
+    int marinade_c = 1;
+    int caprese_c = 1;
+    int caesar_c = 1;
+    int vegetable_c = 1;
+    int arab_c = 1;
+    int cappuchino_c = 1;
+    int latte_c = 1;
+    int mikado_c = 1;
+    int napoleon_c = 1;
+    int donut_c = 1;
+    int french_c = 1;
+    int hot_dog_c = 1;
+    int burger_c = 1;
+    int cola_c = 1;
+    int fanta_c = 1;
+    int sprite_c = 1;
+    int water_c = 1;
+
+    EditText meatc;
+    EditText chessec;
+    EditText marinadc;
+    EditText capresec;
+    EditText caesarc;
+    EditText vegetablec;
+    EditText arabc;
+    EditText cappuchinoc;
+    EditText lattec;
+    EditText mikadoc;
+    EditText napoleonc;
+    EditText donutc;
+    EditText frenchc;
+    EditText hot_dogc;
+    EditText burgerc;
+    EditText colac;
+    EditText fantac;
+    EditText spritec;
+    EditText waterc;
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -407,5 +447,274 @@ public class Cart extends AppCompatActivity {
         Intent i = new Intent(Cart.this, Main_Menu.class);
         startActivity(i);
     }
+///////////////////
+    public void meat_plus_c(View view){
+        meatc = findViewById(R.id.meat_num_c);
+        String g = Integer.toString(meat_c);
+        meatc.setText(g);
+        meat_c++;
+    }
+    public void meat_minus_c(View view){
+        meatc = findViewById(R.id.meat_num_c);
+        String g = Integer.toString(meat_c);
+        if(meat_c >= 0){
+            meat_c--;
+            meatc.setText(g);
+        }
+    }
 
+
+    public void cheese_plus_c(View view){
+        chessec = findViewById(R.id.cheese_num_c);
+        String g = Integer.toString(chesse_c);
+        chessec.setText(g);
+        chesse_c++;
+    }
+    public void cheese_minus_c(View view){
+        meatc = findViewById(R.id.cheese_num_c);
+        String g = Integer.toString(chesse_c);
+        if(chesse_c >= 0){
+            chesse_c--;
+            chessec.setText(g);
+        }
+    }
+    public void marinade_plus_c(View view){
+        marinadc = findViewById(R.id.marinade_num_c);
+        String g = Integer.toString(marinade_c);
+        marinadc.setText(g);
+        marinade_c++;
+    }
+    public void marinade_minus_c(View view){
+        meatc = findViewById(R.id.marinade_num_c);
+        String g = Integer.toString(marinade_c);
+        if(marinade_c >= 0){
+            marinade_c--;
+            marinadc.setText(g);
+        }
+    }
+
+    public void caprese_plus_c(View view){
+        capresec = findViewById(R.id.caprese_num_c);
+        String g = Integer.toString(caprese_c);
+        capresec.setText(g);
+        caprese_c++;
+    }
+    public void caprese_minus_c(View view){
+        capresec = findViewById(R.id.caprese_num_c);
+        String g = Integer.toString(caprese_c);
+        if(caprese_c >= 0){
+            caprese_c--;
+            capresec.setText(g);
+        }
+    }
+    public void caesar_plus_c(View view){
+        caesarc = findViewById(R.id.caesar_num_c);
+        String g = Integer.toString(caprese_c);
+        caesarc.setText(g);
+        caesar_c++;
+    }
+    public void caesar_minus_c(View view){
+        caesarc = findViewById(R.id.caesar_num_c);
+        String g = Integer.toString(caesar_c);
+        if(caesar_c >= 0){
+            caesar_c--;
+            caesarc.setText(g);
+        }
+    }
+    public void vegetable_plus_c(View view){
+        vegetablec = findViewById(R.id.vegetable_num_c);
+        String g = Integer.toString(vegetable_c);
+        vegetablec.setText(g);
+        vegetable_c++;
+    }
+    public void vegetable_minus_c(View view){
+        vegetablec = findViewById(R.id.vegetable_num_c);
+        String g = Integer.toString(vegetable_c);
+        if(vegetable_c >= 0){
+            vegetable_c--;
+            vegetablec.setText(g);
+        }
+    }
+    public void arab_plus_c(View view){
+        arabc = findViewById(R.id.arab_num_c);
+        String g = Integer.toString(arab_c);
+        arabc.setText(g);
+        arab_c++;
+    }
+    public void arab_minus_c(View view){
+        arabc = findViewById(R.id.arab_num_c);
+        String g = Integer.toString(arab_c);
+        if(arab_c >= 0){
+            arab_c--;
+            arabc.setText(g);
+        }
+    }
+    public void cappuchino_plus_c(View view){
+        cappuchinoc = findViewById(R.id.cappuchino_num_c);
+        String g = Integer.toString(cappuchino_c);
+        cappuchinoc.setText(g);
+        cappuchino_c++;
+    }
+    public void cappuchino_minus_c(View view){
+        cappuchinoc = findViewById(R.id.cappuchino_num_c);
+        String g = Integer.toString(cappuchino_c);
+        if(cappuchino_c >= 0){
+            cappuchino_c--;
+            cappuchinoc.setText(g);
+        }
+    }
+    public void latte_plus_c(View view){
+        lattec = findViewById(R.id.latte_num_c);
+        String g = Integer.toString(latte_c);
+        lattec.setText(g);
+        latte_c++;
+    }
+    public void latte_minus_c(View view){
+        lattec = findViewById(R.id.latte_num_c);
+        String g = Integer.toString(latte_c);
+        if(latte_c >= 0){
+            latte_c--;
+            lattec.setText(g);
+        }
+    }
+    public void mikado_plus_c(View view){
+        mikadoc = findViewById(R.id.mikado_num_c);
+        String g = Integer.toString(mikado_c);
+        mikadoc.setText(g);
+        mikado_c++;
+    }
+    public void mikado_minus_c(View view){
+        mikadoc = findViewById(R.id.mikado_num_c);
+        String g = Integer.toString(mikado_c);
+        if(mikado_c >= 0){
+            mikado_c--;
+            mikadoc.setText(g);
+        }
+    }
+    public void napoleon_plus_c(View view){
+        napoleonc = findViewById(R.id.napoleon_num_c);
+        String g = Integer.toString(napoleon_c);
+        napoleonc.setText(g);
+        napoleon_c++;
+    }
+    public void napoleon_minus_c(View view){
+        napoleonc = findViewById(R.id.napoleon_num_c);
+        String g = Integer.toString(napoleon_c);
+        if(napoleon_c >= 0){
+            napoleon_c--;
+            napoleonc.setText(g);
+        }
+    }
+    public void donut_plus_c(View view){
+        donutc = findViewById(R.id.donut_num_c);
+        String g = Integer.toString(donut_c);
+        donutc.setText(g);
+        donut_c++;
+    }
+    public void donut_minus_c(View view){
+        donutc = findViewById(R.id.donut_num_c);
+        String g = Integer.toString(donut_c);
+        if(donut_c >= 0){
+            donut_c--;
+            donutc.setText(g);
+        }
+    }
+    public void french_plus_c(View view){
+        frenchc = findViewById(R.id.french_num_c);
+        String g = Integer.toString(french_c);
+        frenchc.setText(g);
+        french_c++;
+    }
+    public void french_minus_c(View view){
+        frenchc = findViewById(R.id.french_num_c);
+        String g = Integer.toString(french_c);
+        if(french_c >= 0){
+            french_c--;
+            frenchc.setText(g);
+        }
+    }
+    public void hot_plus_c(View view){
+        hot_dogc = findViewById(R.id.hot_num_c);
+        String g = Integer.toString(hot_dog_c);
+        hot_dogc.setText(g);
+        hot_dog_c++;
+    }
+    public void hot_minus_c(View view){
+        frenchc = findViewById(R.id.hot_num_c);
+        String g = Integer.toString(hot_dog_c);
+        if(hot_dog_c >= 0){
+            hot_dog_c--;
+            hot_dogc.setText(g);
+        }
+    }
+    public void burger_plus_c(View view){
+        burgerc = findViewById(R.id.burger_num_c);
+        String g = Integer.toString(burger_c);
+        burgerc.setText(g);
+        burger_c++;
+    }
+    public void burger_minus_c(View view){
+        frenchc = findViewById(R.id.burger_num_c);
+        String g = Integer.toString(burger_c);
+        if(burger_c >= 0){
+            burger_c--;
+            burgerc.setText(g);
+        }
+    }
+    public void cola_plus_c(View view){
+        colac = findViewById(R.id.cola_num_c);
+        String g = Integer.toString(cola_c);
+        colac.setText(g);
+        cola_c++;
+    }
+    public void cola_minus_c(View view){
+        colac = findViewById(R.id.cola_num_c);
+        String g = Integer.toString(cola_c);
+        if(cola_c >= 0){
+            cola_c--;
+            colac.setText(g);
+        }
+    }
+    public void fanta_plus_c(View view){
+        fantac = findViewById(R.id.fanta_num_c);
+        String g = Integer.toString(fanta_c);
+        fantac.setText(g);
+        fanta_c++;
+    }
+    public void fanta_minus_c(View view){
+        fantac = findViewById(R.id.fanta_num_c);
+        String g = Integer.toString(fanta_c);
+        if(fanta_c >= 0){
+            fanta_c--;
+            fantac.setText(g);
+        }
+    }
+    public void sprite_plus_c(View view){
+        spritec = findViewById(R.id.sprite_num_c);
+        String g = Integer.toString(sprite_c);
+        spritec.setText(g);
+        sprite_c++;
+    }
+    public void sprite_minus_c(View view){
+        spritec = findViewById(R.id.sprite_num_c);
+        String g = Integer.toString(sprite_c);
+        if(sprite_c >= 0){
+            sprite_c--;
+            spritec.setText(g);
+        }
+    }
+    public void water_plus_c(View view){
+        waterc = findViewById(R.id.water_num_c);
+        String g = Integer.toString(water_c);
+        waterc.setText(g);
+        water_c++;
+    }
+    public void water_minus_c(View view){
+        waterc = findViewById(R.id.water_num_c);
+        String g = Integer.toString(water_c);
+        if(water_c >= 0){
+            water_c--;
+            waterc.setText(g);
+        }
+    }
 }

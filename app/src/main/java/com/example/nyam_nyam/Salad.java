@@ -192,10 +192,10 @@ public class Salad extends AppCompatActivity {
         caparse_num.setText(g);
         caprese++;
     }
-    public void marinad_minus(View view){
+    public void caprese_minus(View view){
         caparse_num = findViewById(R.id.caprese);
         String g = Integer.toString(caprese);
-        if(caprese >= 0){
+        if(caprese > 0){
             caprese--;
             caparse_num.setText(g);
         }
@@ -209,7 +209,7 @@ public class Salad extends AppCompatActivity {
     public void caesar_minus(View view){
         casear_num = findViewById(R.id.caesar);
         String g = Integer.toString(caprese);
-        if(casear >= 0){
+        if(casear > 0){
             casear--;
             casear_num.setText(g);
         }
@@ -224,7 +224,7 @@ public class Salad extends AppCompatActivity {
     public void vegetable_minus(View view){
         vegetablle_num = findViewById(R.id.vegetable);
         String g = Integer.toString(vegetable);
-        if(vegetable >= 0){
+        if(vegetable > 0){
             vegetable--;
             vegetablle_num.setText(g);
         }
