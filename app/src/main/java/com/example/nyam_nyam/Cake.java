@@ -25,6 +25,9 @@ public class Cake extends AppCompatActivity {
     EditText napoleon_num;
     EditText donut_num;
     Food_Nubers food;
+    int micado = 1;
+    int napoleon = 1;
+    int donut = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -183,4 +186,48 @@ public class Cake extends AppCompatActivity {
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
     }
+    public void micado_plus(View view){
+        mikado_num = findViewById(R.id.micado);
+        String g = Integer.toString(micado);
+        mikado_num.setText(g);
+        micado++;
+    }
+    public void micado_minus(View view){
+        mikado_num = findViewById(R.id.micado);
+        String g = Integer.toString(micado);
+        if(micado >= 0){
+            micado--;
+            mikado_num.setText(g);
+        }
+    }
+
+    public void napoleon_plus(View view){
+        napoleon_num = findViewById(R.id.napoleon);
+        String g = Integer.toString(napoleon);
+        napoleon_num.setText(g);
+        napoleon++;
+    }
+    public void napoleon_minus(View view){
+        napoleon_num = findViewById(R.id.napoleon);
+        String g = Integer.toString(napoleon);
+        if(napoleon >= 0){
+            napoleon--;
+            napoleon_num.setText(g);
+        }
+    }
+    public void donut_plus(View view){
+        donut_num = findViewById(R.id.donut);
+        String g = Integer.toString(donut);
+        donut_num.setText(g);
+        donut++;
+    }
+    public void donut_minus(View view){
+        donut_num = findViewById(R.id.donut);
+        String g = Integer.toString(donut);
+        if(donut >= 0){
+            donut--;
+            donut_num.setText(g);
+        }
+    }
+
 }

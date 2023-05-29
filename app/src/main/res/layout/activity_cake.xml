@@ -51,12 +51,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/micado_minus"
+                android:onClick="micado_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/micado"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/micado_plus"
+                android:onClick="micado_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -112,12 +130,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/napoleon_minus"
+                android:onClick="napoleon_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/napoleon"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/napoleon_plus"
+                android:onClick="napoleon_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
 
             <ImageButton
                 android:id="@+id/imageButton5"
@@ -171,12 +207,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/donut_minus"
+                android:onClick="donut_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/donut"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/donut_plus"
+                android:onClick="donut_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
 
             <ImageButton
                 android:id="@+id/imageButton"
