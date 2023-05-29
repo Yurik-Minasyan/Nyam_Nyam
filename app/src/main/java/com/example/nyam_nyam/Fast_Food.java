@@ -26,6 +26,11 @@ public class Fast_Food extends AppCompatActivity {
     EditText hot_dog_num;
     EditText burgir_num;
     Food_Nubers food;
+
+    int french = 1;
+    int hot_dog = 1;
+    int burgir = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,7 +155,7 @@ public class Fast_Food extends AppCompatActivity {
     }
     public void french(View view){
 
-        french_num = findViewById(R.id.french);
+        french_num = findViewById(R.id.french_num);
         String g = french_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
@@ -179,6 +184,51 @@ public class Fast_Food extends AppCompatActivity {
             food.setBurger(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void french_plus(View view){
+        french_num = findViewById(R.id.french_num);
+        String g = Integer.toString(french);
+        french_num.setText(g);
+        french++;
+    }
+    public void french_minus(View view){
+        french_num = findViewById(R.id.french_num);
+        String g = Integer.toString(french);
+        if(french >= 0){
+            french--;
+            french_num.setText(g);
+        }
+    }
+
+    public void hot_dog_plus(View view){
+        hot_dog_num = findViewById(R.id.hot_dog);
+        String g = Integer.toString(hot_dog);
+        hot_dog_num.setText(g);
+        hot_dog++;
+    }
+    public void hot_dog_minus(View view){
+        hot_dog_num = findViewById(R.id.hot_dog);
+        String g = Integer.toString(hot_dog);
+        if(hot_dog >= 0){
+            hot_dog--;
+            hot_dog_num.setText(g);
+        }
+    }
+
+    public void burgir_plus(View view){
+        burgir_num = findViewById(R.id.burgir);
+        String g = Integer.toString(burgir);
+        burgir_num.setText(g);
+        burgir++;
+    }
+    public void burgir_minus(View view){
+        burgir_num = findViewById(R.id.burgir);
+        String g = Integer.toString(burgir);
+        if(burgir >= 0){
+            burgir--;
+            burgir_num.setText(g);
         }
     }
 
