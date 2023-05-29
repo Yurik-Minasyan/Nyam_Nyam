@@ -186,13 +186,13 @@ public class Coffee extends AppCompatActivity {
         }
     }
 
-    public void marinad_plus(View view){
+    public void arab_plus(View view){
         arabia_num = findViewById(R.id.arab);
         String g = Integer.toString(arab);
         arabia_num.setText(g);
         arab++;
     }
-    public void marinad_minus(View view){
+    public void arab_minus(View view){
         arabia_num = findViewById(R.id.arab);
         String g = Integer.toString(arab);
         if(arab >= 0){

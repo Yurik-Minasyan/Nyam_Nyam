@@ -127,7 +127,7 @@ public class Food_Nubers extends Application {
         this.French=French;
     }
     public int getHot_dog(){
-        return Micado;
+        return Hotdog;
     }
     public void setHot_dog(int Hot_dog){
         this.Hotdog=Hot_dog;

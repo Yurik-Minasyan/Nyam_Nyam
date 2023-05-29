@@ -150,16 +150,6 @@ public class Naxutest extends AppCompatActivity {
         });
 
     }
-//    public void meat(View view){
-//        String n = meat.getText().toString();
-//      if (TextUtils.isEmpty()) {
-//
-//         return;
-//       }else{
-//            mDatabase.child("Meat").setValue("n");Toast.makeText(Naxutest.this,"Enter Number",Toast.LENGTH_LONG).show();
-//        }
-//    }
-
 
     public void home2(View view) {
         Intent i = new Intent(Naxutest.this, Main_Menu.class);

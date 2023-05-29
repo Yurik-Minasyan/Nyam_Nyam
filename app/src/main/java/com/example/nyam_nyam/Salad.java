@@ -170,7 +170,7 @@ public class Salad extends AppCompatActivity {
         String g = casear_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setCaprese(n);
+            food.setCaesar(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }

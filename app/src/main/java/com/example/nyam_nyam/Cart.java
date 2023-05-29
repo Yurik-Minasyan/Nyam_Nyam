@@ -644,7 +644,7 @@ public class Cart extends AppCompatActivity {
         hot_dog_c++;
     }
     public void hot_minus_c(View view){
-        frenchc = findViewById(R.id.hot_num_c);
+        hot_dogc = findViewById(R.id.hot_num_c);
         String g = Integer.toString(hot_dog_c);
         if(hot_dog_c >= 0){
             hot_dog_c--;
@@ -658,7 +658,7 @@ public class Cart extends AppCompatActivity {
         burger_c++;
     }
     public void burger_minus_c(View view){
-        frenchc = findViewById(R.id.burger_num_c);
+        burgerc = findViewById(R.id.burger_num_c);
         String g = Integer.toString(burger_c);
         if(burger_c >= 0){
             burger_c--;
@@ -760,7 +760,7 @@ public class Cart extends AppCompatActivity {
         String g = capresec.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setCaprese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -771,7 +771,7 @@ public class Cart extends AppCompatActivity {
         String g = caesarc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setCaesar(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -782,7 +782,7 @@ public class Cart extends AppCompatActivity {
         String g = vegetablec.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setVegetable(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -793,7 +793,7 @@ public class Cart extends AppCompatActivity {
         String g = arabc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setArab(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -804,7 +804,7 @@ public class Cart extends AppCompatActivity {
         String g = cappuchinoc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setCappuccino(2);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -815,7 +815,7 @@ public class Cart extends AppCompatActivity {
         String g = lattec.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setLatte(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -826,7 +826,7 @@ public class Cart extends AppCompatActivity {
         String g = frenchc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setFrench(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -837,7 +837,7 @@ public class Cart extends AppCompatActivity {
         String g = hot_dogc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setHot_dog(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
