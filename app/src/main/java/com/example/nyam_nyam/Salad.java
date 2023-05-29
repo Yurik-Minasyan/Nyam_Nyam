@@ -26,6 +26,10 @@ public class Salad extends AppCompatActivity {
     EditText caparse_num;
     EditText casear_num;
     EditText vegetablle_num;
+
+    int caprese = 1;
+    int casear = 1;
+    int vegetable = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -173,13 +177,56 @@ public class Salad extends AppCompatActivity {
     }
     public void vegetable(View view){
 
-        vegetablle_num = findViewById(R.id.caesar);
+        vegetablle_num = findViewById(R.id.vegetable);
         String g = vegetablle_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
             food.setVegetable(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void caprese_plus(View view){
+        caparse_num = findViewById(R.id.caprese);
+        String g = Integer.toString(caprese);
+        caparse_num.setText(g);
+        caprese++;
+    }
+    public void marinad_minus(View view){
+        caparse_num = findViewById(R.id.caprese);
+        String g = Integer.toString(caprese);
+        if(caprese >= 0){
+            caprese--;
+            caparse_num.setText(g);
+        }
+    }
+    public void caesar_plus(View view){
+        casear_num = findViewById(R.id.caesar);
+        String g = Integer.toString(casear);
+        casear_num.setText(g);
+        casear++;
+    }
+    public void caesar_minus(View view){
+        casear_num = findViewById(R.id.caesar);
+        String g = Integer.toString(caprese);
+        if(casear >= 0){
+            casear--;
+            casear_num.setText(g);
+        }
+    }
+
+    public void vegetable_plus(View view){
+        vegetablle_num = findViewById(R.id.vegetable);
+        String g = Integer.toString(vegetable);
+        vegetablle_num.setText(g);
+        vegetable++;
+    }
+    public void vegetable_minus(View view){
+        vegetablle_num = findViewById(R.id.vegetable);
+        String g = Integer.toString(vegetable);
+        if(vegetable >= 0){
+            vegetable--;
+            vegetablle_num.setText(g);
         }
     }
 
