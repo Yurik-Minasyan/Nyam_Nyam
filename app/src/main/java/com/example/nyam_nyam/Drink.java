@@ -258,5 +258,4 @@ public class Drink extends AppCompatActivity {
             water_num.setText(g);
         }
     }
-
 }
