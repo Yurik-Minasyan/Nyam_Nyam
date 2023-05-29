@@ -126,12 +126,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/chess_minus"
+                android:onClick="chess_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/chess_num"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/chess_plus"
+                android:onClick="chess_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
 
             <ImageButton
                 android:id="@+id/imageButton14"
@@ -184,12 +202,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/minus"
+                android:clickable="true"
+                android:id="@+id/marinad_minus"
+                android:onClick="marinad_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
             <EditText
                 android:id="@+id/marinad"
-                android:layout_width="65dp"
+                android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/add"
+                android:clickable="true"
+                android:id="@+id/marinad_plus"
+                android:onClick="marinad_plus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                />
 
             <ImageButton
                 android:id="@+id/imageButton13"

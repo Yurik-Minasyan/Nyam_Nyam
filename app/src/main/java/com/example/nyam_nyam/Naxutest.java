@@ -22,7 +22,9 @@ public class Naxutest extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
 
     SearchView sw;
-    int i = 0;
+    int meat = 1;
+    int cheese = 1;
+    int marinad = 1;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
@@ -204,17 +206,44 @@ public class Naxutest extends AppCompatActivity {
     }
     public void meat_plus(View view){
         meat_num = findViewById(R.id.meat_num);
-        String g = Integer.toString(i);
+        String g = Integer.toString(meat);
         meat_num.setText(g);
-        i++;
+        meat++;
     }
     public void meat_minus(View view){
         meat_num = findViewById(R.id.meat_num);
-        String g = Integer.toString(i);
-        if(i >= 0){
+        String g = Integer.toString(meat);
+        if(meat >= 0){
+            meat--;
             meat_num.setText(g);
-            i--;
         }
     }
-
+    public void chess_plus(View view){
+        cheese_num = findViewById(R.id.chess_num);
+        String g = Integer.toString(cheese);
+        cheese_num.setText(g);
+        cheese++;
+    }
+    public void chess_minus(View view){
+        cheese_num = findViewById(R.id.chess_num);
+        String g = Integer.toString(cheese);
+        if(cheese >= 0){
+            cheese--;
+            cheese_num.setText(g);
+        }
+    }
+    public void marinad_plus(View view){
+        marinade_num = findViewById(R.id.marinad);
+        String g = Integer.toString(marinad);
+        marinade_num.setText(g);
+        marinad++;
+    }
+    public void marinad_minus(View view){
+        marinade_num = findViewById(R.id.marinad);
+        String g = Integer.toString(marinad);
+        if(marinad >= 0){
+            marinad--;
+            marinade_num.setText(g);
+        }
+    }
 }
