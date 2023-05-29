@@ -23,6 +23,9 @@ public class Coffee extends AppCompatActivity {
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     Food_Nubers food;
+    int arab = 1;
+    int cappuchino = 1;
+    int latte = 1;
 
     EditText arabia_num;
     EditText cappuchino_num;
@@ -183,4 +186,46 @@ public class Coffee extends AppCompatActivity {
         }
     }
 
+    public void marinad_plus(View view){
+        arabia_num = findViewById(R.id.arab);
+        String g = Integer.toString(arab);
+        arabia_num.setText(g);
+        arab++;
+    }
+    public void marinad_minus(View view){
+        arabia_num = findViewById(R.id.arab);
+        String g = Integer.toString(arab);
+        if(arab >= 0){
+            arab--;
+            arabia_num.setText(g);
+        }
+    }
+    public void cappuchino_plus(View view){
+        cappuchino_num = findViewById(R.id.cappuchino);
+        String g = Integer.toString(cappuchino);
+        cappuchino_num.setText(g);
+        cappuchino++;
+    }
+    public void cappuchino_minus(View view){
+        cappuchino_num = findViewById(R.id.cappuchino);
+        String g = Integer.toString(cappuchino);
+        if(cappuchino >= 0){
+            cappuchino--;
+            cappuchino_num.setText(g);
+        }
+    }
+    public void latte_plus(View view){
+        lattee_num = findViewById(R.id.lattee);
+        String g = Integer.toString(latte);
+        lattee_num.setText(g);
+        latte++;
+    }
+    public void latte_minus(View view){
+        lattee_num = findViewById(R.id.lattee);
+        String g = Integer.toString(latte);
+        if(latte >= 0){
+            latte--;
+            lattee_num.setText(g);
+        }
+    }
 }
