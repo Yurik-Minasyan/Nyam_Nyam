@@ -357,6 +357,7 @@
     <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"

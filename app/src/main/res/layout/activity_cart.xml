@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgr_test1"
-    tools:context=".Cart">
+    tools:context=".Cart"
+    tools:ignore="ExtraText">
     <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
