@@ -313,32 +313,32 @@ public class Cart extends AppCompatActivity {
         fanta_n = food.getFanta();
         sprite_n = food.getSprite();
         water_n = food.getWater();
-        meatc = findViewById(R.id.meat_num_c);
-        chessec = findViewById(R.id.cheese_num_c);
-        marinadc = findViewById(R.id.marinade_num_c);
-        capresec = findViewById(R.id.caprese_num_c);
-        caesarc = findViewById(R.id.caesar_num_c);
-        vegetablec = findViewById(R.id.vegetable_num_c);
-        arabc = findViewById(R.id.arab_num_c);
-        cappuchinoc = findViewById(R.id.cappuchino_num_c);
-        lattec = findViewById(R.id.latte_num_c);
-        mikadoc = findViewById(R.id.mikado_num_c);
-        napoleonc = findViewById(R.id.napoleon_num_c);
-        donutc = findViewById(R.id.donut_num_c);
-        frenchc = findViewById(R.id.french_num_c);
-        hot_dogc = findViewById(R.id.hot_num_c);
-        burgerc = findViewById(R.id.burger_num_c);
-        colac = findViewById(R.id.cola_num_c);
-        fantac = findViewById(R.id.fanta_num_c);
-        spritec = findViewById(R.id.sprite_num_c);
-        waterc = findViewById(R.id.water_num_c);
+//        meatc = findViewById(R.id.meat_num_c);
+//        chessec = findViewById(R.id.cheese_num_c);
+//        marinadc = findViewById(R.id.marinade_num_c);
+//        capresec = findViewById(R.id.caprese_num_c);
+//        caesarc = findViewById(R.id.caesar_num_c);
+//        vegetablec = findViewById(R.id.vegetable_num_c);
+//        arabc = findViewById(R.id.arab_num_c);
+//        cappuchinoc = findViewById(R.id.cappuchino_num_c);
+//        lattec = findViewById(R.id.latte_num_c);
+//        mikadoc = findViewById(R.id.mikado_num_c);
+//        napoleonc = findViewById(R.id.napoleon_num_c);
+//        donutc = findViewById(R.id.donut_num_c);
+//        frenchc = findViewById(R.id.french_num_c);
+//        hot_dogc = findViewById(R.id.hot_num_c);
+//        burgerc = findViewById(R.id.burger_num_c);
+//        colac = findViewById(R.id.cola_num_c);
+//        fantac = findViewById(R.id.fanta_num_c);
+//        spritec = findViewById(R.id.sprite_num_c);
+//        waterc = findViewById(R.id.water_num_c);
         int sum = 0;
         if(meat_n > 0){
             meat.setVisibility(View.VISIBLE);
             snackk.setVisibility(View.VISIBLE);
             meat_p.setText(meat_n * 3000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            meatc.setText(meat_n);
+//            meatc.setText(meat_n);
             sum += meat_n*3000;
         }
         if(cheese_n > 0){
@@ -346,7 +346,7 @@ public class Cart extends AppCompatActivity {
             snackk.setVisibility(View.VISIBLE);
             cheese_p.setText(cheese_n * 2500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            chessec.setText(cheese_n);
+//            chessec.setText(cheese_n);
             sum += cheese_n*2500;
         }
         if(marinade_n > 0){
@@ -354,7 +354,7 @@ public class Cart extends AppCompatActivity {
             snackk.setVisibility(View.VISIBLE);
             marinade_p.setText(marinade_n * 1800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            marinadc.setText(marinade_n);
+//            marinadc.setText(marinade_n);
             sum += marinade_n*1800;
         }
         if(micado_n > 0){
@@ -362,7 +362,7 @@ public class Cart extends AppCompatActivity {
             cakee.setVisibility(View.VISIBLE);
             micado_p.setText(micado_n  * 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            mikadoc.setText(micado_n);
+//            mikadoc.setText(micado_n);
             sum += micado_n*550;
         }
         if(napoleon_n > 0){
@@ -370,7 +370,7 @@ public class Cart extends AppCompatActivity {
             cakee.setVisibility(View.VISIBLE);
             napoleon_p.setText(napoleon_n  * 600 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            napoleonc.setText(napoleon_n);
+//            napoleonc.setText(napoleon_n);
             sum += napoleon_n*600;
         }
         if(donat_n > 0){
@@ -378,7 +378,7 @@ public class Cart extends AppCompatActivity {
             cakee.setVisibility(View.VISIBLE);
             donat_p.setText(donat_n * 750 + " amd");
             theEnd.setVisibility(View.VISIBLE);
-            donutc.setText(donat_n);
+//            donutc.setText(donat_n);
             sum += donat_n*750;
         }
         if(arabia_n > 0){
@@ -386,7 +386,7 @@ public class Cart extends AppCompatActivity {
             coffeee.setVisibility(View.VISIBLE);
             arabia_p.setText(arabia_n * 700 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            arabc.setText(arabia_n);
+//            arabc.setText(arabia_n);
             sum += arabia_n*700;
         }
         if(cappuchino_n > 0){
@@ -394,7 +394,7 @@ public class Cart extends AppCompatActivity {
             coffeee.setVisibility(View.VISIBLE);
             cappuchino_p.setText(cappuchino_n * 750 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            cappuchinoc.setText(cappuchino_n);
+//            cappuchinoc.setText(cappuchino_n);
             sum += cappuchino_n*750;
         }
         if(latte_n > 0){
@@ -402,7 +402,7 @@ public class Cart extends AppCompatActivity {
             coffeee.setVisibility(View.VISIBLE);
             latte_p.setText(latte_n* 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            lattec.setText(latte_n);
+//            lattec.setText(latte_n);
             sum += latte_n*1000;
         }
         if(french_n > 0){
@@ -410,7 +410,7 @@ public class Cart extends AppCompatActivity {
             fastt.setVisibility(View.VISIBLE);
             french_p.setText(french_n * 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            frenchc.setText(french_c);
+//            frenchc.setText(french_c);
             sum += french_n*550;
         }
         if(hot_dog_n > 0){
@@ -418,7 +418,7 @@ public class Cart extends AppCompatActivity {
             fastt.setVisibility(View.VISIBLE);
             hot_dog_p.setText(hot_dog_n  * 800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            hot_dogc.setText(hot_dog_n);
+//            hot_dogc.setText(hot_dog_n);
             sum += hot_dog_n*800;
         }
         if(burger_n > 0){
@@ -426,7 +426,7 @@ public class Cart extends AppCompatActivity {
             fastt.setVisibility(View.VISIBLE);
             burger_p.setText(burger_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            burgerc.setText(burger_n);
+//            burgerc.setText(burger_n);
             sum += burger_n*1200;
         }
         if(capreze_n > 0){
@@ -434,7 +434,7 @@ public class Cart extends AppCompatActivity {
             saladd.setVisibility(View.VISIBLE);
             capreze_p.setText(capreze_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            capresec.setText(capreze_n);
+            //capresec.setText(capreze_n);
             sum += capreze_n*1200;
         }
         if(caesar_n > 0){
@@ -442,7 +442,7 @@ public class Cart extends AppCompatActivity {
             saladd.setVisibility(View.VISIBLE);
             caesar_p.setText(caesar_n  * 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            caesarc.setText(caesar_n);
+//            caesarc.setText(caesar_n);
             sum += caesar_n*1000;
         }
         if(vegetable_n > 0){
@@ -450,7 +450,7 @@ public class Cart extends AppCompatActivity {
             saladd.setVisibility(View.VISIBLE);
             vegetable_p.setText(vegetable_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            vegetablec.setText(vegetable_n);
+//            vegetablec.setText(vegetable_n);
             sum += vegetable_n*500;
         }
         if(cola_n > 0){
@@ -458,7 +458,7 @@ public class Cart extends AppCompatActivity {
             drinkk.setVisibility(View.VISIBLE);
             cola_p.setText(cola_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            colac.setText(cola_n);
+//            colac.setText(cola_n);
             sum += cola_n*500;
         }
         if(fanta_n > 0){
@@ -466,7 +466,7 @@ public class Cart extends AppCompatActivity {
             drinkk.setVisibility(View.VISIBLE);
             fanta_p.setText(fanta_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            fantac.setText(fanta_n);
+//            fantac.setText(fanta_n);
             sum += fanta_n*500;
         }
         if(sprite_n > 0){
@@ -474,7 +474,7 @@ public class Cart extends AppCompatActivity {
             drinkk.setVisibility(View.VISIBLE);
             sprite_p.setText(sprite_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            spritec.setText(sprite_n);
+//            spritec.setText(sprite_n);
             sum += sprite_n*500;
         }
         if(water_n > 0){
@@ -482,7 +482,7 @@ public class Cart extends AppCompatActivity {
             drinkk.setVisibility(View.VISIBLE);
             water_p.setText(water_n * 300 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
-            waterc.setText(water_n);
+//            waterc.setText(water_n);
             sum += water_n*300;
         }
         end_t.setText(sum + " amd");
