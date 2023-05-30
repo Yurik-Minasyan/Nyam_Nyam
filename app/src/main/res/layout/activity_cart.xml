@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dradient"
+    android:background="@color/backgr_test1"
     tools:context=".Cart">
-
-
-
-
     <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
@@ -86,7 +82,7 @@
     <LinearLayout
         android:layout_marginTop="50dp"
         android:id="@+id/snack"
-
+        android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
@@ -97,6 +93,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginRight="15dp"
             android:visibility="gone">
 
             <ImageView
@@ -174,6 +171,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginRight="15dp"
             android:visibility="gone">
 
             <ImageView
@@ -335,11 +333,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+    android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/snack"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/caprese_c"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -416,6 +416,7 @@
 
         <LinearLayout
             android:id="@+id/ceasar_c"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -581,6 +582,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/white"
         android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@+id/salad_c"
         tools:ignore="MissingConstraints">
@@ -588,6 +590,7 @@
         <LinearLayout
             android:id="@+id/arabia"
             android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone"
@@ -666,6 +669,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone"
+            android:layout_marginRight="15dp"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -824,12 +828,14 @@
         android:id="@+id/cake"
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
+        android:background="@color/white"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/coffee_c"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/mikado"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -909,11 +915,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone"
+            android:layout_marginRight="15dp"
             tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/napo"
                 android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
                 android:layout_height="115dp"
                 android:background="#33FFFFFF"
                 app:srcCompat="@drawable/napoleon" />
@@ -1060,6 +1068,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fast_food"
         android:textSize="35dp"
+
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/fast"
         app:layout_constraintEnd_toEndOf="parent"
@@ -1068,12 +1077,14 @@
         android:layout_marginTop="50dp"
         android:id="@+id/fast"
         android:layout_width="wrap_content"
+        android:background="@color/white"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/cake"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/french_f"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -1150,6 +1161,7 @@
 
         <LinearLayout
             android:id="@+id/hot_dog_ca"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -1313,6 +1325,7 @@
     <LinearLayout
         android:id="@+id/drink"
         android:layout_marginTop="50dp"
+        android:background="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/fast"
@@ -1320,6 +1333,7 @@
 
         <LinearLayout
             android:id="@+id/cola_c"
+            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -1395,6 +1409,7 @@
         <LinearLayout
             android:id="@+id/fanta_c"
             android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone"
@@ -1472,6 +1487,7 @@
             android:id="@+id/sprite_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
             android:visibility="gone">
 

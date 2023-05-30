@@ -360,7 +360,7 @@ public class Cart extends AppCompatActivity {
         if(micado_n > 0){
             micado.setVisibility(View.VISIBLE);
             cakee.setVisibility(View.VISIBLE);
-            micado_p.setText(micado_n + "-"+  marinade_n* 550 + " amd" );
+            micado_p.setText(micado_n + "-"+  micado_n* 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            mikadoc.setText(micado_n);
             sum += micado_n*550;
@@ -842,7 +842,7 @@ public class Cart extends AppCompatActivity {
         String g = cappuchinoc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setCappuccino(2);
+            food.setCappuccino(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -886,7 +886,7 @@ public class Cart extends AppCompatActivity {
         String g = burgerc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setBurger(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -897,7 +897,7 @@ public class Cart extends AppCompatActivity {
         String g = colac.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setCola(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -908,7 +908,7 @@ public class Cart extends AppCompatActivity {
         String g = fantac.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setFanta(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -919,7 +919,7 @@ public class Cart extends AppCompatActivity {
         String g = spritec.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setSprite(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
@@ -930,7 +930,7 @@ public class Cart extends AppCompatActivity {
         String g = waterc.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setMarinade(n);
+            food.setWater(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
