@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dradient"
+    android:background="@color/backgr_test1"
     tools:context=".Naxutest">
 
 
@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:background="@color/white"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
@@ -91,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/linearLayout19"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">
@@ -168,6 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/linearLayout20"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         tools:ignore="MissingConstraints">

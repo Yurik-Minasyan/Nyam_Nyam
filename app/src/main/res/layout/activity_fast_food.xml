@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dradient"
+    android:background="@color/backgr_test1"
     tools:context=".Fast_Food">
 
 
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -92,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/linearLayout16"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -170,6 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
+        android:background="@color/white"
         app:layout_constraintStart_toEndOf="@+id/linearLayout17"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
