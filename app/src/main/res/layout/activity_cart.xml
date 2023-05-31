@@ -168,7 +168,8 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -1018,7 +1019,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/donat_i"
@@ -1092,10 +1093,10 @@
             android:id="@+id/cake_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:text="@string/cake"
             android:textSize="35dp"
-            android:visibility="gone"
+            android:visibility="visible"
+            android:background="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/cake"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -1118,7 +1119,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1196,7 +1197,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1273,7 +1274,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/burger_i"
@@ -1348,10 +1349,10 @@
             android:id="@+id/fas_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:text="@string/fast_food"
             android:textSize="35dp"
-            android:visibility="gone"
+            android:background="@color/white"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/fast"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -1374,7 +1375,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/cola"
@@ -1451,7 +1452,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -1530,7 +1531,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/sprite_i"
@@ -1547,8 +1548,7 @@
                 android:gravity="center"
                 android:text="Sprite"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:visibility="gone" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sprite_pr"
@@ -1608,7 +1608,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1687,12 +1687,11 @@
             android:background="@color/white"
             android:text="@string/drinks"
             android:textSize="25dp"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/drink"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/end"
