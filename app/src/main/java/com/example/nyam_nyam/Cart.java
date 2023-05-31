@@ -347,126 +347,126 @@ public class Cart extends AppCompatActivity {
         }
         if(cheese_n > 0){
             cheese.setVisibility(View.VISIBLE);
-            cheese_p.setText(cheese_n + "-"+ cheese_n * 2500 + " amd" );
+            cheese_p.setText(cheese_n + "x"+ 2500 + "="+cheese_n * 2500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            chessec.setText(cheese_n);
             sum += cheese_n*2500;
         }
         if(marinade_n > 0){
             marinade.setVisibility(View.VISIBLE);
-            marinade_p.setText(marinade_n+ "-"+ marinade_n * 1800 + " amd" );
+            marinade_p.setText(marinade_n+ "x"+ 1800 + "=" +marinade_n * 1800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            marinadc.setText(marinade_n);
             sum += marinade_n*1800;
         }
         if(micado_n > 0){
             micado.setVisibility(View.VISIBLE);
-            micado_p.setText(micado_n + "-"+  micado_n* 550 + " amd" );
+            micado_p.setText(micado_n + "x"+ 550 + " = " + micado_n* 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            mikadoc.setText(micado_n);
             sum += micado_n*550;
         }
         if(napoleon_n > 0){
             napoleon.setVisibility(View.VISIBLE);
-            napoleon_p.setText(napoleon_n + "-"+ napoleon_n * 600 + " amd" );
+            napoleon_p.setText(napoleon_n + "x"+ 600 +"="+ napoleon_n * 600 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            napoleonc.setText(napoleon_n);
             sum += napoleon_n*600;
         }
         if(donat_n > 0){
             donat.setVisibility(View.VISIBLE);
-            donat_p.setText(donat_n + "-"+ donat_n * 750 + " amd");
+            donat_p.setText(donat_n + "x"+750 +"=" + donat_n * 750 + " amd");
             theEnd.setVisibility(View.VISIBLE);
 //            donutc.setText(donat_n);
             sum += donat_n*750;
         }
         if(arabia_n > 0){
             arabia.setVisibility(View.VISIBLE);
-            arabia_p.setText(arabia_n + "-"+ arabia_n * 700 + " amd" );
+            arabia_p.setText(arabia_n + "x"+ 700 + "=" + arabia_n * 700 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            arabc.setText(arabia_n);
             sum += arabia_n*700;
         }
         if(cappuchino_n > 0){
             cappuchino.setVisibility(View.VISIBLE);
-            cappuchino_p.setText(cappuchino_n + "-"+ cappuchino_n * 750 + " amd" );
+            cappuchino_p.setText(cappuchino_n + "x"+ 750 + "=" + cappuchino_n * 750 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            cappuchinoc.setText(cappuchino_n);
             sum += cappuchino_n*750;
         }
         if(latte_n > 0){
             latte.setVisibility(View.VISIBLE);
-            latte_p.setText(latte_n + "-"+ latte_n * 1000 + " amd" );
+            latte_p.setText(latte_n + "x"+ 1000 + "=" + latte_n * 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            lattec.setText(latte_n);
             sum += latte_n*1000;
         }
         if(french_n > 0){
             french.setVisibility(View.VISIBLE);
-            french_p.setText(french_n+ "-"+ french_n * 550 + " amd" );
+            french_p.setText(french_n+ "x"+ 550 + "=" + french_n * 550 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            frenchc.setText(french_c);
             sum += french_n*550;
         }
         if(hot_dog_n > 0){
             hot_dog.setVisibility(View.VISIBLE);
-            hot_dog_p.setText(hot_dog_n + "-"+ hot_dog_n  * 800 + " amd" );
+            hot_dog_p.setText(hot_dog_n + "x"+ 800 + "=" + hot_dog_n  * 800 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            hot_dogc.setText(hot_dog_n);
             sum += hot_dog_n*800;
         }
         if(burger_n > 0){
             burger.setVisibility(View.VISIBLE);
-            burger_p.setText(burger_n + "-"+ burger_n * 1200 + " amd" );
+            burger_p.setText(burger_n + "x" + 1200 + "=" + burger_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            burgerc.setText(burger_n);
             sum += burger_n*1200;
         }
         if(capreze_n > 0){
             capreze.setVisibility(View.VISIBLE);
-            capreze_p.setText(capreze_n + "-"+  capreze_n * 1200 + " amd" );
+            capreze_p.setText(capreze_n + "x"+ 1200 + "=" + capreze_n * 1200 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
             //capresec.setText(capreze_n);
             sum += capreze_n*1200;
         }
         if(caesar_n > 0){
             caesar.setVisibility(View.VISIBLE);
-            caesar_p.setText(caesar_n + "-"+  caesar_n * 1000 + " amd" );
+            caesar_p.setText(caesar_n + "x"+ 1000 + "=" + caesar_n * 1000 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            caesarc.setText(caesar_n);
             sum += caesar_n*1000;
         }
         if(vegetable_n > 0){
             vegetable.setVisibility(View.VISIBLE);
-            vegetable_p.setText(vegetable_n+ "-"+ vegetable_n * 500 + " amd" );
+            vegetable_p.setText(vegetable_n+ "x"+ 500 + "=" + vegetable_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            vegetablec.setText(vegetable_n);
             sum += vegetable_n*500;
         }
         if(cola_n > 0){
             cola.setVisibility(View.VISIBLE);
-            cola_p.setText(cola_n + "-"+ cola_n * 500 + " amd" );
+            cola_p.setText(cola_n + "x"+ 500 +"=" + cola_n * 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            colac.setText(cola_n);
             sum += cola_n*500;
         }
         if(fanta_n > 0){
             fanta.setVisibility(View.VISIBLE);
-            fanta_p.setText(fanta_n + "-"+ fanta_n* 500 + " amd" );
+            fanta_p.setText(fanta_n + "x"+ 500 +"=" + fanta_n* 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            fantac.setText(fanta_n);
             sum += fanta_n*500;
         }
         if(sprite_n > 0){
             sprite.setVisibility(View.VISIBLE);
-            sprite_p.setText(sprite_n + "-"+  sprite_n* 500 + " amd" );
+            sprite_p.setText(sprite_n + "x"+ 500 + "=" + sprite_n* 500 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            spritec.setText(sprite_n);
             sum += sprite_n*500;
         }
         if(water_n > 0){
             water.setVisibility(View.VISIBLE);
-            water_p.setText(water_n + "-"+ water_n* 300 + " amd" );
+            water_p.setText(water_n + "x"+ 300 + "=" + water_n* 300 + " amd" );
             theEnd.setVisibility(View.VISIBLE);
 //            waterc.setText(water_n);
             sum += water_n*300;
@@ -488,6 +488,7 @@ public class Cart extends AppCompatActivity {
         meat.setVisibility(View.GONE);
         sum -= meat_n*3000;
         end_t.setText(sum + " amd");
+        food.setMeat(0);
     }
     public void cheese_plus_c(View view){
         chessec = findViewById(R.id.cheese_num_c);
@@ -496,12 +497,10 @@ public class Cart extends AppCompatActivity {
         chesse_c++;
     }
     public void cheese_minus_c(View view){
-        chessec = findViewById(R.id.cheese_num_c);
-        String g = Integer.toString(chesse_c);
-        if(chesse_c >= 0){
-            chesse_c--;
-            chessec.setText(g);
-        }
+        cheese.setVisibility(View.GONE);
+        sum -= cheese_n*2500;
+        end_t.setText(sum + " amd");
+        food.setCheese(0);
     }
     public void marinade_plus_c(View view){
         marinadc = findViewById(R.id.marinade_num_c);
@@ -510,12 +509,10 @@ public class Cart extends AppCompatActivity {
         marinade_c++;
     }
     public void marinade_minus_c(View view){
-         marinadc = findViewById(R.id.marinade_num_c);
-        String g = Integer.toString(marinade_c);
-        if(marinade_c >= 0){
-            marinade_c--;
-            marinadc.setText(g);
-        }
+        marinade.setVisibility(View.GONE);
+        sum -= marinade_n*1800;
+        end_t.setText(sum + " amd");
+        food.setMarinade(0);
     }
 
     public void caprese_plus_c(View view){
@@ -525,12 +522,10 @@ public class Cart extends AppCompatActivity {
         caprese_c++;
     }
     public void caprese_minus_c(View view){
-        capresec = findViewById(R.id.caprese_num_c);
-        String g = Integer.toString(caprese_c);
-        if(caprese_c >= 0){
-            caprese_c--;
-            capresec.setText(g);
-        }
+        capreze.setVisibility(View.GONE);
+        sum -= capreze_n*1200;
+        end_t.setText(sum + " amd");
+        food.setCaprese(0);
     }
     public void caesar_plus_c(View view){
         caesarc = findViewById(R.id.caesar_num_c);
@@ -539,12 +534,10 @@ public class Cart extends AppCompatActivity {
         caesar_c++;
     }
     public void caesar_minus_c(View view){
-        caesarc = findViewById(R.id.caesar_num_c);
-        String g = Integer.toString(caesar_c);
-        if(caesar_c >= 0){
-            caesar_c--;
-            caesarc.setText(g);
-        }
+        caesar.setVisibility(View.GONE);
+        sum -= caesar_n*1000;
+        end_t.setText(sum + " amd");
+        food.setCaesar(0);
     }
     public void vegetable_plus_c(View view){
         vegetablec = findViewById(R.id.vegetable_num_c);
@@ -553,12 +546,10 @@ public class Cart extends AppCompatActivity {
         vegetable_c++;
     }
     public void vegetable_minus_c(View view){
-        vegetablec = findViewById(R.id.vegetable_num_c);
-        String g = Integer.toString(vegetable_c);
-        if(vegetable_c >= 0){
-            vegetable_c--;
-            vegetablec.setText(g);
-        }
+        vegetable.setVisibility(View.GONE);
+        sum -= vegetable_n*500;
+        end_t.setText(sum + " amd");
+        food.setVegetable(0);
     }
     public void arab_plus_c(View view){
         arabc = findViewById(R.id.arab_num_c);
@@ -567,12 +558,10 @@ public class Cart extends AppCompatActivity {
         arab_c++;
     }
     public void arab_minus_c(View view){
-        arabc = findViewById(R.id.arab_num_c);
-        String g = Integer.toString(arab_c);
-        if(arab_c >= 0){
-            arab_c--;
-            arabc.setText(g);
-        }
+        arabia.setVisibility(View.GONE);
+        sum -= arabia_n*700;
+        end_t.setText(sum + " amd");
+        food.setArab(0);
     }
     public void cappuchino_plus_c(View view){
         cappuchinoc = findViewById(R.id.cappuchino_num_c);
@@ -581,12 +570,10 @@ public class Cart extends AppCompatActivity {
         cappuchino_c++;
     }
     public void cappuchino_minus_c(View view){
-        cappuchinoc = findViewById(R.id.cappuchino_num_c);
-        String g = Integer.toString(cappuchino_c);
-        if(cappuchino_c >= 0){
-            cappuchino_c--;
-            cappuchinoc.setText(g);
-        }
+        cappuchino.setVisibility(View.GONE);
+        sum -= cappuchino_n*750;
+        end_t.setText(sum + " amd");
+        food.setCappuccino(0);
     }
     public void latte_plus_c(View view){
         lattec = findViewById(R.id.latte_num_c);
@@ -595,12 +582,10 @@ public class Cart extends AppCompatActivity {
         latte_c++;
     }
     public void latte_minus_c(View view){
-        lattec = findViewById(R.id.latte_num_c);
-        String g = Integer.toString(latte_c);
-        if(latte_c >= 0){
-            latte_c--;
-            lattec.setText(g);
-        }
+        latte.setVisibility(View.GONE);
+        sum -= latte_n*1000;
+        end_t.setText(sum + " amd");
+        food.setLatte(0);
     }
     public void mikado_plus_c(View view){
         mikadoc = findViewById(R.id.mikado_num_c);
@@ -609,12 +594,10 @@ public class Cart extends AppCompatActivity {
         mikado_c++;
     }
     public void mikado_minus_c(View view){
-        mikadoc = findViewById(R.id.mikado_num_c);
-        String g = Integer.toString(mikado_c);
-        if(mikado_c >= 0){
-            mikado_c--;
-            mikadoc.setText(g);
-        }
+        micado.setVisibility(View.GONE);
+        sum -= micado_n*550;
+        end_t.setText(sum + " amd");
+        food.setMicado(0);
     }
     public void napoleon_plus_c(View view){
         napoleonc = findViewById(R.id.napoleon_num_c);
@@ -623,12 +606,10 @@ public class Cart extends AppCompatActivity {
         napoleon_c++;
     }
     public void napoleon_minus_c(View view){
-        napoleonc = findViewById(R.id.napoleon_num_c);
-        String g = Integer.toString(napoleon_c);
-        if(napoleon_c >= 0){
-            napoleon_c--;
-            napoleonc.setText(g);
-        }
+        napoleon.setVisibility(View.GONE);
+        sum -= napoleon_n*600;
+        end_t.setText(sum + " amd");
+        food.setNapoleon(0);
     }
     public void donut_plus_c(View view){
         donutc = findViewById(R.id.donut_num_c);
@@ -637,12 +618,10 @@ public class Cart extends AppCompatActivity {
         donut_c++;
     }
     public void donut_minus_c(View view){
-        donutc = findViewById(R.id.donut_num_c);
-        String g = Integer.toString(donut_c);
-        if(donut_c >= 0){
-            donut_c--;
-            donutc.setText(g);
-        }
+        donat.setVisibility(View.GONE);
+        sum -= donat_n*750;
+        end_t.setText(sum + " amd");
+        food.setDonat(0);
     }
     public void french_plus_c(View view){
         frenchc = findViewById(R.id.french_num_c);
@@ -651,12 +630,10 @@ public class Cart extends AppCompatActivity {
         french_c++;
     }
     public void french_minus_c(View view){
-        frenchc = findViewById(R.id.french_num_c);
-        String g = Integer.toString(french_c);
-        if(french_c >= 0){
-            french_c--;
-            frenchc.setText(g);
-        }
+        french.setVisibility(View.GONE);
+        sum -= french_n*550;
+        end_t.setText(sum + " amd");
+        food.setFrench(0);
     }
     public void hot_plus_c(View view){
         hot_dogc = findViewById(R.id.hot_num_c);
@@ -665,12 +642,10 @@ public class Cart extends AppCompatActivity {
         hot_dog_c++;
     }
     public void hot_minus_c(View view){
-        hot_dogc = findViewById(R.id.hot_num_c);
-        String g = Integer.toString(hot_dog_c);
-        if(hot_dog_c >= 0){
-            hot_dog_c--;
-            hot_dogc.setText(g);
-        }
+        hot_dog.setVisibility(View.GONE);
+        sum -= hot_dog_n*800;
+        end_t.setText(sum + " amd");
+        food.setHot_dog(0);
     }
     public void burger_plus_c(View view){
         burgerc = findViewById(R.id.burger_num_c);
@@ -679,12 +654,10 @@ public class Cart extends AppCompatActivity {
         burger_c++;
     }
     public void burger_minus_c(View view){
-        burgerc = findViewById(R.id.burger_num_c);
-        String g = Integer.toString(burger_c);
-        if(burger_c >= 0){
-            burger_c--;
-            burgerc.setText(g);
-        }
+        burger.setVisibility(View.GONE);
+        sum -= burger_n*1200;
+        end_t.setText(sum + " amd");
+        food.setBurger(0);
     }
     public void cola_plus_c(View view){
         colac = findViewById(R.id.cola_num_c);
@@ -693,12 +666,10 @@ public class Cart extends AppCompatActivity {
         cola_c++;
     }
     public void cola_minus_c(View view){
-        colac = findViewById(R.id.cola_num_c);
-        String g = Integer.toString(cola_c);
-        if(cola_c >= 0){
-            cola_c--;
-            colac.setText(g);
-        }
+        cola.setVisibility(View.GONE);
+        sum -= cola_n*500;
+        end_t.setText(sum + " amd");
+        food.setCola(0);
     }
     public void fanta_plus_c(View view){
         fantac = findViewById(R.id.fanta_num_c);
@@ -707,12 +678,10 @@ public class Cart extends AppCompatActivity {
         fanta_c++;
     }
     public void fanta_minus_c(View view){
-        fantac = findViewById(R.id.fanta_num_c);
-        String g = Integer.toString(fanta_c);
-        if(fanta_c >= 0){
-            fanta_c--;
-            fantac.setText(g);
-        }
+        fanta.setVisibility(View.GONE);
+        sum -= fanta_n*500;
+        end_t.setText(sum + " amd");
+        food.setFanta(0);
     }
     public void sprite_plus_c(View view){
         spritec = findViewById(R.id.sprite_num_c);
@@ -721,12 +690,10 @@ public class Cart extends AppCompatActivity {
         sprite_c++;
     }
     public void sprite_minus_c(View view){
-        spritec = findViewById(R.id.sprite_num_c);
-        String g = Integer.toString(sprite_c);
-        if(sprite_c >= 0){
-            sprite_c--;
-            spritec.setText(g);
-        }
+        sprite.setVisibility(View.GONE);
+        sum -= sprite_n*500;
+        end_t.setText(sum + " amd");
+        food.setSprite(0);
     }
     public void water_plus_c(View view){
         waterc = findViewById(R.id.water_num_c);
@@ -735,12 +702,11 @@ public class Cart extends AppCompatActivity {
         water_c++;
     }
     public void water_minus_c(View view){
-        waterc = findViewById(R.id.water_num_c);
-        String g = Integer.toString(water_c);
-        if(water_c >= 0){
-            water_c--;
-            waterc.setText(g);
-        }
+        water.setVisibility(View.GONE);
+        sum -= water_n*300;
+        end_t.setText(sum + " amd");
+        food.setWater(0);
+
     }
 /////////////////
     public void meat_cart_c(View view){
