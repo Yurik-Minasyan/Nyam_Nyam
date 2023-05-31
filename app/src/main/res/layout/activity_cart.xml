@@ -75,7 +75,7 @@
     <LinearLayout
         android:layout_marginTop="40dp"
         android:id="@+id/snack"
-
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
@@ -85,10 +85,10 @@
             android:id="@+id/meat_Lay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:layout_marginLeft="30dp"
+
+            android:orientation="horizontal"
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageViewexper"
@@ -97,65 +97,80 @@
 
                 app:srcCompat="@drawable/mser" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/meat"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/meat_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="meat_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/meat"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/meat_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/meat_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="meat_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/meat_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="meat_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/meat_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="meat_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/meat_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/meat_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="meat_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/meat_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="meat_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
 
 
@@ -168,14 +183,13 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="170dp"
                 android:layout_height="115dp"
-
                 app:srcCompat="@drawable/panir" />
 
             <TextView
@@ -316,19 +330,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/snack_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:text="@string/snack"
-            android:textSize="35dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/snack"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
     </LinearLayout>
 ////////////////////////////////
 
@@ -576,19 +577,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/salad_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:text="@string/salad"
-            android:textSize="35dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/snack"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
     </LinearLayout>
 //////////////////////////////
 
@@ -833,17 +821,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/coffee_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="@string/coffee"
-            android:textSize="35dp"
-            android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/coffee_c"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 /////////////////
 
@@ -1019,7 +996,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/donat_i"
@@ -1089,17 +1066,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/cake_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cake"
-            android:textSize="35dp"
-            android:visibility="visible"
-            android:background="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/cake"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 ///////////////////////
 
@@ -1119,7 +1085,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1197,7 +1163,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1274,7 +1240,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/burger_i"
@@ -1345,17 +1311,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/fas_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fast_food"
-            android:textSize="35dp"
-            android:background="@color/white"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/fast"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 ///////////////
 
@@ -1375,7 +1330,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/cola"
@@ -1452,7 +1407,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -1531,7 +1486,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/sprite_i"
@@ -1608,7 +1563,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1679,18 +1634,6 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/drink_tt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="@string/drinks"
-            android:textSize="25dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/drink"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
     <LinearLayout
