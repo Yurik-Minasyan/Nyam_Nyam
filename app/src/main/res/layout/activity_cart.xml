@@ -62,6 +62,7 @@
 
         <ListView
             android:id="@+id/list"
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:visibility="gone"
@@ -70,22 +71,11 @@
     </LinearLayout>
 /////////////////////////////////////////////////////////
 
-    <TextView
-        android:id="@+id/snack_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/snack"
-        android:textSize="35dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/snack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
+
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/snack"
-        android:background="@color/white"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
@@ -96,8 +86,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageViewexper"
@@ -142,10 +133,10 @@
                 <EditText
                     android:id="@+id/meat_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/meat_plus_c"
@@ -175,8 +166,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -221,10 +213,10 @@
                 <EditText
                     android:id="@+id/cheese_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/cheese_plus_c"
@@ -251,8 +243,9 @@
             android:id="@+id/marinad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -296,10 +289,10 @@
                 <EditText
                     android:id="@+id/marinade_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/marinade_plus_c"
@@ -321,25 +314,28 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/snack_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/snack"
+            android:textSize="35dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/snack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
     </LinearLayout>
 ////////////////////////////////
 
-    <TextView
-        android:id="@+id/salad_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/salad"
-        android:textSize="40dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/salad_c"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
         android:id="@+id/salad_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-    android:background="@color/white"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/snack"
         tools:ignore="MissingConstraints">
 
@@ -348,8 +344,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -395,10 +392,10 @@
                 <EditText
                     android:id="@+id/caprese_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/caprese_plus_c"
@@ -426,8 +423,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/caesar_i"
@@ -472,11 +470,11 @@
                 <EditText
                     android:id="@+id/caesar_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
-
                     android:layout_height="35dp"
+
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/caesar_plus_c"
@@ -503,8 +501,9 @@
             android:id="@+id/vegetable_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="ExtraText">
 
             <ImageView
@@ -550,9 +549,9 @@
                     android:id="@+id/vegetable_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
-                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/vegetable_plus_c"
@@ -574,26 +573,29 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/salad_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/salad"
+            android:textSize="35dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/snack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />
     </LinearLayout>
 //////////////////////////////
 
-    <TextView
-        android:id="@+id/coffee_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/coffee"
-        android:textSize="35dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/coffee_c"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
         android:id="@+id/coffee_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/white"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/salad_c"
         tools:ignore="MissingConstraints">
 
@@ -602,8 +604,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -648,10 +651,10 @@
                 <EditText
                     android:id="@+id/arab_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/arab_plus_c"
@@ -679,8 +682,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -725,9 +729,9 @@
                     android:id="@+id/cappuchino_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
-                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/cappuchino_plus_c"
@@ -754,8 +758,9 @@
             android:id="@+id/latte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/latte_i"
@@ -799,10 +804,10 @@
                 <EditText
                     android:id="@+id/latte_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/latte_plus_c"
@@ -824,24 +829,25 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/coffee_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coffee"
+            android:textSize="35dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/coffee_c"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 /////////////////
 
-    <TextView
-        android:id="@+id/cake_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cake"
-        android:textSize="35dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/cake"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
         android:id="@+id/cake"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
-        android:background="@color/white"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/coffee_c"
         tools:ignore="MissingConstraints">
@@ -851,8 +857,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -897,10 +904,10 @@
                 <EditText
                     android:id="@+id/mikado_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/mikado_plus_c"
@@ -928,8 +935,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -975,10 +983,10 @@
                 <EditText
                     android:id="@+id/napoleon_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/napoleon_plus_c"
@@ -1005,8 +1013,9 @@
             android:id="@+id/donut_lay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/donat_i"
@@ -1051,9 +1060,9 @@
                     android:id="@+id/donut_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
-                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/donut_plus_c"
@@ -1075,25 +1084,25 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/cake_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cake"
+            android:textSize="35dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/cake"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 ///////////////////////
 
-    <TextView
-        android:id="@+id/fas_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/fast_food"
-        android:textSize="35dp"
 
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/fast"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/fast"
         android:layout_width="wrap_content"
-        android:background="@color/white"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/cake"
         tools:ignore="MissingConstraints">
@@ -1103,15 +1112,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/french_i"
                 android:layout_width="170dp"
                 android:layout_height="115dp"
-
                 app:srcCompat="@drawable/frechfries" />
 
             <TextView
@@ -1150,10 +1159,10 @@
                 <EditText
                     android:id="@+id/french_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/french_plus_c"
@@ -1181,8 +1190,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1226,11 +1236,11 @@
 
                 <EditText
                     android:id="@+id/hot_num_c"
-                    android:textAlignment="center"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/hot_plus_c"
@@ -1257,8 +1267,9 @@
             android:id="@+id/burger"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/burger_i"
@@ -1304,9 +1315,9 @@
                     android:id="@+id/burger_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
-                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/burger_plus_c"
@@ -1328,23 +1339,25 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/fas_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fast_food"
+            android:textSize="35dp"
+
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/fast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 ///////////////
 
-    <TextView
-        android:id="@+id/drink_tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/drinks"
-        android:textSize="35dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/drink"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
         android:id="@+id/drink"
-        android:layout_marginTop="50dp"
-        android:background="@color/white"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/fast"
@@ -1355,8 +1368,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/cola"
@@ -1400,10 +1414,10 @@
                 <EditText
                     android:id="@+id/cola_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/cola_plus_c"
@@ -1431,8 +1445,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -1478,10 +1493,10 @@
                 <EditText
                     android:id="@+id/fanta_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/fanta_plus_c"
@@ -1509,8 +1524,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/sprite_i"
@@ -1556,9 +1572,9 @@
                     android:id="@+id/sprite_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
-                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/sprite_plus_c"
@@ -1585,8 +1601,9 @@
             android:id="@+id/water_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1632,10 +1649,10 @@
                 <EditText
                     android:id="@+id/water_num_c"
                     android:layout_width="50dp"
-                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <ImageButton
                     android:id="@+id/water_plus_c"
@@ -1657,6 +1674,17 @@
                     android:src="@drawable/cart" />
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/drink_tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drinks"
+            android:textSize="25dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/drink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
     <LinearLayout
