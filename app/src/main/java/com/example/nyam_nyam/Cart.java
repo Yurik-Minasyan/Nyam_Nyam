@@ -772,10 +772,14 @@ public class Cart extends AppCompatActivity {
     public void meat_cart_c(View view){
         meatc = findViewById(R.id.meat_num_c);
         String g = meatc.getText().toString();
+//        meat.setVisibility(View.GONE);
         int n = Integer.parseInt(g);
-        if (n > 0){
+        if (n == 0){
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+            meat.setVisibility(View.GONE);
+        } else if(n > 0){
             food.setMeat(n);
-        }else{
+        } else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
         check();

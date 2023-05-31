@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="snack"
-            android:layout_marginLeft="250dp"
             android:text="@string/snack"
             android:textColor="@color/black"
             android:textSize="22dp"
@@ -36,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="550dp"
             android:onClick="salad"
             android:text="@string/salad"
             android:textColor="@color/black"
@@ -50,7 +49,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:onClick="junk_food"
-            android:layout_marginLeft="100dp"
             android:text="@string/fast_food"
 
             android:textColor="@color/black"
@@ -76,7 +74,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"
             android:onClick="coffee"
             android:text="@string/coffee"
             android:textColor="@color/black"
@@ -93,8 +90,6 @@
             android:text="@string/cake"
             android:textColor="@color/black"
             android:textSize="22dp"
-            android:layout_gravity="end"
-            android:layout_marginRight="50dp"
             android:textStyle="bold"
             tools:ignore="TextSizeCheck" />
     </LinearLayout>
