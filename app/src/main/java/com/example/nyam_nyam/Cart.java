@@ -975,6 +975,7 @@ public class Cart extends AppCompatActivity {
         if (n > 0){
             food.setDonat(n);
         }else{
+
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
         check();
