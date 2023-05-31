@@ -62,9 +62,9 @@
 
         <ListView
             android:id="@+id/list"
-            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:background="@color/white"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/search"
             tools:layout_editor_absoluteX="1dp" />
@@ -73,7 +73,7 @@
 
 
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:id="@+id/snack"
 
         android:layout_width="wrap_content"
@@ -320,8 +320,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/snack"
             android:background="@color/white"
+            android:text="@string/snack"
             android:textSize="35dp"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/snack"
@@ -580,8 +580,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/salad"
             android:background="@color/white"
+            android:text="@string/salad"
             android:textSize="35dp"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/snack"
@@ -836,8 +836,8 @@
             android:id="@+id/coffee_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/coffee"
             android:background="@color/white"
+            android:text="@string/coffee"
             android:textSize="35dp"
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/coffee_c"
@@ -1092,6 +1092,7 @@
             android:id="@+id/cake_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:text="@string/cake"
             android:textSize="35dp"
             android:visibility="gone"
@@ -1347,9 +1348,9 @@
             android:id="@+id/fas_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:text="@string/fast_food"
             android:textSize="35dp"
-
             android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/fast"
             app:layout_constraintEnd_toEndOf="parent"
@@ -1546,7 +1547,8 @@
                 android:gravity="center"
                 android:text="Sprite"
                 android:textColor="@color/black"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/sprite_pr"
@@ -1682,6 +1684,7 @@
             android:id="@+id/drink_tt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:text="@string/drinks"
             android:textSize="25dp"
             android:visibility="gone"
@@ -1689,6 +1692,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/end"
