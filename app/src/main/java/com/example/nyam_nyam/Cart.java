@@ -1,11 +1,12 @@
 package com.example.nyam_nyam;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,10 +16,17 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class Cart extends AppCompatActivity {
+    private DatabaseReference mDatabase;
+
     SearchView sw;
     LinearLayout meat;
     LinearLayout cheese;
@@ -131,6 +139,7 @@ public class Cart extends AppCompatActivity {
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         food  = (Food_Nubers) getApplicationContext();
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
@@ -969,5 +978,23 @@ public class Cart extends AppCompatActivity {
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
         check();
+    }
+    public void to_database(View view){
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference myRef = database.getReference("message");
+//        myRef.setValue("Hello, World!");
+        mDatabase.child("hello").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    end_t.setText(String.valueOf(task.getResult().getValue()));
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                }
+            }
+        });
+
     }
 }
