@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgr_test1"
+    android:background="@drawable/background"
     tools:context=".Cart"
     tools:ignore="ExtraText">
     <LinearLayout
@@ -1694,23 +1694,30 @@
         android:id="@+id/end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginLeft="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-        <ImageButton
-            android:id="@+id/end_i"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="to_database"
-            app:srcCompat="@drawable/cart"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="25dp"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/end_t"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="35dp"/>
+        <Button
+            android:id="@+id/end_i"
+            android:background="@xml/button_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="to_database"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:text="@string/order"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
