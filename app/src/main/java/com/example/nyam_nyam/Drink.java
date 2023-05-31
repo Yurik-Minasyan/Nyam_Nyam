@@ -205,57 +205,22 @@ public class Drink extends AppCompatActivity {
         cola_num.setText(g);
         cola++;
     }
-    public void cola_minus(View view){
-        cola_num = findViewById(R.id.cola);
-        String g = Integer.toString(cola);
-        if(cola >= 0){
-            cola--;
-            cola_num.setText(g);
-        }
-    }
-
     public void fanta_plus(View view){
         fanta_num = findViewById(R.id.fanta);
         String g = Integer.toString(fanta);
         fanta_num.setText(g);
         fanta++;
     }
-    public void fanta_minus(View view){
-        fanta_num = findViewById(R.id.fanta);
-        String g = Integer.toString(fanta);
-        if(fanta >= 0){
-            fanta--;
-            fanta_num.setText(g);
-        }
-    }
-
     public void sprite_plus(View view){
         sprite_num = findViewById(R.id.sprite);
         String g = Integer.toString(sprite);
         sprite_num.setText(g);
         sprite++;
     }
-    public void sprite_minus(View view){
-        sprite_num = findViewById(R.id.sprite);
-        String g = Integer.toString(sprite);
-        if(sprite >= 0){
-            sprite--;
-            sprite_num.setText(g);
-        }
-    }
-
     public void water_plus(View view){
         water_num = findViewById(R.id.water);
         String g = Integer.toString(water);
         water_num.setText(g);
         water++;
-    }
-    public void water_minus(View view){
-        water_num = findViewById(R.id.water);
-        String g = Integer.toString(water);
-        if(water >= 0){
-            water--;
-            water_num.setText(g);
-        }
     }
 }

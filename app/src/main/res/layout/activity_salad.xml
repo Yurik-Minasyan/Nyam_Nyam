@@ -50,18 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/caprese_minus"
-                android:onClick="caprese_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/caprese"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -129,18 +121,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/caesar_minus"
-                android:onClick="caesar_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/caesar"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"
@@ -208,18 +192,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/vegetable_minus"
-                android:onClick="vegetable_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
             <EditText
                 android:id="@+id/vegetable"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"

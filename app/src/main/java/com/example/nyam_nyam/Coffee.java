@@ -192,40 +192,16 @@ public class Coffee extends AppCompatActivity {
         arabia_num.setText(g);
         arab++;
     }
-    public void arab_minus(View view){
-        arabia_num = findViewById(R.id.arab);
-        String g = Integer.toString(arab);
-        if(arab >= 0){
-            arab--;
-            arabia_num.setText(g);
-        }
-    }
     public void cappuchino_plus(View view){
         cappuchino_num = findViewById(R.id.cappuchino);
         String g = Integer.toString(cappuchino);
         cappuchino_num.setText(g);
         cappuchino++;
     }
-    public void cappuchino_minus(View view){
-        cappuchino_num = findViewById(R.id.cappuchino);
-        String g = Integer.toString(cappuchino);
-        if(cappuchino >= 0){
-            cappuchino--;
-            cappuchino_num.setText(g);
-        }
-    }
     public void latte_plus(View view){
         lattee_num = findViewById(R.id.lattee);
         String g = Integer.toString(latte);
         lattee_num.setText(g);
         latte++;
-    }
-    public void latte_minus(View view){
-        lattee_num = findViewById(R.id.lattee);
-        String g = Integer.toString(latte);
-        if(latte >= 0){
-            latte--;
-            lattee_num.setText(g);
-        }
     }
 }

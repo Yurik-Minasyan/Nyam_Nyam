@@ -192,42 +192,17 @@ public class Cake extends AppCompatActivity {
         mikado_num.setText(g);
         micado++;
     }
-    public void micado_minus(View view){
-        mikado_num = findViewById(R.id.micado);
-        String g = Integer.toString(micado);
-        if(micado >= 0){
-            micado--;
-            mikado_num.setText(g);
-        }
-    }
-
     public void napoleon_plus(View view){
         napoleon_num = findViewById(R.id.napoleon);
         String g = Integer.toString(napoleon);
         napoleon_num.setText(g);
         napoleon++;
     }
-    public void napoleon_minus(View view){
-        napoleon_num = findViewById(R.id.napoleon);
-        String g = Integer.toString(napoleon);
-        if(napoleon >= 0){
-            napoleon--;
-            napoleon_num.setText(g);
-        }
-    }
     public void donut_plus(View view){
         donut_num = findViewById(R.id.donut);
         String g = Integer.toString(donut);
         donut_num.setText(g);
         donut++;
-    }
-    public void donut_minus(View view){
-        donut_num = findViewById(R.id.donut);
-        String g = Integer.toString(donut);
-        if(donut >= 0){
-            donut--;
-            donut_num.setText(g);
-        }
     }
 
 }

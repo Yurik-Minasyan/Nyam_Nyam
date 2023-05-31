@@ -186,19 +186,11 @@ public class Salad extends AppCompatActivity {
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
     }
-    public void caprese_plus(View view){
+    public void caprese_plus(View view) {
         caparse_num = findViewById(R.id.caprese);
         String g = Integer.toString(caprese);
         caparse_num.setText(g);
         caprese++;
-    }
-    public void caprese_minus(View view){
-        caparse_num = findViewById(R.id.caprese);
-        String g = Integer.toString(caprese);
-        if(caprese > 0){
-            caprese--;
-            caparse_num.setText(g);
-        }
     }
     public void caesar_plus(View view){
         casear_num = findViewById(R.id.caesar);
@@ -206,28 +198,11 @@ public class Salad extends AppCompatActivity {
         casear_num.setText(g);
         casear++;
     }
-    public void caesar_minus(View view){
-        casear_num = findViewById(R.id.caesar);
-        String g = Integer.toString(caprese);
-        if(casear > 0){
-            casear--;
-            casear_num.setText(g);
-        }
-    }
-
     public void vegetable_plus(View view){
         vegetablle_num = findViewById(R.id.vegetable);
         String g = Integer.toString(vegetable);
         vegetablle_num.setText(g);
         vegetable++;
-    }
-    public void vegetable_minus(View view){
-        vegetablle_num = findViewById(R.id.vegetable);
-        String g = Integer.toString(vegetable);
-        if(vegetable > 0){
-            vegetable--;
-            vegetablle_num.setText(g);
-        }
     }
 
 }

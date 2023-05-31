@@ -51,18 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/french_minus"
-                android:onClick="french_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
             <EditText
                 android:id="@+id/french_num"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -132,18 +123,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/hot_dog_minus"
-                android:onClick="hot_dog_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/hot_dog"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"
@@ -213,18 +196,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/burgir_minus"
-                android:onClick="burgir_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/burgir"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"

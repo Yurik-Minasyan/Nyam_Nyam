@@ -200,40 +200,16 @@ public class Naxutest extends AppCompatActivity {
         meat_num.setText(g);
         meat++;
     }
-    public void meat_minus(View view){
-        meat_num = findViewById(R.id.meat_num);
-        String g = Integer.toString(meat);
-        if(meat >= 0){
-            meat--;
-            meat_num.setText(g);
-        }
-    }
     public void chess_plus(View view){
         cheese_num = findViewById(R.id.chess_num);
         String g = Integer.toString(cheese);
         cheese_num.setText(g);
         cheese++;
     }
-    public void chess_minus(View view){
-        cheese_num = findViewById(R.id.chess_num);
-        String g = Integer.toString(cheese);
-        if(cheese >= 0){
-            cheese--;
-            cheese_num.setText(g);
-        }
-    }
     public void marinad_plus(View view){
         marinade_num = findViewById(R.id.marinad);
         String g = Integer.toString(marinad);
         marinade_num.setText(g);
         marinad++;
-    }
-    public void marinad_minus(View view){
-        marinade_num = findViewById(R.id.marinad);
-        String g = Integer.toString(marinad);
-        if(marinad >= 0){
-            marinad--;
-            marinade_num.setText(g);
-        }
     }
 }

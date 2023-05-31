@@ -193,14 +193,6 @@ public class Fast_Food extends AppCompatActivity {
         french_num.setText(g);
         french++;
     }
-    public void french_minus(View view){
-        french_num = findViewById(R.id.french_num);
-        String g = Integer.toString(french);
-        if(french >= 0){
-            french--;
-            french_num.setText(g);
-        }
-    }
 
     public void hot_dog_plus(View view){
         hot_dog_num = findViewById(R.id.hot_dog);
@@ -208,28 +200,13 @@ public class Fast_Food extends AppCompatActivity {
         hot_dog_num.setText(g);
         hot_dog++;
     }
-    public void hot_dog_minus(View view){
-        hot_dog_num = findViewById(R.id.hot_dog);
-        String g = Integer.toString(hot_dog);
-        if(hot_dog >= 0){
-            hot_dog--;
-            hot_dog_num.setText(g);
-        }
-    }
+
 
     public void burgir_plus(View view){
         burgir_num = findViewById(R.id.burgir);
         String g = Integer.toString(burgir);
         burgir_num.setText(g);
         burgir++;
-    }
-    public void burgir_minus(View view){
-        burgir_num = findViewById(R.id.burgir);
-        String g = Integer.toString(burgir);
-        if(burgir >= 0){
-            burgir--;
-            burgir_num.setText(g);
-        }
     }
 
 }

@@ -50,19 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/cola_minus"
-                android:onClick="cola_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
             <EditText
                 android:id="@+id/cola"
                 android:textAlignment="center"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
@@ -130,18 +121,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/fanta_minus"
-                android:onClick="fanta_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/fanta"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -210,18 +193,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/sprite_minus"
-                android:onClick="sprite_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
+
             <EditText
                 android:id="@+id/sprite"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -289,19 +264,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/minus"
-                android:clickable="true"
-                android:id="@+id/water_minus"
-                android:onClick="water_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                />
             <EditText
                 android:id="@+id/water"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"

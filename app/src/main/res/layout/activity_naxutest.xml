@@ -49,18 +49,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/meat_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:clickable="true"
-                android:onClick="meat_minus"
-                android:src="@drawable/minus" />
 
             <EditText
                 android:id="@+id/meat_num"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"
@@ -131,18 +123,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/chess_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:clickable="true"
-                android:onClick="chess_minus"
-                android:src="@drawable/minus" />
 
             <EditText
                 android:id="@+id/chess_num"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"
@@ -210,18 +194,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/marinad_minus"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:clickable="true"
-                android:onClick="marinad_minus"
-                android:src="@drawable/minus" />
-
             <EditText
                 android:id="@+id/marinad"
-                android:layout_width="50dp"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
                 android:textAlignment="center"
                 android:background="@xml/edittext_view"
