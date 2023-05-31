@@ -61,6 +61,7 @@
                 />
             <EditText
                 android:id="@+id/cola"
+                android:textAlignment="center"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
@@ -141,6 +142,7 @@
             <EditText
                 android:id="@+id/fanta"
                 android:layout_width="50dp"
+                android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
@@ -220,6 +222,7 @@
             <EditText
                 android:id="@+id/sprite"
                 android:layout_width="50dp"
+                android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
@@ -299,6 +302,7 @@
             <EditText
                 android:id="@+id/water"
                 android:layout_width="50dp"
+                android:textAlignment="center"
                 android:layout_height="35dp"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />

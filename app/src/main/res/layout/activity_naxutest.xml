@@ -62,6 +62,7 @@
                 android:id="@+id/meat_num"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
+                android:textAlignment="center"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
 
@@ -143,6 +144,7 @@
                 android:id="@+id/chess_num"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
+                android:textAlignment="center"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
 
@@ -221,6 +223,7 @@
                 android:id="@+id/marinad"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
+                android:textAlignment="center"
                 android:background="@xml/edittext_view"
                 android:inputType="number" />
 

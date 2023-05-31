@@ -63,7 +63,8 @@
         <ListView
             android:id="@+id/list"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="90dp"
+            android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/search"
             tools:layout_editor_absoluteX="1dp" />
     </LinearLayout>
@@ -94,9 +95,9 @@
             android:id="@+id/meat_Lay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginRight="15dp"
-            android:visibility="gone">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageViewexper"
@@ -141,6 +142,7 @@
                 <EditText
                     android:id="@+id/meat_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -172,9 +174,9 @@
             android:id="@+id/cheese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginRight="15dp"
-            android:visibility="gone">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -219,6 +221,7 @@
                 <EditText
                     android:id="@+id/cheese_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -249,7 +252,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -293,6 +296,7 @@
                 <EditText
                     android:id="@+id/marinade_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -341,11 +345,11 @@
 
         <LinearLayout
             android:id="@+id/caprese_c"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -391,6 +395,7 @@
                 <EditText
                     android:id="@+id/caprese_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -418,11 +423,11 @@
 
         <LinearLayout
             android:id="@+id/ceasar_c"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/caesar_i"
@@ -467,6 +472,8 @@
                 <EditText
                     android:id="@+id/caesar_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
+
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -497,7 +504,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="ExtraText">
 
             <ImageView
@@ -543,6 +550,7 @@
                     android:id="@+id/vegetable_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
+                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
 
@@ -592,10 +600,10 @@
         <LinearLayout
             android:id="@+id/arabia"
             android:layout_width="wrap_content"
-            android:layout_marginRight="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -640,6 +648,7 @@
                 <EditText
                     android:id="@+id/arab_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -669,9 +678,9 @@
             android:id="@+id/cappuchino_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
             android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -716,6 +725,7 @@
                     android:id="@+id/cappuchino_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
+                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
 
@@ -745,7 +755,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/latte_i"
@@ -789,6 +799,7 @@
                 <EditText
                     android:id="@+id/latte_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -837,11 +848,11 @@
 
         <LinearLayout
             android:id="@+id/mikado"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -886,6 +897,7 @@
                 <EditText
                     android:id="@+id/mikado_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -915,16 +927,16 @@
             android:id="@+id/napoleon_lay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone"
             android:layout_marginRight="15dp"
+            android:orientation="vertical"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
                 android:id="@+id/napo"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_height="115dp"
+                android:layout_marginRight="15dp"
                 android:background="#33FFFFFF"
                 app:srcCompat="@drawable/napoleon" />
 
@@ -963,6 +975,7 @@
                 <EditText
                     android:id="@+id/napoleon_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -993,7 +1006,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/donat_i"
@@ -1038,6 +1051,7 @@
                     android:id="@+id/donut_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
+                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
 
@@ -1086,11 +1100,11 @@
 
         <LinearLayout
             android:id="@+id/french_f"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1136,6 +1150,7 @@
                 <EditText
                     android:id="@+id/french_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -1163,11 +1178,11 @@
 
         <LinearLayout
             android:id="@+id/hot_dog_ca"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1211,6 +1226,7 @@
 
                 <EditText
                     android:id="@+id/hot_num_c"
+                    android:textAlignment="center"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
@@ -1242,7 +1258,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/burger_i"
@@ -1288,6 +1304,7 @@
                     android:id="@+id/burger_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
+                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
 
@@ -1335,11 +1352,11 @@
 
         <LinearLayout
             android:id="@+id/cola_c"
-            android:layout_marginRight="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/cola"
@@ -1383,6 +1400,7 @@
                 <EditText
                     android:id="@+id/cola_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -1411,10 +1429,10 @@
         <LinearLayout
             android:id="@+id/fanta_c"
             android:layout_width="wrap_content"
-            android:layout_marginRight="15dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent">
 
             <ImageView
@@ -1460,6 +1478,7 @@
                 <EditText
                     android:id="@+id/fanta_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
@@ -1491,7 +1510,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:id="@+id/sprite_i"
@@ -1537,6 +1556,7 @@
                     android:id="@+id/sprite_num_c"
                     android:layout_width="50dp"
                     android:layout_height="35dp"
+                    android:textAlignment="center"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
 
@@ -1566,7 +1586,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             tools:ignore="MissingConstraints">
 
             <ImageView
@@ -1612,6 +1632,7 @@
                 <EditText
                     android:id="@+id/water_num_c"
                     android:layout_width="50dp"
+                    android:textAlignment="center"
                     android:layout_height="35dp"
                     android:background="@xml/edittext_view"
                     android:inputType="number" />
