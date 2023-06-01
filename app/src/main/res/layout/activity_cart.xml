@@ -6,7 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_height="match_parent">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -1821,7 +1820,6 @@
                             android:id="@+id/sprite_num_c"
                             android:layout_width="50dp"
                             android:layout_height="35dp"
-                            android:layout_height="35dp"
                             android:layout_marginRight="15dp"
                             android:background="@xml/edittext_view"
                             android:inputType="number"
@@ -1955,7 +1953,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="25dp"
+            android:visibility="gone"
             >
             <TextView
                 android:layout_width="wrap_content"
@@ -1963,6 +1961,7 @@
                 android:id="@+id/end_t"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
+
                 android:textSize="35dp"/>
             <Button
                 android:id="@+id/end_i"
