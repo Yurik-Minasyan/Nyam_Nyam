@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,10 +17,14 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -165,6 +170,22 @@ public class Main_Menu extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Firestore.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(Main_Menu.this,"Successful",Toast.LENGTH_LONG).show();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d(TAG, "FiredStore");
+                        Log.d(TAG, document.getId() + " => " + document.getData());
+                    }
+                }
+                else{
+                    Toast.makeText(Main_Menu.this,"Failed",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
