@@ -1,28 +1,33 @@
 package com.example.nyam_nyam;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Cart extends AppCompatActivity {
     private DatabaseReference mDatabase;
@@ -88,6 +93,7 @@ public class Cart extends AppCompatActivity {
     TextView cola_p;
     TextView fanta_p;
     TextView sprite_p;
+    Button end_b;
     TextView water_p;
     TextView snackk;
     TextView saladd;
@@ -137,6 +143,7 @@ public class Cart extends AppCompatActivity {
     EditText waterc;
     Food_Nubers food;
     int sum;
+    FirebaseFirestore Firestore;
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,158 +152,158 @@ public class Cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
-        end_t = findViewById(R.id.end_t);
-        meat = findViewById(R.id.meat_Lay);
-
-        cheese = findViewById(R.id.cheese);
-        marinade = findViewById(R.id.marinad);
-        micado = findViewById(R.id.mikado);
-        napoleon = findViewById(R.id.napoleon_lay);
-        donat = findViewById(R.id.donut_lay);
-        arabia = findViewById(R.id.arabia);
-        cappuchino = findViewById(R.id.cappuchino_c);
-        latte = findViewById(R.id.latte);
-        french = findViewById(R.id.french_f);
-        hot_dog = findViewById(R.id.hot_dog_ca);
-        burger = findViewById(R.id.burger);
-        capreze = findViewById(R.id.caprese_c);
-        caesar = findViewById(R.id.ceasar_c);
-        vegetable = findViewById(R.id.vegetable_c);
-        cola = findViewById(R.id.cola_c);
-        fanta = findViewById(R.id.fanta_c);
-        sprite = findViewById(R.id.sprite_c);
-        water = findViewById(R.id.water_c);
-        theEnd = findViewById(R.id.end);
-        sw = findViewById(R.id.search);
-        lw = findViewById(R.id.list);
-        lw.setVisibility(View.GONE);
-        meat_p = findViewById(R.id.textView2);
-        cheese_p = findViewById(R.id.chesse_pr);
-        marinade_p = findViewById(R.id.marinade);
-        micado_p = findViewById(R.id.mikadoo);
-        napoleon_p = findViewById(R.id.napoleont);
-        donat_p = findViewById(R.id.donat_pr);
-        arabia_p = findViewById(R.id.arabia_pr);
-        latte_p = findViewById(R.id.latte_pr);
-        french_p = findViewById(R.id.french_pr);
-        cappuchino_p = findViewById(R.id.cappuchino_pr);
-        hot_dog_p = findViewById(R.id.hot_dog_pr);
-        burger_p = findViewById(R.id.burger_pr);
-        capreze_p = findViewById(R.id.caprese_pr);
-        caesar_p = findViewById(R.id.caesar_pr);
-        vegetable_p = findViewById(R.id.vegetable_pr);
-        cola_p = findViewById(R.id.cola_pr);
-        fanta_p = findViewById(R.id.fanta_pr);
-        sprite_p = findViewById(R.id.sprite_pr);
-        water_p = findViewById(R.id.water_pr);
-        array = new ArrayList<>();
-        array.add("Մսային նախուտեստներ");//0
-        array.add("Պանրի տեսականի");//1
-        array.add("Թթուներ");//2
-        array.add("Կապարզե");//3
-        array.add("Կեսար");//4
-        array.add("Բանջարեղենային");//5
-        array.add("Կարտոֆիլ ֆրի");//6
-        array.add("Հոթ-դոգ բարբիքյու");//7
-        array.add("Տավարի մսով բուրգեր");//8
-        array.add("Արաբիկա");//9
-        array.add("Կապուչինո");//10
-        array.add("Լատտե");//11
-        array.add("Միկադո");//12
-        array.add("Նապոլեոն");//13
-        array.add("Կարամելային միջուկով դոնաթ");//14
-        array.add("Закуски");//15
-        array.add("Сыры");//16
-        array.add("Маринады");//17
-        array.add("Капрезе");//18
-        array.add("Цезарь");//19
-        array.add("Овощной");//20
-        array.add("Картофель фри");//21
-        array.add("Хот-дог барбекю");//22
-        array.add("Бургер с говядиной");//23
-        array.add("Арабика");//24
-        array.add("Капучино");//25
-        array.add("Латте");//26
-        array.add("Микадо");//27
-        array.add("Наполеон");//28
-        array.add("Донат с карамельной начинкой");//29
-        array.add("Meat snacks");//30
-        array.add("Cheese");//31
-        array.add("Marinades");//32
-        array.add("Caprese");//33
-        array.add("Caesar");//34
-        array.add("Vegetable");//35
-        array.add("French fries");//36
-        array.add("Hot-dog barbeque");//37
-        array.add("Beef burger");//38
-        array.add("Latte");//39
-        array.add("Arabia");//40
-        array.add("Cappuccino");//41
-        array.add("Coca-Cola");//42
-        array.add("Fanta");//43
-        array.add("Sprite");//44
-        array.add("Water");//45
-        array.add("Micado");//46
-        array.add("Napoleon");//47
-        array.add("Caramel filled donut");//48
-        array.add("Ջուր");//49
-        array.add("Вода");//50
-        adapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,array);
-        lw.setAdapter(adapter);
-        sw.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                if(s.length() != 0){
-                    lw.setVisibility(View.VISIBLE);
-                    adapter.getFilter().filter(s);
-                }
-                else{
-                    lw.setVisibility(View.GONE);
+        {
+            end_t = findViewById(R.id.end_t);
+            meat = findViewById(R.id.meat_Lay);
+            end_b =findViewById(R.id.end_i);
+            cheese = findViewById(R.id.cheese);
+            marinade = findViewById(R.id.marinad);
+            micado = findViewById(R.id.mikado);
+            napoleon = findViewById(R.id.napoleon_lay);
+            donat = findViewById(R.id.donut_lay);
+            arabia = findViewById(R.id.arabia);
+            cappuchino = findViewById(R.id.cappuchino_c);
+            latte = findViewById(R.id.latte);
+            french = findViewById(R.id.french_f);
+            hot_dog = findViewById(R.id.hot_dog_ca);
+            burger = findViewById(R.id.burger);
+            capreze = findViewById(R.id.caprese_c);
+            caesar = findViewById(R.id.ceasar_c);
+            vegetable = findViewById(R.id.vegetable_c);
+            cola = findViewById(R.id.cola_c);
+            fanta = findViewById(R.id.fanta_c);
+            sprite = findViewById(R.id.sprite_c);
+            water = findViewById(R.id.water_c);
+            theEnd = findViewById(R.id.end);
+            sw = findViewById(R.id.search);
+            lw = findViewById(R.id.list);
+            lw.setVisibility(View.GONE);
+            meat_p = findViewById(R.id.textView2);
+            cheese_p = findViewById(R.id.chesse_pr);
+            marinade_p = findViewById(R.id.marinade);
+            micado_p = findViewById(R.id.mikadoo);
+            napoleon_p = findViewById(R.id.napoleont);
+            donat_p = findViewById(R.id.donat_pr);
+            arabia_p = findViewById(R.id.arabia_pr);
+            latte_p = findViewById(R.id.latte_pr);
+            french_p = findViewById(R.id.french_pr);
+            cappuchino_p = findViewById(R.id.cappuchino_pr);
+            hot_dog_p = findViewById(R.id.hot_dog_pr);
+            burger_p = findViewById(R.id.burger_pr);
+            capreze_p = findViewById(R.id.caprese_pr);
+            caesar_p = findViewById(R.id.caesar_pr);
+            vegetable_p = findViewById(R.id.vegetable_pr);
+            cola_p = findViewById(R.id.cola_pr);
+            fanta_p = findViewById(R.id.fanta_pr);
+            sprite_p = findViewById(R.id.sprite_pr);
+            water_p = findViewById(R.id.water_pr);
+            array = new ArrayList<>();
+            array.add("Մսային նախուտեստներ");//0
+            array.add("Պանրի տեսականի");//1
+            array.add("Թթուներ");//2
+            array.add("Կապարզե");//3
+            array.add("Կեսար");//4
+            array.add("Բանջարեղենային");//5
+            array.add("Կարտոֆիլ ֆրի");//6
+            array.add("Հոթ-դոգ բարբիքյու");//7
+            array.add("Տավարի մսով բուրգեր");//8
+            array.add("Արաբիկա");//9
+            array.add("Կապուչինո");//10
+            array.add("Լատտե");//11
+            array.add("Միկադո");//12
+            array.add("Նապոլեոն");//13
+            array.add("Կարամելային միջուկով դոնաթ");//14
+            array.add("Закуски");//15
+            array.add("Сыры");//16
+            array.add("Маринады");//17
+            array.add("Капрезе");//18
+            array.add("Цезарь");//19
+            array.add("Овощной");//20
+            array.add("Картофель фри");//21
+            array.add("Хот-дог барбекю");//22
+            array.add("Бургер с говядиной");//23
+            array.add("Арабика");//24
+            array.add("Капучино");//25
+            array.add("Латте");//26
+            array.add("Микадо");//27
+            array.add("Наполеон");//28
+            array.add("Донат с карамельной начинкой");//29
+            array.add("Meat snacks");//30
+            array.add("Cheese");//31
+            array.add("Marinades");//32
+            array.add("Caprese");//33
+            array.add("Caesar");//34
+            array.add("Vegetable");//35
+            array.add("French fries");//36
+            array.add("Hot-dog barbeque");//37
+            array.add("Beef burger");//38
+            array.add("Latte");//39
+            array.add("Arabia");//40
+            array.add("Cappuccino");//41
+            array.add("Coca-Cola");//42
+            array.add("Fanta");//43
+            array.add("Sprite");//44
+            array.add("Water");//45
+            array.add("Micado");//46
+            array.add("Napoleon");//47
+            array.add("Caramel filled donut");//48
+            array.add("Ջուր");//49
+            array.add("Вода");//50
+            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, array);
+            lw.setAdapter(adapter);
+            sw.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String s) {
+                    return false;
                 }
 
-                return false;
-            }
-        });
-        lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
-                String text = lw.getItemAtPosition(i).toString();
-                //Toast.makeText(Main_Menu.this, ""+text, Toast.LENGTH_SHORT).show();
-                if(text=="Water" || text=="Вода" || text=="Ջուր" || text=="Coca-Cola" || text=="Fanta" || text=="Sprite"){
-                    Intent iy = new Intent(Cart.this, Drink.class);
-                    startActivity(iy);
-                }
-                if(text=="Մսային նախուտեստներ" || text=="Պանրի տեսականի" || text=="Թթուներ" || text=="Закуски" || text=="Сыры" || text=="Маринады" || text=="Meat snacks" || text=="Cheese" || text=="Marinades"){
-                    Intent iy = new Intent(Cart.this, Naxutest.class);
-                    startActivity(iy);
-                }
-                if(text=="Կապարզե" || text=="Կեսար" || text=="Բանջարեղենային" || text=="Капрезе" || text=="Цезарь" || text=="Овощной" || text=="Caprese" || text=="Caesar" || text=="Vegetable"){
-                    Intent iy = new Intent(Cart.this, Salad.class);
-                    startActivity(iy);
-                }
-                if(text=="Կարտոֆիլ ֆրի" || text=="Հոթ-դոգ բարբիքյու" || text=="Տավարի մսով բուրգեր" || text=="Картофель фри" || text=="Хот-дог барбекю" || text=="Бургер с говядиной" || text=="Hot-dog barbeque" || text=="French fries" || text=="Beef burger"){
-                    Intent iy = new Intent(Cart.this, Fast_Food.class);
-                    startActivity(iy);
-                }
-                if(text=="Արաբիկա" || text=="Կապուչինո" || text=="Լատտե" || text=="Арабика" || text=="Капучино" || text=="Латте" || text=="Latte" || text=="Arabia" || text=="Cappuccino"){
-                    Intent iy = new Intent(Cart.this, Fast_Food.class);
-                    startActivity(iy);
-                }
-                if(text=="Միկադո" || text=="Նապոլեոն" || text=="Կարամելային միջուկով դոնաթ" || text=="Наполеон" || text=="Микадо" || text=="Донат с карамельной начинкой" || text=="Micado" || text=="Napoleon" || text=="Caramel filled donut"){
-                    Intent iy = new Intent(Cart.this, Fast_Food.class);
-                    startActivity(iy);
-                }
-            }
-        });
-        check();
+                @Override
+                public boolean onQueryTextChange(String s) {
+                    if (s.length() != 0) {
+                        lw.setVisibility(View.VISIBLE);
+                        adapter.getFilter().filter(s);
+                    } else {
+                        lw.setVisibility(View.GONE);
+                    }
 
+                    return false;
+                }
+            });
+            lw.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                    String text = lw.getItemAtPosition(i).toString();
+                    //Toast.makeText(Main_Menu.this, ""+text, Toast.LENGTH_SHORT).show();
+                    if (text == "Water" || text == "Вода" || text == "Ջուր" || text == "Coca-Cola" || text == "Fanta" || text == "Sprite") {
+                        Intent iy = new Intent(Cart.this, Drink.class);
+                        startActivity(iy);
+                    }
+                    if (text == "Մսային նախուտեստներ" || text == "Պանրի տեսականի" || text == "Թթուներ" || text == "Закуски" || text == "Сыры" || text == "Маринады" || text == "Meat snacks" || text == "Cheese" || text == "Marinades") {
+                        Intent iy = new Intent(Cart.this, Naxutest.class);
+                        startActivity(iy);
+                    }
+                    if (text == "Կապարզե" || text == "Կեսար" || text == "Բանջարեղենային" || text == "Капрезе" || text == "Цезарь" || text == "Овощной" || text == "Caprese" || text == "Caesar" || text == "Vegetable") {
+                        Intent iy = new Intent(Cart.this, Salad.class);
+                        startActivity(iy);
+                    }
+                    if (text == "Կարտոֆիլ ֆրի" || text == "Հոթ-դոգ բարբիքյու" || text == "Տավարի մսով բուրգեր" || text == "Картофель фри" || text == "Хот-дог барбекю" || text == "Бургер с говядиной" || text == "Hot-dog barbeque" || text == "French fries" || text == "Beef burger") {
+                        Intent iy = new Intent(Cart.this, Fast_Food.class);
+                        startActivity(iy);
+                    }
+                    if (text == "Արաբիկա" || text == "Կապուչինո" || text == "Լատտե" || text == "Арабика" || text == "Капучино" || text == "Латте" || text == "Latte" || text == "Arabia" || text == "Cappuccino") {
+                        Intent iy = new Intent(Cart.this, Fast_Food.class);
+                        startActivity(iy);
+                    }
+                    if (text == "Միկադո" || text == "Նապոլեոն" || text == "Կարամելային միջուկով դոնաթ" || text == "Наполеон" || text == "Микадо" || text == "Донат с карамельной начинкой" || text == "Micado" || text == "Napoleon" || text == "Caramel filled donut") {
+                        Intent iy = new Intent(Cart.this, Fast_Food.class);
+                        startActivity(iy);
+                    }
+                }
+            });
+            check();
 
-
+        }
+        Firestore = FirebaseFirestore.getInstance();
     }
     public void check(){
         meat_n = food.getMeat();
@@ -472,6 +479,102 @@ public class Cart extends AppCompatActivity {
             sum += water_n*300;
         }
         end_t.setText("Total: "+sum + " amd");
+    }
+
+    public void to_database(View view){
+        {
+            meat_n = food.getMeat();
+            cheese_n = food.getCheese();
+            marinade_n = food.getMarinade();
+            micado_n = food.getMicado();
+            napoleon_n =food.getNapoleon();
+            donat_n = food.getDonat();
+            arabia_n = food.getArab();
+            cappuchino_n = food.getCappuccino();
+            latte_n =  food.getLatte();
+            french_n = food.getFrench();
+            hot_dog_n =food.getHot_dog();
+            burger_n = food.getBurger();
+            capreze_n = food.getCaprese();
+            caesar_n = food.getCaesar();
+            vegetable_n = food.getVegetable();
+            cola_n = food.getCola();
+            fanta_n = food.getFanta();
+            sprite_n = food.getSprite();
+            water_n = food.getWater();
+        }
+        Map<String,Object> order = new HashMap<>();
+        if (meat_n > 0){
+            order.put("Meat",meat_n);
+        }
+        if (cheese_n > 0){
+            order.put("Cheese",cheese_n);
+        }
+        if (marinade_n > 0){
+            order.put("Marinade",marinade_n);
+        }
+        if (micado_n > 0){
+            order.put("Mikado",micado_n);
+        }
+        if (napoleon_n > 0){
+            order.put("Napoleon",napoleon_n);
+        }
+        if (donat_n > 0){
+            order.put("Donut",donat_n);
+        }
+        if (arabia_n > 0){
+            order.put("Arabia Coffee",arabia_n);
+        }
+        if (cappuchino_n > 0){
+            order.put("Cappuccino",cappuchino_n);
+        }
+        if (latte_n > 0){
+            order.put("Latte",latte_n);
+        }
+        if (capreze_n > 0){
+            order.put("Caprese",capreze_n);
+        }
+        if (caesar_n > 0){
+            order.put("Caesar",caesar_n);
+        }
+        if (vegetable_n > 0){
+            order.put("Vegetable salad",vegetable_n);
+        }
+        if (french_n > 0){
+            order.put("French fries",french_n);
+        }
+        if (hot_dog_n > 0){
+            order.put("Hot dog",hot_dog_n);
+        }
+        if (burger_n > 0){
+            order.put("Beef burger",burger_n);
+        }
+        if (cola_n > 0){
+            order.put("Coca-Cola",cola_n);
+        }
+        if (fanta_n > 0){
+            order.put("Fanta",fanta_n);
+        }
+        if (sprite_n > 0){
+            order.put("Sprite",sprite_n);
+        }
+        if (water_n > 0){
+            order.put("Water",water_n);
+        }
+        if (sum > 0){
+            order.put("Total",sum);
+        }
+        Firestore.collection("Order").add(order).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(Cart.this,"Your order delivered",Toast.LENGTH_LONG).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Cart.this,"Sucsess",Toast.LENGTH_LONG).show();
+            }
+        });
     }
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);
@@ -923,23 +1026,5 @@ public class Cart extends AppCompatActivity {
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
         check();
-    }
-    public void to_database(View view){
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//        myRef.setValue("Hello, World!");
-        mDatabase.child("hello").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DataSnapshot> task) {
-                if (!task.isSuccessful()) {
-                    Log.e("firebase", "Error getting data", task.getException());
-                }
-                else {
-                    end_t.setText(String.valueOf(task.getResult().getValue()));
-                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
-                }
-            }
-        });
-
     }
 }

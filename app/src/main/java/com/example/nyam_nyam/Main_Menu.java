@@ -32,9 +32,7 @@ public class Main_Menu extends AppCompatActivity {
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
-    FirebaseFirestore Firestore;
 
-    private static final String TAG = "Main_Menu";
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -151,46 +149,8 @@ public class Main_Menu extends AppCompatActivity {
             });
         }
 
-        Firestore = FirebaseFirestore.getInstance();
-        Map<String,Object> users = new HashMap<>();
-        users.put("firstName","Anun");
-        users.put("lastName","Azganun");
-        users.put("descrption","esim inch");
-        Firestore.collection("users").add(users).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
-            }
-        });
-
-
-
-
     }
 
-//    public void basicReadWrite() {
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//        myRef.setValue("Hello, World!");
-//        myRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                String value = dataSnapshot.getValue(String.class);
-//                Log.d(TAG, "Value is: " + value);
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//                Log.w(TAG, "Failed to read value.", error.toException());
-//            }
-//        });
-//    }
     public void snack(View view){
         Intent i = new Intent(Main_Menu.this, Naxutest.class);
         startActivity(i);
