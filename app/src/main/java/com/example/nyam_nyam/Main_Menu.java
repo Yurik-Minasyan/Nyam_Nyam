@@ -173,21 +173,7 @@ public class Main_Menu extends AppCompatActivity {
             }
         });
 
-        Firestore.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if(task.isSuccessful()){
-                    Toast.makeText(Main_Menu.this,"Successful",Toast.LENGTH_LONG).show();
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        Log.d(TAG, "FiredStore");
-                        Log.d(TAG, document.getId() + " => " + document.getData());
-                    }
-                }
-                else{
-                    Toast.makeText(Main_Menu.this,"Failed",Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+
 
 
     }
