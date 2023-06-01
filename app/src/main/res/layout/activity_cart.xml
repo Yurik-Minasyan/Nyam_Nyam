@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:context=".Cart"
     tools:ignore="ExtraText">
     <LinearLayout
@@ -12,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/white"
+        android:background="#808080"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -64,21 +63,31 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:background="@color/white"
+            android:background="#808080"
             android:visibility="gone"
             app:layout_constraintTop_toBottomOf="@+id/search"
             tools:layout_editor_absoluteX="1dp" />
     </LinearLayout>
 /////////////////////////////////////////////////////////
 
-
-    <LinearLayout
-        android:layout_marginTop="40dp"
-        android:id="@+id/snack"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        android:layout_marginTop="40dp"
+        android:text="@string/order_c"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+    <LinearLayout
+        android:id="@+id/snack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
@@ -86,7 +95,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-
             android:orientation="horizontal"
             android:visibility="gone">
 
@@ -107,7 +115,7 @@
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="170dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
@@ -180,9 +188,11 @@
             android:id="@+id/cheese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone"
             tools:ignore="MissingConstraints">
 
@@ -192,74 +202,91 @@
                 android:layout_height="115dp"
                 app:srcCompat="@drawable/panir" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/cheese"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/chesse_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/cheese_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="cheese_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/cheese"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/cheese_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/chesse_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/cheese_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="cheese_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/cheese_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="cheese_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/cheese_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="cheese_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/cheese_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/cheese_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="cheese_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/cheese_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="cheese_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/marinad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone">
 
             <ImageView
@@ -268,87 +295,101 @@
                 android:layout_height="115dp"
                 app:srcCompat="@drawable/marinad" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/marinades"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/marinade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/marinade_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="marinade_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/marinades"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/marinade_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/marinade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/marinade_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="marinade_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/marinade_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="marinade_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/marinade_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="marinade_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/marinade_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/marinade_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="marinade_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/marinade_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="marinade_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-////////////////////////////////
-
 
     <LinearLayout
         android:id="@+id/salad_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/snack"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints,NotSibling">
 
         <LinearLayout
             android:id="@+id/caprese_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
-            android:orientation="vertical"
             android:visibility="gone"
             tools:ignore="MissingConstraints">
 
@@ -359,75 +400,92 @@
 
                 app:srcCompat="@drawable/kaparze" />
 
-            <TextView
-                android:id="@+id/caprese_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/caprese"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/caprese_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/caprese_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="caprese_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/caprese_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/caprese"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/caprese_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/caprese_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/caprese_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="caprese_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/caprese_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="caprese_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/caprese_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="caprese_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/caprese_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/caprese_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="caprese_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/caprese_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="caprese_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ceasar_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone">
 
             <ImageView
@@ -437,75 +495,91 @@
 
                 app:srcCompat="@drawable/kesar" />
 
-            <TextView
-                android:id="@+id/caesar_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/caesar"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/caesar_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/caesar_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="caesar_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/caesar_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/caesar"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/caesar_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
+                <TextView
+                    android:id="@+id/caesar_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/caesar_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="caesar_plus_c"
-                    android:src="@drawable/add" />
+                    <ImageButton
+                        android:id="@+id/caesar_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="caesar_minus_c"
+                        android:src="@drawable/minus" />
 
-                <ImageButton
-                    android:id="@+id/caesar_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="caesar_cart_c"
-                    android:src="@drawable/cart" />
+                    <EditText
+                        android:id="@+id/caesar_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/caesar_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="caesar_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/caesar_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="caesar_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/vegetable_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone"
             tools:ignore="ExtraText">
 
@@ -516,76 +590,88 @@
 
                 app:srcCompat="@drawable/vegetable" />
 
-            <TextView
-                android:id="@+id/vegetable_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/vegetable"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/vegetable_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/vegetable_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="vegetable_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/vegetable_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/vegetable"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/vegetable_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/vegetable_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/vegetable_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="vegetable_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/vegetable_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="vegetable_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/vegetable_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="vegetable_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/vegetable_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/vegetable_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="vegetable_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/vegetable_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="vegetable_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-//////////////////////////////
-
-
     <LinearLayout
         android:id="@+id/coffee_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/salad_c"
         tools:ignore="MissingConstraints">
@@ -594,9 +680,11 @@
             android:id="@+id/arabia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone"
             tools:ignore="MissingConstraints">
 
@@ -607,74 +695,91 @@
 
                 app:srcCompat="@drawable/arabika" />
 
-            <TextView
-                android:id="@+id/arabia_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/arab"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/arabia_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/arab_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="arab_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/arabia_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/arab"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/arab_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/arabia_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/arab_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="arab_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/arab_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="arab_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/arab_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="arab_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/arab_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/arab_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="arab_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/arab_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="arab_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/cappuchino_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone"
             tools:ignore="MissingConstraints">
 
@@ -684,73 +789,90 @@
                 android:layout_height="115dp"
                 app:srcCompat="@drawable/cappuccino" />
 
-            <TextView
-                android:id="@+id/cap_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/cappuccino"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/cappuchino_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/cappuchino_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="cappuchino_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/cap_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/cappuccino"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/cappuchino_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/cappuchino_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/cappuchino_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="cappuchino_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/cappuchino_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="cappuchino_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/cappuchino_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="cappuchino_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/cappuchino_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/cappuchino_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="cappuchino_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/cappuchino_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="cappuchino_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/latte"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:background="@color/white"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:visibility="gone">
 
             <ImageView
@@ -760,71 +882,83 @@
 
                 app:srcCompat="@drawable/latte" />
 
-            <TextView
-                android:id="@+id/latte_t"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/latte"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/latte_pr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:id="@+id/latte_minus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="latte_minus_c"
-                    android:src="@drawable/minus" />
+                <TextView
+                    android:id="@+id/latte_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/latte"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/latte_num_c"
-                    android:layout_width="50dp"
-                    android:layout_height="35dp"
-                    android:background="@xml/edittext_view"
-                    android:inputType="number"
-                    android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/latte_pr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/latte_plus_c"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:onClick="latte_plus_c"
-                    android:src="@drawable/add" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <ImageButton
-                    android:id="@+id/latte_btn_cc"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:clickable="true"
-                    android:gravity="end"
-                    android:onClick="latte_cart_c"
-                    android:src="@drawable/cart" />
+                    <ImageButton
+                        android:id="@+id/latte_minus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:onClick="latte_minus_c"
+                        android:src="@drawable/minus" />
+
+                    <EditText
+                        android:id="@+id/latte_num_c"
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@xml/edittext_view"
+                        android:inputType="number"
+                        android:textAlignment="center" />
+
+                    <ImageButton
+                        android:id="@+id/latte_plus_c"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:clickable="true"
+                        android:onClick="latte_plus_c"
+                        android:src="@drawable/add" />
+
+                    <ImageButton
+                        android:id="@+id/latte_btn_cc"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="15dp"
+                        android:clickable="true"
+                        android:gravity="end"
+                        android:onClick="latte_cart_c"
+                        android:src="@drawable/cart" />
+                </LinearLayout>
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-/////////////////
-
-
     <LinearLayout
         android:id="@+id/cake"
         android:layout_marginTop="10dp"
@@ -1067,8 +1201,6 @@
         </LinearLayout>
 
     </LinearLayout>
-///////////////////////
-
 
     <LinearLayout
         android:layout_marginTop="10dp"
@@ -1312,8 +1444,6 @@
         </LinearLayout>
 
     </LinearLayout>
-///////////////
-
 
     <LinearLayout
         android:id="@+id/drink"
@@ -1635,7 +1765,6 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/end"
         android:layout_width="wrap_content"
@@ -1651,16 +1780,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/end_t"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:textSize="35dp"/>
         <Button
             android:id="@+id/end_i"
-            android:background="@xml/button_view"
+            android:backgroundTint="#808080"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="to_database"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:text="@string/order"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
