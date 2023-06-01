@@ -85,7 +85,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/second_line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
