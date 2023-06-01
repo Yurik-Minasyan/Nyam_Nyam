@@ -1,14 +1,10 @@
 package com.example.nyam_nyam;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,20 +12,27 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+
 
 public class Main_Menu extends AppCompatActivity {
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
+    FirebaseFirestore Firestore;
 
     private static final String TAG = "Main_Menu";
     @SuppressLint("MissingInflatedId")
@@ -147,6 +150,23 @@ public class Main_Menu extends AppCompatActivity {
                 }
             });
         }
+
+        Firestore = FirebaseFirestore.getInstance();
+        Map<String,Object> users = new HashMap<>();
+        users.put("firstName","Anun");
+        users.put("lastName","Azganun");
+        users.put("descrption","esim inch");
+        Firestore.collection("users").add(users).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Main_Menu.this,"Sucsess",Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }
