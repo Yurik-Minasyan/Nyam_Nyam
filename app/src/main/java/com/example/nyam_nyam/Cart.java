@@ -506,66 +506,66 @@ public class Cart extends AppCompatActivity {
         Map<String,Object> order = new HashMap<>();
         {
             if (meat_n > 0){
-                order.put("Meat",meat_n);
+                order.put("Meat",Integer.toString(meat_n));
             }
             if (cheese_n > 0){
-                order.put("Cheese",cheese_n);
+                order.put("Cheese",Integer.toString(cheese_n));
             }
             if (marinade_n > 0){
-                order.put("Marinade",marinade_n);
+                order.put("Marinade",Integer.toString(marinade_n));
             }
             if (micado_n > 0){
-                order.put("Mikado",micado_n);
+                order.put("Mikado",Integer.toString(micado_n));
             }
             if (napoleon_n > 0){
-                order.put("Napoleon",napoleon_n);
+                order.put("Napoleon",Integer.toString(napoleon_n));
             }
             if (donat_n > 0){
-                order.put("Donut",donat_n);
+                order.put("Donut",Integer.toString(donat_n));
             }
             if (arabia_n > 0){
-                order.put("Arabia Coffee",arabia_n);
+                order.put("Arabia Coffee",Integer.toString(arabia_n));
             }
             if (cappuchino_n > 0){
-                order.put("Cappuccino",cappuchino_n);
+                order.put("Cappuccino",Integer.toString(cappuchino_n));
             }
             if (latte_n > 0){
-                order.put("Latte",latte_n);
+                order.put("Latte",Integer.toString(latte_n));
             }
             if (capreze_n > 0){
-                order.put("Caprese",capreze_n);
+                order.put("Caprese",Integer.toString(capreze_n));
             }
             if (caesar_n > 0){
-                order.put("Caesar",caesar_n);
+                order.put("Caesar",Integer.toString(caesar_n));
             }
             if (vegetable_n > 0){
-                order.put("Vegetable salad",vegetable_n);
+                order.put("Vegetable salad",Integer.toString(vegetable_n));
             }
             if (french_n > 0){
-                order.put("French fries",french_n);
+                order.put("French fries",Integer.toString(french_n));
             }
             if (hot_dog_n > 0){
-                order.put("Hot dog",hot_dog_n);
+                order.put("Hot dog",Integer.toString(hot_dog_n));
             }
             if (burger_n > 0){
-                order.put("Beef burger",burger_n);
+                order.put("Beef burger",Integer.toString(burger_n));
             }
             if (cola_n > 0){
-                order.put("Coca-Cola",cola_n);
+                order.put("Coca-Cola",Integer.toString(cola_n));
             }
             if (fanta_n > 0){
-                order.put("Fanta",fanta_n);
+                order.put("Fanta",Integer.toString(fanta_n));
             }
             if (sprite_n > 0){
-                order.put("Sprite",sprite_n);
+                order.put("Sprite",Integer.toString(sprite_n));
             }
             if (water_n > 0){
-                order.put("Water",water_n);
+                order.put("Water",Integer.toString(water_n));
             }
             if (sum > 0){
-                order.put("Total",sum);
+                order.put("Total",Integer.toString(sum));
             }
-            order.put("Table",food.getTable());
+            order.put("Table",Integer.toString(food.getTable()));
         }
 
         Firestore.collection("Order").add(order).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -580,6 +580,8 @@ public class Cart extends AppCompatActivity {
             }
         });
     }
+
+
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);
         startActivity(i);
