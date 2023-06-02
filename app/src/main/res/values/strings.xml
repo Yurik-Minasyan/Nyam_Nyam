@@ -24,6 +24,6 @@
     <string name="number_err" translatable="false">Select the quantity of the dish</string>
     <string name="order" translatable="false">Order food</string>
     <string name="order_c" translatable="false">My orders</string>
-    <string name="order_pr" translatable="false">Sum.</string>
+    <string name="order_pr" translatable="false">Total:</string>
 
 </resources>

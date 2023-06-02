@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class Cart extends AppCompatActivity {
     private DatabaseReference mDatabase;
-
+    Button order_b;
     SearchView sw;
     LinearLayout meat;
     LinearLayout cheese;
@@ -78,6 +78,7 @@ public class Cart extends AppCompatActivity {
     TextView meat_p;
     TextView cheese_p;
     TextView marinade_p;
+    TextView end_num;
     TextView micado_p;
     TextView napoleon_p;
     TextView donat_p;
@@ -152,8 +153,10 @@ public class Cart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_cart);
+        order_b = findViewById(R.id.end_i);
         {
             end_t = findViewById(R.id.end_t);
+            end_num = findViewById(R.id.end_num);
             meat = findViewById(R.id.meat_Lay);
             end_b =findViewById(R.id.end_i);
             cheese = findViewById(R.id.cheese);
@@ -478,7 +481,8 @@ public class Cart extends AppCompatActivity {
 //            waterc.setText(water_n);
             sum += water_n*300;
         }
-        end_t.setText("Total: "+sum + " amd");
+        end_t.setText(R.string.order_pr);
+        end_num.setText(sum + "amd");
     }
 
     public void to_database(View view){
@@ -628,12 +632,12 @@ public class Cart extends AppCompatActivity {
         Firestore.collection("Order").add(order).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-                Toast.makeText(Cart.this,"Your order delivered",Toast.LENGTH_LONG).show();
+                order_b.setBackgroundColor(getResources().getColor(R.color.green));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Cart.this,"Sucsess",Toast.LENGTH_LONG).show();
+                Toast.makeText(Cart.this,"fail",Toast.LENGTH_LONG).show();
             }
         });
     }
