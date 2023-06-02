@@ -506,60 +506,117 @@ public class Cart extends AppCompatActivity {
         Map<String,Object> order = new HashMap<>();
         {
             if (meat_n > 0){
-                order.put("Meat",Integer.toString(meat_n));
+                order.put("Meat Snack",Integer.toString(meat_n));
+            }
+            else {
+                order.put("Meat Snack",Integer.toString(meat_n));
             }
             if (cheese_n > 0){
+                order.put("Cheese",Integer.toString(cheese_n));
+            }
+            else {
                 order.put("Cheese",Integer.toString(cheese_n));
             }
             if (marinade_n > 0){
                 order.put("Marinade",Integer.toString(marinade_n));
             }
+            else {
+                order.put("Marinade",Integer.toString(marinade_n));
+            }
             if (micado_n > 0){
+                order.put("Mikado",Integer.toString(micado_n));
+            }
+            else {
                 order.put("Mikado",Integer.toString(micado_n));
             }
             if (napoleon_n > 0){
                 order.put("Napoleon",Integer.toString(napoleon_n));
             }
+            else{
+                order.put("Napoleon",Integer.toString(napoleon_n));
+            }
             if (donat_n > 0){
+                order.put("Donut",Integer.toString(donat_n));
+            }
+            else {
                 order.put("Donut",Integer.toString(donat_n));
             }
             if (arabia_n > 0){
                 order.put("Arabia Coffee",Integer.toString(arabia_n));
             }
+            else {
+                order.put("Arabia Coffee",Integer.toString(arabia_n));
+            }
             if (cappuchino_n > 0){
+                order.put("Cappuccino",Integer.toString(cappuchino_n));
+            }
+            else {
                 order.put("Cappuccino",Integer.toString(cappuchino_n));
             }
             if (latte_n > 0){
                 order.put("Latte",Integer.toString(latte_n));
             }
+            else {
+                order.put("Latte",Integer.toString(latte_n));
+            }
             if (capreze_n > 0){
+                order.put("Caprese",Integer.toString(capreze_n));
+            }
+            else {
                 order.put("Caprese",Integer.toString(capreze_n));
             }
             if (caesar_n > 0){
                 order.put("Caesar",Integer.toString(caesar_n));
             }
+            else {
+                order.put("Caesar",Integer.toString(caesar_n));
+            }
             if (vegetable_n > 0){
+                order.put("Vegetable salad",Integer.toString(vegetable_n));
+            }
+            else {
                 order.put("Vegetable salad",Integer.toString(vegetable_n));
             }
             if (french_n > 0){
                 order.put("French fries",Integer.toString(french_n));
             }
+            else{
+                order.put("French fries",Integer.toString(french_n));
+            }
             if (hot_dog_n > 0){
+                order.put("Hot dog",Integer.toString(hot_dog_n));
+            }
+            else {
                 order.put("Hot dog",Integer.toString(hot_dog_n));
             }
             if (burger_n > 0){
                 order.put("Beef burger",Integer.toString(burger_n));
             }
+            else {
+                order.put("Beef burger",Integer.toString(burger_n));
+            }
             if (cola_n > 0){
+                order.put("Coca-Cola",Integer.toString(cola_n));
+            }
+            else {
                 order.put("Coca-Cola",Integer.toString(cola_n));
             }
             if (fanta_n > 0){
                 order.put("Fanta",Integer.toString(fanta_n));
             }
+            else {
+                order.put("Fanta",Integer.toString(fanta_n));
+            }
             if (sprite_n > 0){
                 order.put("Sprite",Integer.toString(sprite_n));
             }
+            else {
+                order.put("Sprite",Integer.toString(sprite_n));
+            }
             if (water_n > 0){
+                order.put("Water",Integer.toString(water_n));
+            }
+            else {
                 order.put("Water",Integer.toString(water_n));
             }
             if (sum > 0){
