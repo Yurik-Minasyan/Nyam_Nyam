@@ -1,26 +1,24 @@
 package com.example.nyam_nyam;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import java.util.Locale;
-
 public class MainActivity extends AppCompatActivity {
     TextView tv;
+    Food_Nubers food;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        food  = (Food_Nubers) getApplicationContext();
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
         tv = findViewById(R.id.textView5);
@@ -41,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         if (ir != null){
             String contents = ir.getContents();
             if(contents != null){
-                tv.setText(ir.getContents());
+//                tv.setText(ir.getContents());
+                food.setTable(Integer.parseInt(ir.getContents()));
                 Intent i = new Intent(MainActivity.this, Main_Menu.class);
                 startActivity(i);
             }

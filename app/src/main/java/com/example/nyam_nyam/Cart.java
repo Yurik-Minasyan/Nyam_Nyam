@@ -504,66 +504,70 @@ public class Cart extends AppCompatActivity {
             water_n = food.getWater();
         }
         Map<String,Object> order = new HashMap<>();
-        if (meat_n > 0){
-            order.put("Meat",meat_n);
+        {
+            if (meat_n > 0){
+                order.put("Meat",meat_n);
+            }
+            if (cheese_n > 0){
+                order.put("Cheese",cheese_n);
+            }
+            if (marinade_n > 0){
+                order.put("Marinade",marinade_n);
+            }
+            if (micado_n > 0){
+                order.put("Mikado",micado_n);
+            }
+            if (napoleon_n > 0){
+                order.put("Napoleon",napoleon_n);
+            }
+            if (donat_n > 0){
+                order.put("Donut",donat_n);
+            }
+            if (arabia_n > 0){
+                order.put("Arabia Coffee",arabia_n);
+            }
+            if (cappuchino_n > 0){
+                order.put("Cappuccino",cappuchino_n);
+            }
+            if (latte_n > 0){
+                order.put("Latte",latte_n);
+            }
+            if (capreze_n > 0){
+                order.put("Caprese",capreze_n);
+            }
+            if (caesar_n > 0){
+                order.put("Caesar",caesar_n);
+            }
+            if (vegetable_n > 0){
+                order.put("Vegetable salad",vegetable_n);
+            }
+            if (french_n > 0){
+                order.put("French fries",french_n);
+            }
+            if (hot_dog_n > 0){
+                order.put("Hot dog",hot_dog_n);
+            }
+            if (burger_n > 0){
+                order.put("Beef burger",burger_n);
+            }
+            if (cola_n > 0){
+                order.put("Coca-Cola",cola_n);
+            }
+            if (fanta_n > 0){
+                order.put("Fanta",fanta_n);
+            }
+            if (sprite_n > 0){
+                order.put("Sprite",sprite_n);
+            }
+            if (water_n > 0){
+                order.put("Water",water_n);
+            }
+            if (sum > 0){
+                order.put("Total",sum);
+            }
+            order.put("Table",food.getTable());
         }
-        if (cheese_n > 0){
-            order.put("Cheese",cheese_n);
-        }
-        if (marinade_n > 0){
-            order.put("Marinade",marinade_n);
-        }
-        if (micado_n > 0){
-            order.put("Mikado",micado_n);
-        }
-        if (napoleon_n > 0){
-            order.put("Napoleon",napoleon_n);
-        }
-        if (donat_n > 0){
-            order.put("Donut",donat_n);
-        }
-        if (arabia_n > 0){
-            order.put("Arabia Coffee",arabia_n);
-        }
-        if (cappuchino_n > 0){
-            order.put("Cappuccino",cappuchino_n);
-        }
-        if (latte_n > 0){
-            order.put("Latte",latte_n);
-        }
-        if (capreze_n > 0){
-            order.put("Caprese",capreze_n);
-        }
-        if (caesar_n > 0){
-            order.put("Caesar",caesar_n);
-        }
-        if (vegetable_n > 0){
-            order.put("Vegetable salad",vegetable_n);
-        }
-        if (french_n > 0){
-            order.put("French fries",french_n);
-        }
-        if (hot_dog_n > 0){
-            order.put("Hot dog",hot_dog_n);
-        }
-        if (burger_n > 0){
-            order.put("Beef burger",burger_n);
-        }
-        if (cola_n > 0){
-            order.put("Coca-Cola",cola_n);
-        }
-        if (fanta_n > 0){
-            order.put("Fanta",fanta_n);
-        }
-        if (sprite_n > 0){
-            order.put("Sprite",sprite_n);
-        }
-        if (water_n > 0){
-            order.put("Water",water_n);
-        }
-        if (sum > 0){
-            order.put("Total",sum);
-        }
+
         Firestore.collection("Order").add(order).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {

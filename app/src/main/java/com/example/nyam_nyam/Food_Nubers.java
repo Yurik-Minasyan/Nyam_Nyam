@@ -22,6 +22,7 @@ public class Food_Nubers extends Application {
     private int Caprese=0;
     private int Caesar=0;
     private int Vegetable=0;
+    private int table = 0;
 
 //    private int Meat=2;
 //    private int Cheese=2;
@@ -42,6 +43,13 @@ public class Food_Nubers extends Application {
 //    private int Caprese=2;
 //    private int Caesar=2;
 //    private int Vegetable=2;
+//    private int table = 2;
+    public int getTable(){
+        return table;
+    }
+    public void setTable(int table){
+        this.table=table;
+    }
     public int getMeat(){
         return Meat;
     }
