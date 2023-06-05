@@ -25,4 +25,5 @@
     <string name="order" translatable="false">Заказать еду</string>
     <string name="order_c" translatable="false">Мои заказы</string>
     <string name="order_pr" translatable="false">Итог:</string>
+    <string name="qr_table" translatable="false">Отсканируйте QR-код на столе</string>
 </resources>

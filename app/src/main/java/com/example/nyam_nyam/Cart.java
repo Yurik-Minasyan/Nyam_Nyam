@@ -22,7 +22,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -485,19 +484,19 @@ public class Cart extends AppCompatActivity {
         end_num.setText(sum + "amd");
     }
 
-    public void to_database(View view){
+    public void to_database(View view) {
         {
             meat_n = food.getMeat();
             cheese_n = food.getCheese();
             marinade_n = food.getMarinade();
             micado_n = food.getMicado();
-            napoleon_n =food.getNapoleon();
+            napoleon_n = food.getNapoleon();
             donat_n = food.getDonat();
             arabia_n = food.getArab();
             cappuchino_n = food.getCappuccino();
-            latte_n =  food.getLatte();
+            latte_n = food.getLatte();
             french_n = food.getFrench();
-            hot_dog_n =food.getHot_dog();
+            hot_dog_n = food.getHot_dog();
             burger_n = food.getBurger();
             capreze_n = food.getCaprese();
             caesar_n = food.getCaesar();
@@ -507,141 +506,161 @@ public class Cart extends AppCompatActivity {
             sprite_n = food.getSprite();
             water_n = food.getWater();
         }
-        Map<String,Object> order = new HashMap<>();
+        Map<String, Object> order = new HashMap<>();
         {
-            if (meat_n > 0){
-                order.put("Meat Snack",Integer.toString(meat_n));
+            if (meat_n > 0) {
+                order.put("Meat Snack", Integer.toString(meat_n));
+            } else {
+                order.put("Meat Snack", Integer.toString(meat_n));
             }
-            else {
-                order.put("Meat Snack",Integer.toString(meat_n));
+            if (cheese_n > 0) {
+                order.put("Cheese", Integer.toString(cheese_n));
+            } else {
+                order.put("Cheese", Integer.toString(cheese_n));
             }
-            if (cheese_n > 0){
-                order.put("Cheese",Integer.toString(cheese_n));
+            if (marinade_n > 0) {
+                order.put("Marinade", Integer.toString(marinade_n));
+            } else {
+                order.put("Marinade", Integer.toString(marinade_n));
             }
-            else {
-                order.put("Cheese",Integer.toString(cheese_n));
+            if (micado_n > 0) {
+                order.put("Mikado", Integer.toString(micado_n));
+            } else {
+                order.put("Mikado", Integer.toString(micado_n));
             }
-            if (marinade_n > 0){
-                order.put("Marinade",Integer.toString(marinade_n));
+            if (napoleon_n > 0) {
+                order.put("Napoleon", Integer.toString(napoleon_n));
+            } else {
+                order.put("Napoleon", Integer.toString(napoleon_n));
             }
-            else {
-                order.put("Marinade",Integer.toString(marinade_n));
+            if (donat_n > 0) {
+                order.put("Donut", Integer.toString(donat_n));
+            } else {
+                order.put("Donut", Integer.toString(donat_n));
             }
-            if (micado_n > 0){
-                order.put("Mikado",Integer.toString(micado_n));
+            if (arabia_n > 0) {
+                order.put("Arabia Coffee", Integer.toString(arabia_n));
+            } else {
+                order.put("Arabia Coffee", Integer.toString(arabia_n));
             }
-            else {
-                order.put("Mikado",Integer.toString(micado_n));
+            if (cappuchino_n > 0) {
+                order.put("Cappuccino", Integer.toString(cappuchino_n));
+            } else {
+                order.put("Cappuccino", Integer.toString(cappuchino_n));
             }
-            if (napoleon_n > 0){
-                order.put("Napoleon",Integer.toString(napoleon_n));
+            if (latte_n > 0) {
+                order.put("Latte", Integer.toString(latte_n));
+            } else {
+                order.put("Latte", Integer.toString(latte_n));
             }
-            else{
-                order.put("Napoleon",Integer.toString(napoleon_n));
+            if (capreze_n > 0) {
+                order.put("Caprese", Integer.toString(capreze_n));
+            } else {
+                order.put("Caprese", Integer.toString(capreze_n));
             }
-            if (donat_n > 0){
-                order.put("Donut",Integer.toString(donat_n));
+            if (caesar_n > 0) {
+                order.put("Caesar", Integer.toString(caesar_n));
+            } else {
+                order.put("Caesar", Integer.toString(caesar_n));
             }
-            else {
-                order.put("Donut",Integer.toString(donat_n));
+            if (vegetable_n > 0) {
+                order.put("Vegetable salad", Integer.toString(vegetable_n));
+            } else {
+                order.put("Vegetable salad", Integer.toString(vegetable_n));
             }
-            if (arabia_n > 0){
-                order.put("Arabia Coffee",Integer.toString(arabia_n));
+            if (french_n > 0) {
+                order.put("French fries", Integer.toString(french_n));
+            } else {
+                order.put("French fries", Integer.toString(french_n));
             }
-            else {
-                order.put("Arabia Coffee",Integer.toString(arabia_n));
+            if (hot_dog_n > 0) {
+                order.put("Hot dog", Integer.toString(hot_dog_n));
+            } else {
+                order.put("Hot dog", Integer.toString(hot_dog_n));
             }
-            if (cappuchino_n > 0){
-                order.put("Cappuccino",Integer.toString(cappuchino_n));
+            if (burger_n > 0) {
+                order.put("Beef burger", Integer.toString(burger_n));
+            } else {
+                order.put("Beef burger", Integer.toString(burger_n));
             }
-            else {
-                order.put("Cappuccino",Integer.toString(cappuchino_n));
+            if (cola_n > 0) {
+                order.put("Coca-Cola", Integer.toString(cola_n));
+            } else {
+                order.put("Coca-Cola", Integer.toString(cola_n));
             }
-            if (latte_n > 0){
-                order.put("Latte",Integer.toString(latte_n));
+            if (fanta_n > 0) {
+                order.put("Fanta", Integer.toString(fanta_n));
+            } else {
+                order.put("Fanta", Integer.toString(fanta_n));
             }
-            else {
-                order.put("Latte",Integer.toString(latte_n));
+            if (sprite_n > 0) {
+                order.put("Sprite", Integer.toString(sprite_n));
+            } else {
+                order.put("Sprite", Integer.toString(sprite_n));
             }
-            if (capreze_n > 0){
-                order.put("Caprese",Integer.toString(capreze_n));
+            if (water_n > 0) {
+                order.put("Water", Integer.toString(water_n));
+            } else {
+                order.put("Water", Integer.toString(water_n));
             }
-            else {
-                order.put("Caprese",Integer.toString(capreze_n));
+            if (sum > 0) {
+                order.put("Total", Integer.toString(sum));
             }
-            if (caesar_n > 0){
-                order.put("Caesar",Integer.toString(caesar_n));
-            }
-            else {
-                order.put("Caesar",Integer.toString(caesar_n));
-            }
-            if (vegetable_n > 0){
-                order.put("Vegetable salad",Integer.toString(vegetable_n));
-            }
-            else {
-                order.put("Vegetable salad",Integer.toString(vegetable_n));
-            }
-            if (french_n > 0){
-                order.put("French fries",Integer.toString(french_n));
-            }
-            else{
-                order.put("French fries",Integer.toString(french_n));
-            }
-            if (hot_dog_n > 0){
-                order.put("Hot dog",Integer.toString(hot_dog_n));
-            }
-            else {
-                order.put("Hot dog",Integer.toString(hot_dog_n));
-            }
-            if (burger_n > 0){
-                order.put("Beef burger",Integer.toString(burger_n));
-            }
-            else {
-                order.put("Beef burger",Integer.toString(burger_n));
-            }
-            if (cola_n > 0){
-                order.put("Coca-Cola",Integer.toString(cola_n));
-            }
-            else {
-                order.put("Coca-Cola",Integer.toString(cola_n));
-            }
-            if (fanta_n > 0){
-                order.put("Fanta",Integer.toString(fanta_n));
-            }
-            else {
-                order.put("Fanta",Integer.toString(fanta_n));
-            }
-            if (sprite_n > 0){
-                order.put("Sprite",Integer.toString(sprite_n));
-            }
-            else {
-                order.put("Sprite",Integer.toString(sprite_n));
-            }
-            if (water_n > 0){
-                order.put("Water",Integer.toString(water_n));
-            }
-            else {
-                order.put("Water",Integer.toString(water_n));
-            }
-            if (sum > 0){
-                order.put("Total",Integer.toString(sum));
-            }
-            order.put("Table",Integer.toString(food.getTable()));
+            order.put("Table", Integer.toString(food.getTable()));
         }
-
-        Firestore.collection("Order").add(order).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-            @Override
-            public void onSuccess(DocumentReference documentReference) {
-                order_b.setBackgroundColor(getResources().getColor(R.color.green));
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(Cart.this,"fail",Toast.LENGTH_LONG).show();
-            }
-        });
+        if (food.getTable() == 1) {
+            Firestore.collection("Order").document("Table1").update(order).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    order_b.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(Cart.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+        if (food.getTable() == 2) {
+            Firestore.collection("Order").document("Table2").update(order).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    order_b.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(Cart.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+        if(food.getTable() == 3){
+            Firestore.collection("Order").document("Table3").update(order).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    order_b.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(Cart.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+        if(food.getTable() == 4){
+            Firestore.collection("Order").document("Table4").update(order).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+                    order_b.setBackgroundColor(getResources().getColor(R.color.green));
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(Cart.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                }
+            });
+        }
     }
-
 
     public void home_c(View view){
         Intent i = new Intent(Cart.this, Main_Menu.class);

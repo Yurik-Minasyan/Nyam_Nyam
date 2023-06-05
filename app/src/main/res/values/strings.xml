@@ -25,5 +25,6 @@
     <string name="order" translatable="false">Order food</string>
     <string name="order_c" translatable="false">My orders</string>
     <string name="order_pr" translatable="false">Total:</string>
+    <string name="qr_table" translatable="false">Scan a QR Code on Table</string>
 
 </resources>

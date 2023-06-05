@@ -22,7 +22,7 @@ public class Food_Nubers extends Application {
     private int Caprese=0;
     private int Caesar=0;
     private int Vegetable=0;
-    private int table = 2;
+    private int table = 4;
 
 //    private int Meat=2;
 //    private int Cheese=2;

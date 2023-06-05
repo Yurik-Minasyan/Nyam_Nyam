@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         IntentIntegrator ii = new IntentIntegrator(MainActivity.this);
         ii.setOrientationLocked(true);
-        ii.setPrompt("Scan a QR Code on Table");
+        ii.setPrompt(String.valueOf(R.string.qr_table));
         ii.setDesiredBarcodeFormats(ii.QR_CODE);
         ii.initiateScan();
     }
