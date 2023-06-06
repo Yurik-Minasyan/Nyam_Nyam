@@ -8,157 +8,183 @@
     tools:context=".Main_Menu">
 
     <LinearLayout
-        android:id="@+id/first_line"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
-        tools:ignore="MissingConstraints">
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
         <LinearLayout
-            android:id="@+id/snack_menu"
-            android:layout_marginLeft="15dp"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/snack" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@xml/button_view"
-                android:onClick="snack"
-                android:text="@string/snack"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-        </LinearLayout>
-        <LinearLayout
+            android:id="@+id/first_line"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/salad_menu"
-            android:layout_marginLeft="15dp"
-            android:orientation="vertical">
-            <ImageView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/snack_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/salad" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@xml/button_view"
-                android:onClick="salad"
-                android:text="@string/salad"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/fast_food_menu">
-            <ImageView
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/snack" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@xml/button_view"
+                    android:onClick="snack"
+                    android:text="@string/snack"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/salad_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/fast_food" />
-            <Button
-                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/salad" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/button_view"
+                    android:onClick="salad"
+                    android:text="@string/salad"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fast_food_menu"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@xml/button_view"
-                android:onClick="junk_food"
-                android:text="@string/fast_food"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fast_food" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:background="@xml/button_view"
+                    android:onClick="junk_food"
+                    android:text="@string/fast_food"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/second_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first_line"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/drink_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/drink" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@xml/button_view"
+                    android:onClick="drink"
+                    android:text="@string/drinks"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/coffee_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coffee" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/button_view"
+                    android:onClick="coffee"
+                    android:text="@string/coffee"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cake_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cake" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@xml/button_view"
+                    android:onClick="cake"
+                    android:text="@string/cake"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    android:textStyle="bold"
+                    tools:ignore="TextSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:id="@+id/second_line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/first_line"
-        tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:id="@+id/drink_menu"
-            android:layout_marginLeft="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/drink" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@xml/button_view"
-                android:onClick="drink"
-                android:text="@string/drinks"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/coffee_menu"
-            android:layout_marginLeft="15dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/coffee" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@xml/button_view"
-                android:onClick="coffee"
-                android:text="@string/coffee"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cake_menu"
-            android:layout_marginLeft="15dp"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/cake" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@xml/button_view"
-                android:onClick="cake"
-                android:text="@string/cake"
-                android:textColor="@color/black"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:ignore="TextSizeCheck" />
-        </LinearLayout>
-    </LinearLayout>
     <LinearLayout
         android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
