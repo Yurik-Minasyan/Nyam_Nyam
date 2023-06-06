@@ -1,21 +1,21 @@
 package com.example.nyam_nyam;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Coffee extends AppCompatActivity {
     SearchView sw;
@@ -26,6 +26,7 @@ public class Coffee extends AppCompatActivity {
     int arab = 1;
     int cappuchino = 1;
     int latte = 1;
+    ImageButton cart;
 
     EditText arabia_num;
     EditText cappuchino_num;
@@ -35,6 +36,7 @@ public class Coffee extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_coffee);
+        cart = findViewById(R.id.button2);
         food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
@@ -162,6 +164,7 @@ public class Coffee extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void cappuchino(View view){
 
@@ -173,6 +176,7 @@ public class Coffee extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void lattee(View view){
 
@@ -184,6 +188,7 @@ public class Coffee extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
 
     public void arab_plus(View view){

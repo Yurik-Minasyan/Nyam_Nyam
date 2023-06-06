@@ -1,20 +1,19 @@
 package com.example.nyam_nyam;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -32,13 +31,14 @@ public class Naxutest extends AppCompatActivity {
     EditText cheese_num;
     EditText marinade_num;
     Food_Nubers food;
-
+    ImageButton cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_naxutest);
         food  = (Food_Nubers) getApplicationContext();
+        cart = findViewById(R.id.button2);
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.INVISIBLE);
@@ -168,7 +168,7 @@ public class Naxutest extends AppCompatActivity {
             food.setMeat(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
+        }cart.setImageResource(R.drawable.cart2);
 
 
     }
@@ -181,7 +181,7 @@ public class Naxutest extends AppCompatActivity {
             food.setCheese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
+        }cart.setImageResource(R.drawable.cart2);
     }
     public void marinade(View view){
 
@@ -192,7 +192,7 @@ public class Naxutest extends AppCompatActivity {
             food.setMarinade(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
+        }cart.setImageResource(R.drawable.cart2);
     }
     public void meat_plus(View view){
         meat_num = findViewById(R.id.meat_num);

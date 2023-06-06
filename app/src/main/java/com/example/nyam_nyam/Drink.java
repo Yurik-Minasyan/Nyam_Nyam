@@ -1,21 +1,20 @@
 package com.example.nyam_nyam;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class Drink extends AppCompatActivity {
     SearchView sw;
@@ -32,11 +31,13 @@ public class Drink extends AppCompatActivity {
     int fanta = 1;
     int sprite = 1;
     int water = 1;
+    ImageButton cart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_drink);
+        cart = findViewById(R.id.button2);
         food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
@@ -163,6 +164,7 @@ public class Drink extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void fanta(View view){
 
@@ -173,7 +175,8 @@ public class Drink extends AppCompatActivity {
             food.setFanta(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
+        }cart.setImageResource(R.drawable.cart2);
+
     }
     public void sprite(View view){
 
@@ -184,7 +187,8 @@ public class Drink extends AppCompatActivity {
             food.setSprite(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
+        }cart.setImageResource(R.drawable.cart2);
+
     }
     public void water(View view){
 

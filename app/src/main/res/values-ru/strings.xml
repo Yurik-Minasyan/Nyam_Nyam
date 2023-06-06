@@ -5,7 +5,7 @@
     <string name="fast_food" translatable="false">Быстрое питание</string>
     <string name="drinks" translatable="false">Напитки</string>
     <string name="coffee" translatable="false">Кофе</string>
-    <string name="cake" translatable="false">Торт</string>
+    <string name="cake" translatable="false">Пирожные</string>
     <string name="meat" translatable="false">Мясные закуски</string>
     <string name="cheese" translatable="false">Сыр</string>
     <string name="marinades" translatable="false">Маринады</string>
@@ -26,4 +26,6 @@
     <string name="order_c" translatable="false">Мои заказы</string>
     <string name="order_pr" translatable="false">Итог:</string>
     <string name="qr_table" translatable="false">Отсканируйте QR-код на столе</string>
+    <string name="order_suc" translatable="false">Ваш заказ принят!</string>
+    <string name="order_suc2" translatable="false">Спасибо за заказ!</string>
 </resources>

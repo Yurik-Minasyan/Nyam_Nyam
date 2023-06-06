@@ -26,5 +26,7 @@
     <string name="order_c" translatable="false">My orders</string>
     <string name="order_pr" translatable="false">Total:</string>
     <string name="qr_table" translatable="false">Scan a QR Code on Table</string>
+    <string name="order_suc" translatable="false">Your order is accepted!</string>
+    <string name="order_suc2" translatable="false">Thanks for your order!</string>
 
 </resources>

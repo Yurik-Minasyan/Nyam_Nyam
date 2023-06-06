@@ -483,9 +483,13 @@ public class Cart extends AppCompatActivity {
         end_t.setText(R.string.order_pr);
         end_num.setText(sum + "amd");
     }
-
+    public void openDialog() {
+        ExampleDialog exampleDialog = new ExampleDialog();
+        exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    }
     public void to_database(View view) {
         {
+
             meat_n = food.getMeat();
             cheese_n = food.getCheese();
             marinade_n = food.getMarinade();
@@ -660,6 +664,28 @@ public class Cart extends AppCompatActivity {
                 }
             });
         }
+        meat.setVisibility(View.GONE);
+        cheese.setVisibility(View.GONE);
+        marinade.setVisibility(View.GONE);
+        micado.setVisibility(View.GONE);
+        napoleon.setVisibility(View.GONE);
+        donat.setVisibility(View.GONE);
+        arabia.setVisibility(View.GONE);
+        cappuchino.setVisibility(View.GONE);
+        latte.setVisibility(View.GONE);
+        capreze.setVisibility(View.GONE);
+        caesar.setVisibility(View.GONE);
+        vegetable.setVisibility(View.GONE);
+        french.setVisibility(View.GONE);
+        hot_dog.setVisibility(View.GONE);
+        burger.setVisibility(View.GONE);
+        cola.setVisibility(View.GONE);
+        fanta.setVisibility(View.GONE);
+        sprite.setVisibility(View.GONE);
+        water.setVisibility(View.GONE);
+        theEnd.setVisibility(View.GONE);
+
+        openDialog();
     }
 
     public void home_c(View view){

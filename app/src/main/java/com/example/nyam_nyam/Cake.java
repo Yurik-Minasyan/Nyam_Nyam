@@ -1,18 +1,19 @@
 package com.example.nyam_nyam;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class Cake extends AppCompatActivity {
     int micado = 1;
     int napoleon = 1;
     int donut = 1;
+    ImageButton cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class Cake extends AppCompatActivity {
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
+        cart = findViewById(R.id.button2);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -163,6 +166,7 @@ public class Cake extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void napoleon(View view){
 
@@ -174,6 +178,7 @@ public class Cake extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void donut(View view){
 
@@ -185,6 +190,7 @@ public class Cake extends AppCompatActivity {
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
     }
     public void micado_plus(View view){
         mikado_num = findViewById(R.id.micado);
