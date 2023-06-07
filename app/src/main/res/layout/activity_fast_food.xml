@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="550դր/др/amd"
+            android:text="550 amd"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -114,7 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="800դր/др/amd"
+            android:text="800 amd"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -187,7 +187,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="1200դր/др/amd"
+            android:text="1200 amd"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
