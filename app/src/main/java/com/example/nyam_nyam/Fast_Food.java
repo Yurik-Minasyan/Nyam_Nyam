@@ -1,5 +1,6 @@
 package com.example.nyam_nyam;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -153,6 +154,7 @@ public class Fast_Food extends AppCompatActivity {
         Intent i = new Intent(Fast_Food.this, Cart.class);
         startActivity(i);
     }
+    @SuppressLint("ResourceAsColor")
     public void french(View view){
 
         french_num = findViewById(R.id.french_num);
