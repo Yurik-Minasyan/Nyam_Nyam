@@ -702,7 +702,7 @@ public class Cart extends AppCompatActivity {
     public void meat_minus_c(View view){
         meat.setVisibility(View.GONE);
         sum -= meat_n*3000;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setMeat(0);
     }
     public void cheese_plus_c(View view){
@@ -714,7 +714,7 @@ public class Cart extends AppCompatActivity {
     public void cheese_minus_c(View view){
         cheese.setVisibility(View.GONE);
         sum -= cheese_n*2500;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setCheese(0);
     }
     public void marinade_plus_c(View view){
@@ -726,7 +726,7 @@ public class Cart extends AppCompatActivity {
     public void marinade_minus_c(View view){
         marinade.setVisibility(View.GONE);
         sum -= marinade_n*1800;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setMarinade(0);
     }
 
@@ -739,7 +739,7 @@ public class Cart extends AppCompatActivity {
     public void caprese_minus_c(View view){
         capreze.setVisibility(View.GONE);
         sum -= capreze_n*1200;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setCaprese(0);
     }
     public void caesar_plus_c(View view){
@@ -751,7 +751,7 @@ public class Cart extends AppCompatActivity {
     public void caesar_minus_c(View view){
         caesar.setVisibility(View.GONE);
         sum -= caesar_n*1000;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setCaesar(0);
     }
     public void vegetable_plus_c(View view){
@@ -763,7 +763,7 @@ public class Cart extends AppCompatActivity {
     public void vegetable_minus_c(View view){
         vegetable.setVisibility(View.GONE);
         sum -= vegetable_n*500;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setVegetable(0);
     }
     public void arab_plus_c(View view){
@@ -775,7 +775,7 @@ public class Cart extends AppCompatActivity {
     public void arab_minus_c(View view){
         arabia.setVisibility(View.GONE);
         sum -= arabia_n*700;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setArab(0);
     }
     public void cappuchino_plus_c(View view){
@@ -787,7 +787,7 @@ public class Cart extends AppCompatActivity {
     public void cappuchino_minus_c(View view){
         cappuchino.setVisibility(View.GONE);
         sum -= cappuchino_n*750;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setCappuccino(0);
     }
     public void latte_plus_c(View view){
@@ -799,7 +799,7 @@ public class Cart extends AppCompatActivity {
     public void latte_minus_c(View view){
         latte.setVisibility(View.GONE);
         sum -= latte_n*1000;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setLatte(0);
     }
     public void mikado_plus_c(View view){
@@ -811,7 +811,7 @@ public class Cart extends AppCompatActivity {
     public void mikado_minus_c(View view){
         micado.setVisibility(View.GONE);
         sum -= micado_n*550;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setMicado(0);
     }
     public void napoleon_plus_c(View view){
@@ -823,7 +823,7 @@ public class Cart extends AppCompatActivity {
     public void napoleon_minus_c(View view){
         napoleon.setVisibility(View.GONE);
         sum -= napoleon_n*600;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setNapoleon(0);
     }
     public void donut_plus_c(View view){
@@ -835,7 +835,7 @@ public class Cart extends AppCompatActivity {
     public void donut_minus_c(View view){
         donat.setVisibility(View.GONE);
         sum -= donat_n*750;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setDonat(0);
     }
     public void french_plus_c(View view){
@@ -847,7 +847,7 @@ public class Cart extends AppCompatActivity {
     public void french_minus_c(View view){
         french.setVisibility(View.GONE);
         sum -= french_n*550;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setFrench(0);
     }
     public void hot_plus_c(View view){
@@ -859,7 +859,7 @@ public class Cart extends AppCompatActivity {
     public void hot_minus_c(View view){
         hot_dog.setVisibility(View.GONE);
         sum -= hot_dog_n*800;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setHot_dog(0);
     }
     public void burger_plus_c(View view){
@@ -871,7 +871,7 @@ public class Cart extends AppCompatActivity {
     public void burger_minus_c(View view){
         burger.setVisibility(View.GONE);
         sum -= burger_n*1200;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setBurger(0);
     }
     public void cola_plus_c(View view){
@@ -883,7 +883,7 @@ public class Cart extends AppCompatActivity {
     public void cola_minus_c(View view){
         cola.setVisibility(View.GONE);
         sum -= cola_n*500;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setCola(0);
     }
     public void fanta_plus_c(View view){
@@ -895,7 +895,7 @@ public class Cart extends AppCompatActivity {
     public void fanta_minus_c(View view){
         fanta.setVisibility(View.GONE);
         sum -= fanta_n*500;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setFanta(0);
     }
     public void sprite_plus_c(View view){
@@ -907,7 +907,7 @@ public class Cart extends AppCompatActivity {
     public void sprite_minus_c(View view){
         sprite.setVisibility(View.GONE);
         sum -= sprite_n*500;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setSprite(0);
     }
     public void water_plus_c(View view){
@@ -919,7 +919,7 @@ public class Cart extends AppCompatActivity {
     public void water_minus_c(View view){
         water.setVisibility(View.GONE);
         sum -= water_n*300;
-        end_t.setText("Total: "+sum + " amd");
+        end_num.setText(sum + " amd");
         food.setWater(0);
 
     }

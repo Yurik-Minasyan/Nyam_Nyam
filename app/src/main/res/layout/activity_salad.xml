@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +87,7 @@
         android:layout_marginStart="20dp"
         android:orientation="vertical"
         android:background="@color/white"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toEndOf="@+id/linearLayout22"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -157,6 +159,7 @@
         android:layout_marginStart="20dp"
         android:orientation="vertical"
         android:background="@color/white"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toEndOf="@+id/linearLayout23"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -225,6 +228,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:orientation="vertical"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toEndOf="@+id/linearLayout24"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
         tools:ignore="MissingConstraints">
@@ -311,6 +315,7 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:background="@color/white"
             app:layout_constraintTop_toBottomOf="@+id/search"
             tools:layout_editor_absoluteX="1dp" />
     </LinearLayout>
