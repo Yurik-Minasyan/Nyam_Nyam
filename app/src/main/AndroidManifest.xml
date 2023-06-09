@@ -7,7 +7,7 @@
     <uses-feature android:name="android.hardware.camera"/>
 
     <application
-        android:name=".Food_Nubers"
+        android:name="com.EMenu.nyam_nyam.Food_Nubers"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,31 +17,31 @@
         android:theme="@style/Theme.Nyam_Nyam"
         tools:targetApi="31">
         <activity
-            android:name=".Cart"
+            android:name="com.EMenu.nyam_nyam.Cart"
             android:exported="false" />
         <activity
-            android:name=".Cake"
+            android:name="com.EMenu.nyam_nyam.Cake"
             android:exported="false" />
         <activity
-            android:name=".Coffee"
+            android:name="com.EMenu.nyam_nyam.Coffee"
             android:exported="false" />
         <activity
-            android:name=".Drink"
+            android:name="com.EMenu.nyam_nyam.Drink"
             android:exported="false" />
         <activity
-            android:name=".Fast_Food"
+            android:name="com.EMenu.nyam_nyam.Fast_Food"
             android:exported="false" />
         <activity
-            android:name=".Salad"
+            android:name="com.EMenu.nyam_nyam.Salad"
             android:exported="false" />
         <activity
-            android:name=".Naxutest"
+            android:name="com.EMenu.nyam_nyam.Naxutest"
             android:exported="false" />
         <activity
-            android:name=".Main_Menu"
+            android:name="com.EMenu.nyam_nyam.Main_Menu"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.EMenu.nyam_nyam.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

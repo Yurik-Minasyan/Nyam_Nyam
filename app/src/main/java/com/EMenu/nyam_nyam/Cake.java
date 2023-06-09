@@ -1,4 +1,4 @@
-package com.example.nyam_nyam;
+package com.EMenu.nyam_nyam;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;

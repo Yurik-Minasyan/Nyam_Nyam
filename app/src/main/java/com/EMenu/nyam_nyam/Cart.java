@@ -1,4 +1,4 @@
-package com.example.nyam_nyam;
+package com.EMenu.nyam_nyam;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.EMenu.nyam_nyam.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;

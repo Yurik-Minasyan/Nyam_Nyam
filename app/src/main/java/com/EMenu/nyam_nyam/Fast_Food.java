@@ -1,4 +1,4 @@
-package com.example.nyam_nyam;
+package com.EMenu.nyam_nyam;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

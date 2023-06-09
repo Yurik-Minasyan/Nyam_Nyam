@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Cart"
+        tools:context="com.EMenu.nyam_nyam.Cart"
         tools:ignore="ExtraText">
     <LinearLayout
             android:id="@+id/linearLayout9"

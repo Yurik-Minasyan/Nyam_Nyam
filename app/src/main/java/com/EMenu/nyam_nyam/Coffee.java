@@ -1,4 +1,4 @@
-package com.example.nyam_nyam;
+package com.EMenu.nyam_nyam;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -13,30 +13,29 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import com.EMenu.nyam_nyam.R;
 
 import java.util.ArrayList;
 
-public class Drink extends AppCompatActivity {
+public class Coffee extends AppCompatActivity {
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     Food_Nubers food;
-    EditText cola_num;
-    EditText fanta_num;
-    EditText sprite_num;
-    EditText water_num;
-
-    int cola = 1;
-    int fanta = 1;
-    int sprite = 1;
-    int water = 1;
+    int arab = 1;
+    int cappuchino = 1;
+    int latte = 1;
     ImageButton cart;
+
+    EditText arabia_num;
+    EditText cappuchino_num;
+    EditText lattee_num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_drink);
+        setContentView(R.layout.activity_coffee);
         cart = findViewById(R.id.button2);
         food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
@@ -121,110 +120,93 @@ public class Drink extends AppCompatActivity {
                 String text = lw.getItemAtPosition(i).toString();
                 //Toast.makeText(Main_Menu.this, ""+text, Toast.LENGTH_SHORT).show();
                 if(text=="Water" || text=="Вода" || text=="Ջուր" || text=="Coca-Cola" || text=="Fanta" || text=="Sprite"){
-                    Intent iy = new Intent(Drink.this, Drink.class);
+                    Intent iy = new Intent(Coffee.this, Drink.class);
                     startActivity(iy);
                 }
                 if(text=="Մսային նախուտեստներ" || text=="Պանրի տեսականի" || text=="Թթուներ" || text=="Закуски" || text=="Сыры" || text=="Маринады" || text=="Meat snacks" || text=="Cheese" || text=="Marinades"){
-                    Intent iy = new Intent(Drink.this, Naxutest.class);
+                    Intent iy = new Intent(Coffee.this, Naxutest.class);
                     startActivity(iy);
                 }
                 if(text=="Կապարզե" || text=="Կեսար" || text=="Բանջարեղենային" || text=="Капрезе" || text=="Цезарь" || text=="Овощной" || text=="Caprese" || text=="Caesar" || text=="Vegetable"){
-                    Intent iy = new Intent(Drink.this, Salad.class);
+                    Intent iy = new Intent(Coffee.this, Salad.class);
                     startActivity(iy);
                 }
                 if(text=="Կարտոֆիլ ֆրի" || text=="Հոթ-դոգ բարբիքյու" || text=="Տավարի մսով բուրգեր" || text=="Картофель фри" || text=="Хот-дог барбекю" || text=="Бургер с говядиной" || text=="Hot-dog barbeque" || text=="French fries" || text=="Beef burger"){
-                    Intent iy = new Intent(Drink.this, Fast_Food.class);
+                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
                     startActivity(iy);
                 }
                 if(text=="Արաբիկա" || text=="Կապուչինո" || text=="Լատտե" || text=="Арабика" || text=="Капучино" || text=="Латте" || text=="Latte" || text=="Arabia" || text=="Cappuccino"){
-                    Intent iy = new Intent(Drink.this, Fast_Food.class);
+                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
                     startActivity(iy);
                 }
                 if(text=="Միկադո" || text=="Նապոլեոն" || text=="Կարամելային միջուկով դոնաթ" || text=="Наполеон" || text=="Микадо" || text=="Донат с карамельной начинкой" || text=="Micado" || text=="Napoleon" || text=="Caramel filled donut"){
-                    Intent iy = new Intent(Drink.this, Fast_Food.class);
+                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
                     startActivity(iy);
                 }
             }
         });
     }
-    public void home4(View view){
-        Intent i = new Intent(Drink.this, Main_Menu.class);
+    public void home6(View view){
+        Intent i = new Intent(Coffee.this, Main_Menu.class);
         startActivity(i);
     }
-    public void cart_drink(View view){
-        Intent i = new Intent(Drink.this, Cart.class);
+    public void cart_coffee(View view){
+        Intent i = new Intent(Coffee.this, Cart.class);
         startActivity(i);
     }
-    public void cola(View view){
-        cola_num = findViewById(R.id.cola);
-        String g = cola_num.getText().toString();
+    public void arab(View view){
+
+        arabia_num = findViewById(R.id.arab);
+        String g = arabia_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setCola(n);
+            food.setArab(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
         cart.setImageResource(R.drawable.cart2);
     }
-    public void fanta(View view){
+    public void cappuchino(View view){
 
-        fanta_num = findViewById(R.id.fanta);
-        String g = fanta_num.getText().toString();
+        cappuchino_num = findViewById(R.id.cappuchino);
+        String g = cappuchino_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setFanta(n);
-        }else{
-            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }cart.setImageResource(R.drawable.cart2);
-
-    }
-    public void sprite(View view){
-
-        sprite_num = findViewById(R.id.sprite);
-        String g = sprite_num.getText().toString();
-        int n = Integer.parseInt(g);
-        if (n >  0){
-            food.setSprite(n);
-        }else{
-            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }cart.setImageResource(R.drawable.cart2);
-
-    }
-    public void water(View view){
-
-        water_num = findViewById(R.id.water);
-        String g = water_num.getText().toString();
-        int n = Integer.parseInt(g);
-        if (n > 0){
-            food.setWater(n);
+            food.setCappuccino(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
         }
+        cart.setImageResource(R.drawable.cart2);
+    }
+    public void lattee(View view){
+
+        lattee_num = findViewById(R.id.lattee);
+        String g = lattee_num.getText().toString();
+        int n = Integer.parseInt(g);
+        if (n > 0){
+            food.setLatte(n);
+        }else{
+            Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
+        }
+        cart.setImageResource(R.drawable.cart2);
     }
 
-
-    public void cola_plus(View view){
-        cola_num = findViewById(R.id.cola);
-        String g = Integer.toString(cola);
-        cola_num.setText(g);
-        cola++;
+    public void arab_plus(View view){
+        arabia_num = findViewById(R.id.arab);
+        String g = Integer.toString(arab);
+        arabia_num.setText(g);
+        arab++;
     }
-    public void fanta_plus(View view){
-        fanta_num = findViewById(R.id.fanta);
-        String g = Integer.toString(fanta);
-        fanta_num.setText(g);
-        fanta++;
+    public void cappuchino_plus(View view){
+        cappuchino_num = findViewById(R.id.cappuchino);
+        String g = Integer.toString(cappuchino);
+        cappuchino_num.setText(g);
+        cappuchino++;
     }
-    public void sprite_plus(View view){
-        sprite_num = findViewById(R.id.sprite);
-        String g = Integer.toString(sprite);
-        sprite_num.setText(g);
-        sprite++;
-    }
-    public void water_plus(View view){
-        water_num = findViewById(R.id.water);
-        String g = Integer.toString(water);
-        water_num.setText(g);
-        water++;
+    public void latte_plus(View view){
+        lattee_num = findViewById(R.id.lattee);
+        String g = Integer.toString(latte);
+        lattee_num.setText(g);
+        latte++;
     }
 }

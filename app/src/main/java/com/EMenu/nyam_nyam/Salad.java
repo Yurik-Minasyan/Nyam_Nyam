@@ -1,4 +1,4 @@
-package com.example.nyam_nyam;
+package com.EMenu.nyam_nyam;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -17,30 +16,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class Coffee extends AppCompatActivity {
+public class Salad extends AppCompatActivity {
     SearchView sw;
     ListView lw;
     ArrayList<String> array;
     ArrayAdapter<String> adapter;
     Food_Nubers food;
-    int arab = 1;
-    int cappuchino = 1;
-    int latte = 1;
+    EditText caparse_num;
+    EditText casear_num;
+    EditText vegetablle_num;
     ImageButton cart;
-
-    EditText arabia_num;
-    EditText cappuchino_num;
-    EditText lattee_num;
+    int caprese = 1;
+    int casear = 1;
+    int vegetable = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this. setRequestedOrientation(ActivityInfo. SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_coffee);
-        cart = findViewById(R.id.button2);
+        setContentView(R.layout.activity_salad);
         food  = (Food_Nubers) getApplicationContext();
         sw = findViewById(R.id.search);
         lw = findViewById(R.id.list);
         lw.setVisibility(View.GONE);
+        cart = findViewById(R.id.button2);
         array = new ArrayList<>();
         array.add("Մսային նախուտեստներ");//0
         array.add("Պանրի տեսականի");//1
@@ -120,93 +118,91 @@ public class Coffee extends AppCompatActivity {
                 String text = lw.getItemAtPosition(i).toString();
                 //Toast.makeText(Main_Menu.this, ""+text, Toast.LENGTH_SHORT).show();
                 if(text=="Water" || text=="Вода" || text=="Ջուր" || text=="Coca-Cola" || text=="Fanta" || text=="Sprite"){
-                    Intent iy = new Intent(Coffee.this, Drink.class);
+                    Intent iy = new Intent(Salad.this, Drink.class);
                     startActivity(iy);
                 }
                 if(text=="Մսային նախուտեստներ" || text=="Պանրի տեսականի" || text=="Թթուներ" || text=="Закуски" || text=="Сыры" || text=="Маринады" || text=="Meat snacks" || text=="Cheese" || text=="Marinades"){
-                    Intent iy = new Intent(Coffee.this, Naxutest.class);
+                    Intent iy = new Intent(Salad.this, Naxutest.class);
                     startActivity(iy);
                 }
                 if(text=="Կապարզե" || text=="Կեսար" || text=="Բանջարեղենային" || text=="Капрезе" || text=="Цезарь" || text=="Овощной" || text=="Caprese" || text=="Caesar" || text=="Vegetable"){
-                    Intent iy = new Intent(Coffee.this, Salad.class);
+                    Intent iy = new Intent(Salad.this, Salad.class);
                     startActivity(iy);
                 }
                 if(text=="Կարտոֆիլ ֆրի" || text=="Հոթ-դոգ բարբիքյու" || text=="Տավարի մսով բուրգեր" || text=="Картофель фри" || text=="Хот-дог барбекю" || text=="Бургер с говядиной" || text=="Hot-dog barbeque" || text=="French fries" || text=="Beef burger"){
-                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
+                    Intent iy = new Intent(Salad.this, Fast_Food.class);
                     startActivity(iy);
                 }
                 if(text=="Արաբիկա" || text=="Կապուչինո" || text=="Լատտե" || text=="Арабика" || text=="Капучино" || text=="Латте" || text=="Latte" || text=="Arabia" || text=="Cappuccino"){
-                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
+                    Intent iy = new Intent(Salad.this, Fast_Food.class);
                     startActivity(iy);
                 }
                 if(text=="Միկադո" || text=="Նապոլեոն" || text=="Կարամելային միջուկով դոնաթ" || text=="Наполеон" || text=="Микадо" || text=="Донат с карамельной начинкой" || text=="Micado" || text=="Napoleon" || text=="Caramel filled donut"){
-                    Intent iy = new Intent(Coffee.this, Fast_Food.class);
+                    Intent iy = new Intent(Salad.this, Fast_Food.class);
                     startActivity(iy);
                 }
             }
         });
     }
-    public void home6(View view){
-        Intent i = new Intent(Coffee.this, Main_Menu.class);
+    public void home(View view){
+        Intent i = new Intent(Salad.this, Main_Menu.class);
         startActivity(i);
     }
-    public void cart_coffee(View view){
-        Intent i = new Intent(Coffee.this, Cart.class);
+    public void cart_salad(View view){
+        Intent i = new Intent(Salad.this, Cart.class);
         startActivity(i);
     }
-    public void arab(View view){
 
-        arabia_num = findViewById(R.id.arab);
-        String g = arabia_num.getText().toString();
+    public void caparse(View view){
+
+        caparse_num = findViewById(R.id.caprese);
+        String g = caparse_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setArab(n);
+            food.setCaprese(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
-        cart.setImageResource(R.drawable.cart2);
+        }cart.setImageResource(R.drawable.cart2);
     }
-    public void cappuchino(View view){
+    public void caesar(View view){
 
-        cappuchino_num = findViewById(R.id.cappuchino);
-        String g = cappuchino_num.getText().toString();
+        casear_num = findViewById(R.id.caesar);
+        String g = casear_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setCappuccino(n);
+            food.setCaesar(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
-        cart.setImageResource(R.drawable.cart2);
+        }cart.setImageResource(R.drawable.cart2);
     }
-    public void lattee(View view){
+    public void vegetable(View view){
 
-        lattee_num = findViewById(R.id.lattee);
-        String g = lattee_num.getText().toString();
+        vegetablle_num = findViewById(R.id.vegetable);
+        String g = vegetablle_num.getText().toString();
         int n = Integer.parseInt(g);
         if (n > 0){
-            food.setLatte(n);
+            food.setVegetable(n);
         }else{
             Toast.makeText(this, "Select the quantity of the dish", Toast.LENGTH_SHORT).show();
-        }
-        cart.setImageResource(R.drawable.cart2);
+        }cart.setImageResource(R.drawable.cart2);
+    }
+    public void caprese_plus(View view) {
+        caparse_num = findViewById(R.id.caprese);
+        String g = Integer.toString(caprese);
+        caparse_num.setText(g);
+        caprese++;
+    }
+    public void caesar_plus(View view){
+        casear_num = findViewById(R.id.caesar);
+        String g = Integer.toString(casear);
+        casear_num.setText(g);
+        casear++;
+    }
+    public void vegetable_plus(View view){
+        vegetablle_num = findViewById(R.id.vegetable);
+        String g = Integer.toString(vegetable);
+        vegetablle_num.setText(g);
+        vegetable++;
     }
 
-    public void arab_plus(View view){
-        arabia_num = findViewById(R.id.arab);
-        String g = Integer.toString(arab);
-        arabia_num.setText(g);
-        arab++;
-    }
-    public void cappuchino_plus(View view){
-        cappuchino_num = findViewById(R.id.cappuchino);
-        String g = Integer.toString(cappuchino);
-        cappuchino_num.setText(g);
-        cappuchino++;
-    }
-    public void latte_plus(View view){
-        lattee_num = findViewById(R.id.lattee);
-        String g = Integer.toString(latte);
-        lattee_num.setText(g);
-        latte++;
-    }
 }

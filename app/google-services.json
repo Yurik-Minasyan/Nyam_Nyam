@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:117213687417:android:213443b6d8de56cfa76ea8",
+        "mobilesdk_app_id": "1:117213687417:android:11a4a813095d8b8ba76ea8",
         "android_client_info": {
-          "package_name": "com.example.nyam_nyam"
+          "package_name": "com.EMenu.nyam_nyam"
         }
       },
       "oauth_client": [],
