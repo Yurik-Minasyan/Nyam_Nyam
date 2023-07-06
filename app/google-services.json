@@ -1,27 +1,36 @@
 {
   "project_info": {
-    "project_number": "117213687417",
-    "firebase_url": "https://nyam-nyam-ccff4-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "nyam-nyam-ccff4",
-    "storage_bucket": "nyam-nyam-ccff4.appspot.com"
+    "project_number": "839973562963",
+    "project_id": "nyam-nyam-fae96",
+    "storage_bucket": "nyam-nyam-fae96.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:117213687417:android:11a4a813095d8b8ba76ea8",
+        "mobilesdk_app_id": "1:839973562963:android:8967dd4b55c871f79fb4a6",
         "android_client_info": {
           "package_name": "com.EMenu.nyam_nyam"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "839973562963-pdumkmr70tmva8nr5hafmiil3pd4sbq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAaL963XFCH5JzhOujN4xUi1UON5vsY9ps"
+          "current_key": "AIzaSyDns0_GkrZah422NjkvUutonDzWq9vq45g"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839973562963-pdumkmr70tmva8nr5hafmiil3pd4sbq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
